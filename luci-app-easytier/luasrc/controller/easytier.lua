@@ -24,18 +24,18 @@ end
 local function calc_uptime(start_time_file)
     local content = safe_read_file(start_time_file)
     if not content or content == "" then return "" end
-    
+
     local start_time = tonumber(content:match("%d+"))
     if not start_time then return "" end
-    
+
     local now = os.time()
     local elapsed = now - start_time
-    
+
     local days = math.floor(elapsed / 86400)
     local hours = math.floor((elapsed % 86400) / 3600)
     local mins = math.floor((elapsed % 3600) / 60)
     local secs = elapsed % 60
-    
+
     local result = ""
     if days > 0 then result = days .. "天 " end
     result = result .. string.format("%02d小时%02d分%02d秒", hours, mins, secs)
@@ -46,9 +46,9 @@ function index()
 	if not nixio.fs.access("/etc/config/easytier") then
 		return
 	end
-	
-	entry({"admin", "vpn"}, firstchild(), "VPN", 45).dependent = false
-	entry({"admin", "vpn", "easytier"}, firstchild(),_("EasyTier"), 46).dependent = true
+
+	entry({"admin", "vpn"}, firstchild(), "VPN").dependent = false
+	entry({"admin", "vpn", "easytier"}, firstchild(),_("EasyTier")).dependent = true
 	entry({"admin", "vpn", "easytier", "status"}, cbi("easytier_status"),_("Status"), 1).leaf = true
 	entry({"admin", "vpn", "easytier", "config"}, cbi("easytier"),_("EasyTier Core"), 2).leaf = true
 	entry({"admin", "vpn", "easytier", "webconsole"}, template("easytier/easytier_web"),_("EasyTier Web"), 3).leaf = true
@@ -90,28 +90,28 @@ function act_status()
 	e.port = (port or 0)
 	e.cenabled = uci:get_first("easytier", "easytier", "enabled") == "1"
 	e.wenabled = uci:get_first("easytier", "easytier", "web_enabled") == "1"
-	
+
 	-- 使用 Lua 原生计算运行时长
 	e.etsta = calc_uptime("/tmp/easytier_time")
 	e.etwebsta = calc_uptime("/tmp/easytierweb_time")
-	
+
 	-- 获取 CPU 和内存使用率（使用原始命令）
 	local command2 = io.popen('test ! -z "`pidof easytier-core`" && (top -b -n1 | grep -E "$(pidof easytier-core)" 2>/dev/null | grep -v grep | awk \'{for (i=1;i<=NF;i++) {if ($i ~ /easytier-core/) break; else cpu=i}} END {print $cpu}\')')
 	e.etcpu = command2:read("*all")
 	command2:close()
-	
+
 	local command3 = io.popen("test ! -z `pidof easytier-core` && (cat /proc/$(pidof easytier-core | awk '{print $NF}')/status | grep -w VmRSS | awk '{printf \"%.2f MB\", $2/1024}')")
 	e.etram = command3:read("*all")
 	command3:close()
-	
+
 	local command4 = io.popen('test ! -z "`pidof easytier-web`" && (top -b -n1 | grep -E "$(pidof easytier-web)" 2>/dev/null | grep -v grep | awk \'{for (i=1;i<=NF;i++) {if ($i ~ /easytier-web/) break; else cpu=i}} END {print $cpu}\')')
 	e.etwebcpu = command4:read("*all")
 	command4:close()
-	
+
 	local command5 = io.popen("test ! -z `pidof easytier-web` && (cat /proc/$(pidof easytier-web | awk '{print $NF}')/status | grep -w VmRSS | awk '{printf \"%.2f MB\", $2/1024}')")
 	e.etwebram = command5:read("*all")
 	command5:close()
-	
+
 	-- 获取版本信息
 	local cached_newtag = safe_read_file("/tmp/easytiernew.tag")
 	if cached_newtag and cached_newtag ~= "" then
@@ -123,7 +123,7 @@ function act_status()
 			if f then f:write(e.etnewtag); f:close() end
 		end
 	end
-	
+
 	local cached_tag = safe_read_file("/tmp/easytier.tag")
 	if cached_tag and cached_tag ~= "" then
 		e.ettag = cached_tag:gsub("[\r\n]+", "")
@@ -134,7 +134,7 @@ function act_status()
 		local f = io.open("/tmp/easytier.tag", "w")
 		if f then f:write(e.ettag); f:close() end
 	end
-	
+
 	local cached_webtag = safe_read_file("/tmp/easytierweb.tag")
 	if cached_webtag and cached_webtag ~= "" then
 		e.etwebtag = cached_webtag:gsub("[\r\n]+", "")
@@ -145,7 +145,7 @@ function act_status()
 		local f = io.open("/tmp/easytierweb.tag", "w")
 		if f then f:write(e.etwebtag); f:close() end
 	end
-	
+
 	e.no_tun = uci:get_first("easytier", "easytier", "no_tun") == "1"
 	e.dev_name = uci:get_first("easytier", "easytier", "tunname") or "tun0"
 
@@ -156,16 +156,16 @@ end
 function get_upload_config()
 	local uci = require "luci.model.uci".cursor()
 	local http = require "luci.http"
-	
+
 	http.prepare_content("application/json")
-	
+
 	local config = {
 		easytierbin = uci:get_first("easytier", "easytier", "easytierbin") or "/usr/bin/easytier-core",
 		webbin = uci:get_first("easytier", "easytier", "webbin") or "/usr/bin/easytier-web",
 		github_proxys = {},
 		fallback_version = uci:get_first("easytier", "easytier", "fallback_version") or "v2.6.4"
 	}
-	
+
 	-- 读取代理列表（list 类型）
 	uci:foreach("easytier", "easytier", function(s)
 		local proxys = s.github_proxys
@@ -177,7 +177,7 @@ function get_upload_config()
 			end
 		end
 	end)
-	
+
 	http.write_json(config)
 end
 
@@ -185,26 +185,26 @@ function save_upload_config()
 	local uci = require "luci.model.uci".cursor()
 	local http = require "luci.http"
 	local json = require "luci.jsonc"
-	
+
 	http.prepare_content("application/json")
-	
+
 	-- 读取 POST 数据
 	local content = http.content()
 	local data = json.parse(content)
-	
+
 	if not data then
 		http.write_json({success = false, message = "Invalid JSON data"})
 		return
 	end
-	
+
 	-- 保存配置
 	uci:set("easytier", "@easytier[0]", "easytierbin", data.easytierbin or "/usr/bin/easytier-core")
 	uci:set("easytier", "@easytier[0]", "webbin", data.webbin or "/usr/bin/easytier-web")
 	uci:set("easytier", "@easytier[0]", "fallback_version", data.fallback_version or "v2.6.4")
-	
+
 	-- 删除旧的代理列表
 	uci:delete("easytier", "@easytier[0]", "github_proxys")
-	
+
 	-- 保存代理列表（list 类型）
 	if data.github_proxys and type(data.github_proxys) == "table" then
 		for _, proxy in ipairs(data.github_proxys) do
@@ -218,9 +218,9 @@ function save_upload_config()
 			end
 		end
 	end
-	
+
 	uci:commit("easytier")
-	
+
 	http.write_json({success = true, message = "Configuration saved successfully"})
 end
 
@@ -228,36 +228,36 @@ function get_disk_space()
 	local http = require "luci.http"
 	local json = require "luci.jsonc"
 	local nixio = require "nixio"
-	
+
 	http.prepare_content("application/json")
-	
+
 	local content = http.content()
 	local data = json.parse(content)
-	
+
 	if not data or not data.path then
 		http.write_json({success = false, message = "Invalid path"})
 		return
 	end
-	
+
 	local path = data.path
 	local full_path = data.full_path
 	local input_type = data.type
-	
+
 	local df_output = luci.sys.exec("df -h '" .. path .. "' 2>/dev/null | tail -n 1")
 	local df_kb = luci.sys.exec("df -k '" .. path .. "' 2>/dev/null | tail -n 1")
-	
+
 	if df_output and df_output ~= "" and df_kb and df_kb ~= "" then
 		local available = df_output:match("%S+%s+%S+%s+%S+%s+(%S+)")
 		local available_kb = df_kb:match("%S+%s+%S+%s+%S+%s+(%d+)")
 		local available_mb = available_kb and math.floor(tonumber(available_kb) / 1024) or 0
-		
+
 		if available and available_mb then
 			local result = {
 				success = true,
 				available = available,
 				available_mb = available_mb
 			}
-			
+
 			if input_type == "easytierbin" and full_path then
 				if nixio.fs.access(full_path) then
 					local size = luci.sys.exec("ls -lh '" .. full_path .. "' 2>/dev/null | awk '{print $5}'")
@@ -265,7 +265,7 @@ function get_disk_space()
 						result.core_size = size:gsub("[\r\n]+$", "")
 					end
 				end
-				
+
 				local dir = full_path:match("(.*/)")
 				local cli_path = (dir or "/usr/bin/") .. "easytier-cli"
 				if nixio.fs.access(cli_path) then
@@ -282,33 +282,33 @@ function get_disk_space()
 					end
 				end
 			end
-			
+
 			http.write_json(result)
 			return
 		end
 	end
-	
+
 	http.write_json({success = false, message = "Unable to query disk space"})
 end
 
 function get_tun_info()
 	luci.http.prepare_content("application/json")
-	
+
 	local ifname = luci.http.formvalue("ifname") or "tun0"
-	
+
 	local exists = luci.sys.exec("ip link show " .. ifname .. " >/dev/null 2>&1 && echo 1 || echo 0")
 	if not exists:match("1") then
 		luci.http.write('{"success":false,"exists":false}')
 		return
 	end
-	
+
 	local ifconfig_out = luci.sys.exec("ifconfig " .. ifname .. " 2>/dev/null")
-	
+
 	local ip = ifconfig_out:match("inet addr:([%d%.]+)") or ifconfig_out:match("inet ([%d%.]+)")
-	
+
 	local netmask = ""
 	local netmask_full = ifconfig_out:match("Mask:([%d%.]+)") or ifconfig_out:match("netmask ([%d%.]+)")
-	
+
 	if not netmask_full or netmask_full == "" then
 		local ip_output = luci.sys.exec("ip -4 addr show " .. ifname .. " 2>/dev/null | grep 'inet ' | head -n1 | awk '{print $2}'")
 		local cidr = ip_output:match("/(%d+)")
@@ -324,32 +324,32 @@ function get_tun_info()
 	else
 		netmask = netmask_full
 	end
-	
+
 	local ipv6_cmd = luci.sys.exec("ip -6 addr show " .. ifname .. " 2>/dev/null | grep 'inet6' | head -n1 | awk '{print $2}'")
 	local ipv6 = ipv6_cmd:gsub("%s", "")
 	if ipv6 == "" then ipv6 = nil end
-	
+
 	local mtu = ifconfig_out:match("MTU:(%d+)") or luci.sys.exec("ip link show " .. ifname .. " 2>/dev/null | head -n1 | sed -n 's/.*mtu \\([0-9]*\\).*/\\1/p'"):gsub("%s", "")
-	
+
 	local state = "UNKNOWN"
 	if ifconfig_out:match("UP") then
 		state = "UP"
 	elseif ifconfig_out:match("DOWN") then
 		state = "DOWN"
 	end
-	
+
 	local rx = luci.sys.exec("cat /sys/class/net/" .. ifname .. "/statistics/rx_bytes 2>/dev/null || echo 0"):gsub("%s", "")
 	local tx = luci.sys.exec("cat /sys/class/net/" .. ifname .. "/statistics/tx_bytes 2>/dev/null || echo 0"):gsub("%s", "")
-	
+
 	local response = string.format('{"success":true,"exists":true,"ip":"%s","netmask":"%s","mtu":"%s","state":"%s","rx_bytes":%s,"tx_bytes":%s',
 		ip or "", netmask, mtu, state, rx, tx)
-	
+
 	if ipv6 then
 		response = response .. ',"ipv6":"' .. ipv6 .. '"'
 	end
-	
+
 	response = response .. '}'
-	
+
 	luci.http.write(response)
 end
 
@@ -384,12 +384,12 @@ local function test_binary(path)
 	local handle = io.popen(path .. " -h 2>&1")
 	local output = handle:read("*a")
 	handle:close()
-	
+
 	local line_count = 0
 	for _ in output:gmatch("[^\r\n]+") do
 		line_count = line_count + 1
 	end
-	
+
 	return line_count >= 3 and output:lower():match("easytier")
 end
 
@@ -404,11 +404,11 @@ function upload_binary()
 	local uci = require "luci.model.uci".cursor()
 	local nixio = require "nixio"
 	local translate = i18n.translate
-	
+
 	local fp
 	local filename = ""
 	local tmp_file = ""
-	
+
 	http.setfilehandler(
 		function(meta, chunk, eof)
 			if meta and meta.file then
@@ -426,20 +426,20 @@ function upload_binary()
 			end
 		end
 	)
-	
+
 	http.prepare_content("application/json")
-	
+
 	if not http.formvalue("file") or tmp_file == "" then
 		http.write_json({success = false, message = translate("No file uploaded")})
 		return
 	end
-	
+
 	local is_archive = filename:match("%.zip$") or filename:match("%.tar%.gz$") or filename:match("%.tgz$") or filename:match("%.tar$")
-	
+
 	if is_archive then
 		local extract_dir = "/tmp/easytier_extract"
 		os.execute("rm -rf " .. extract_dir .. " && mkdir -p " .. extract_dir)
-		
+
 		if filename:match("%.zip$") then
 			if os.execute("which unzip >/dev/null 2>&1") ~= 0 then
 				cleanup_files(tmp_file)
@@ -450,17 +450,17 @@ function upload_binary()
 		else
 			os.execute("tar -xzf " .. tmp_file .. " -C " .. extract_dir .. " 2>/dev/null || tar -xf " .. tmp_file .. " -C " .. extract_dir)
 		end
-		
+
 		os.execute("find " .. extract_dir .. "/easytier-linux-* -maxdepth 1 -type f -exec mv {} " .. extract_dir .. "/ \\; 2>/dev/null")
 		cleanup_files(tmp_file)
-		
+
 		if nixio.fs.access(extract_dir .. "/easytier-web") then
 			nixio.fs.remove(extract_dir .. "/easytier-web")
 		end
-		
+
 		local binaries = {"easytier-core", "easytier-cli", "easytier-web-embed"}
 		local valid_bins = {}
-		
+
 		for _, bin in ipairs(binaries) do
 			local src = extract_dir .. "/" .. bin
 			if nixio.fs.access(src) then
@@ -472,16 +472,16 @@ function upload_binary()
 				end
 			end
 		end
-		
+
 		if #valid_bins == 0 then
 			os.execute("rm -rf " .. extract_dir)
 			http.write_json({success = false, message = translate("Not a valid EasyTier program or architecture mismatch")})
 			return
 		end
-		
+
 		local core_path = uci:get_first("easytier", "easytier", "easytierbin") or "/usr/bin/easytier-core"
 		local web_path = uci:get_first("easytier", "easytier", "webbin") or "/usr/bin/easytier-web"
-		
+
 		for _, bin in ipairs(valid_bins) do
 			local final_path
 			if bin.name == "easytier-web-embed" then
@@ -492,15 +492,15 @@ function upload_binary()
 				local core_dir = core_path:match("(.*/)")
 				final_path = (core_dir or "/usr/bin/") .. "easytier-cli"
 			end
-			
+
 			os.execute("rm -f " .. final_path)
-			
+
 			if os.execute("mv " .. bin.path .. " " .. final_path) ~= 0 then
 				os.execute("rm -rf " .. extract_dir)
 				http.write_json({success = false, message = translate("Failed to move file. Insufficient space or permission denied")})
 				return
 			end
-			
+
 			os.execute("chmod 755 " .. final_path)
 			if not test_binary(final_path) then
 				os.execute("rm -f " .. final_path)
@@ -509,36 +509,36 @@ function upload_binary()
 				return
 			end
 		end
-		
+
 		os.execute("rm -rf " .. extract_dir)
 		nixio.fs.remove("/tmp/easytier.tag")
 		nixio.fs.remove("/tmp/easytierweb.tag")
 		http.write_json({success = true, message = translate("Successfully installed") .. " " .. #valid_bins .. " " .. translate("binary file(s)")})
 	else
 		local valid_names = {["easytier-core"] = true, ["easytier-cli"] = true, ["easytier-web-embed"] = true, ["easytier-web"] = true}
-		
+
 		if not valid_names[filename] then
 			cleanup_files(tmp_file)
 			http.write_json({success = false, message = translate("Not a valid EasyTier program")})
 			return
 		end
-		
+
 		if filename == "easytier-web" then
 			cleanup_files(tmp_file)
 			http.write_json({success = false, message = translate("easytier-web is not used by this plugin, please upload easytier-web-embed")})
 			return
 		end
-		
+
 		nixio.fs.chmod(tmp_file, "755")
 		if not test_binary(tmp_file) then
 			cleanup_files(tmp_file)
 			http.write_json({success = false, message = translate("Not a valid EasyTier program or architecture mismatch")})
 			return
 		end
-		
+
 		local core_path = uci:get_first("easytier", "easytier", "easytierbin") or "/usr/bin/easytier-core"
 		local web_path = uci:get_first("easytier", "easytier", "webbin") or "/usr/bin/easytier-web"
-		
+
 		local final_path
 		if filename == "easytier-web-embed" then
 			final_path = web_path
@@ -548,22 +548,22 @@ function upload_binary()
 			local core_dir = core_path:match("(.*/)")
 			final_path = (core_dir or "/usr/bin/") .. "easytier-cli"
 		end
-		
+
 		os.execute("rm -f " .. final_path)
-		
+
 		if os.execute("mv " .. tmp_file .. " " .. final_path) ~= 0 then
 			cleanup_files(tmp_file)
 			http.write_json({success = false, message = translate("Failed to move file. Insufficient space or permission denied")})
 			return
 		end
-		
+
 		os.execute("chmod 755 " .. final_path)
 		if not test_binary(final_path) then
 			os.execute("rm -f " .. final_path)
 			http.write_json({success = false, message = translate("Not a valid EasyTier program or architecture mismatch")})
 			return
 		end
-		
+
 		nixio.fs.remove("/tmp/easytier.tag")
 		nixio.fs.remove("/tmp/easytierweb.tag")
 		http.write_json({success = true, message = translate("Binary uploaded successfully to") .. " " .. final_path})
@@ -600,9 +600,9 @@ function act_conninfo()
 	local uci = require "luci.model.uci".cursor()
 	local easytierbin = uci:get_first("easytier", "easytier", "easytierbin") or "/usr/bin/easytier-core"
 	local clibin = easytierbin:gsub("easytier%-core$", "easytier-cli")
-	
+
 	local process_status = luci.sys.exec("pgrep easytier-core")
-	
+
 	if process_status ~= "" then
 		-- 获取各类CLI信息
 		local function get_cli_output(cmd)
@@ -614,7 +614,7 @@ function act_conninfo()
 			end
 			return ""
 		end
-		
+
 		e.node = get_cli_output("node")
 		e.peer = get_cli_output("peer")
 		e.connector = get_cli_output("connector")
@@ -626,7 +626,7 @@ function act_conninfo()
 		e.acl = get_cli_output("acl stats")
 		e.mapped_listener = get_cli_output("mapped-listener")
 		e.stats = get_cli_output("stats")
-		
+
 		-- 获取启动参数
 		local cmdhandle = io.popen("cat /proc/$(pidof easytier-core)/cmdline 2>/dev/null | tr '\\0' ' '")
 		if cmdhandle then
@@ -635,7 +635,7 @@ function act_conninfo()
 		else
 			e.cmdline = ""
 		end
-		
+
 		-- 检查是否使用配置文件启动
 		if e.cmdline:match("%-%-config%-file") or e.cmdline:match("%-c%s+/") then
 			e.config_file = safe_read_file("/etc/easytier/config.toml") or ""
@@ -657,7 +657,7 @@ function act_conninfo()
 		e.stats = errMsg
 		e.cmdline = errMsg
 	end
-	
+
 	luci.http.prepare_content("application/json")
 	luci.http.write_json(e)
 end
@@ -666,7 +666,7 @@ end
 function get_web_config()
 	luci.http.prepare_content("application/json")
 	local uci = require "luci.model.uci".cursor()
-	
+
 	local config = {
 		web_enabled = uci:get_first("easytier", "easytier", "web_enabled") or "0",
 		web_db_path = uci:get_first("easytier", "easytier", "web_db_path") or "/etc/easytier/et.db",
@@ -701,14 +701,14 @@ function get_web_config()
 		web_web_instance_id = uci:get_first("easytier", "easytier", "web_web_instance_id") or "",
 		web_web_instance_api_base_url = uci:get_first("easytier", "easytier", "web_web_instance_api_base_url") or ""
 	}
-	
+
 	luci.http.write_json(config)
 end
 
 function save_web_config()
 	local uci = require "luci.model.uci".cursor()
 	local http = require "luci.http"
-	
+
 	local web_enabled = http.formvalue("web_enabled") or "0"
 	local web_db_path = http.formvalue("web_db_path") or "/etc/easytier/et.db"
 	local web_protocol = http.formvalue("web_protocol") or "udp"
@@ -741,7 +741,7 @@ function save_web_config()
 	local web_internal_auth_token = http.formvalue("web_internal_auth_token") or ""
 	local web_web_instance_id = http.formvalue("web_web_instance_id") or ""
 	local web_web_instance_api_base_url = http.formvalue("web_web_instance_api_base_url") or ""
-	
+
 	uci:set("easytier", "@easytier[0]", "web_enabled", web_enabled)
 	uci:set("easytier", "@easytier[0]", "web_db_path", web_db_path)
 	uci:set("easytier", "@easytier[0]", "web_protocol", web_protocol)
@@ -774,46 +774,46 @@ function save_web_config()
 	uci:set("easytier", "@easytier[0]", "web_internal_auth_token", web_internal_auth_token)
 	uci:set("easytier", "@easytier[0]", "web_web_instance_id", web_web_instance_id)
 	uci:set("easytier", "@easytier[0]", "web_web_instance_api_base_url", web_web_instance_api_base_url)
-	
+
 	uci:commit("easytier")
-	
+
 	http.prepare_content("application/json")
 	http.write_json({success = true})
 end
 
 function reset_database()
 	luci.http.prepare_content("application/json")
-	
+
 	local json = require "luci.jsonc"
 	local nixio = require "nixio"
-	
+
 	-- 从请求中获取数据库路径
 	local req_data = json.parse(luci.http.content())
 	if not req_data or not req_data.db_path then
 		luci.http.write_json({success = false, message = "Missing db_path parameter"})
 		return
 	end
-	
+
 	local db_path = req_data.db_path
-	
+
 	-- 安全检查：路径必须是绝对路径且不能是根目录或系统关键目录
-	if not db_path:match("^/") or db_path == "/" or 
-	   db_path:match("^/bin") or db_path:match("^/sbin") or 
+	if not db_path:match("^/") or db_path == "/" or
+	   db_path:match("^/bin") or db_path:match("^/sbin") or
 	   db_path:match("^/usr/bin") or db_path:match("^/usr/sbin") or
 	   db_path:match("^/lib") or db_path:match("^/boot") then
 		luci.http.write_json({success = false, message = "Invalid database path"})
 		return
 	end
-	
+
 	-- 构建要删除的文件列表
 	local files_to_delete = {
 		db_path,
 		db_path .. "-wal",
 		db_path .. "-shm"
 	}
-	
+
 	local deleted_files = {}
-	
+
 	-- 删除文件
 	for _, file in ipairs(files_to_delete) do
 		if nixio.fs.access(file) then
@@ -823,7 +823,7 @@ function reset_database()
 			end
 		end
 	end
-	
+
 	if #deleted_files > 0 then
 		luci.http.write_json({
 			success = true,
@@ -842,7 +842,7 @@ function check_web_status()
 	local running = luci.sys.call("pgrep easytier-web >/dev/null") == 0
 	local uci = require "luci.model.uci".cursor()
 	local port = uci:get_first("easytier", "easytier", "web_html_port") or "11211"
-	
+
 	luci.http.prepare_content("application/json")
 	luci.http.write_json({
 		running = running,
@@ -861,7 +861,7 @@ function toggle_core()
 	local uci = require "luci.model.uci".cursor()
 	uci:set("easytier", uci:get_first("easytier", "easytier"), "enabled", enabled)
 	uci:commit("easytier")
-	
+
 	if enabled == "1" then
 		luci.sys.exec("/etc/init.d/easytier start >/dev/null 2>&1 &")
 	else
@@ -876,7 +876,7 @@ function toggle_web()
 	local uci = require "luci.model.uci".cursor()
 	uci:set("easytier", uci:get_first("easytier", "easytier"), "web_enabled", enabled)
 	uci:commit("easytier")
-	
+
 	if enabled == "1" then
 		luci.sys.exec("/etc/init.d/easytier start >/dev/null 2>&1 &")
 	else
@@ -889,7 +889,7 @@ end
 local function detect_arch()
 	local cputype = safe_exec("uname -ms | tr ' ' '_' | tr '[A-Z]' '[a-z]'")
 	local cpucore = ""
-	
+
 	if cputype:match("linux.*armv.*") then
 		cpucore = "arm"
 	end
@@ -913,7 +913,7 @@ local function detect_arch()
 			cpucore = "mipsel"
 		end
 	end
-	
+
 	return cpucore
 end
 
@@ -936,10 +936,10 @@ end
 local function get_github_proxies()
 	local uci = require "luci.model.uci".cursor()
 	local proxies = {}
-	
+
 	-- 从UCI配置读取代理列表
 	local proxy_list = uci:get("easytier", "@easytier[0]", "github_proxys")
-	
+
 	if proxy_list then
 		if type(proxy_list) == "table" then
 			-- 多个代理
@@ -955,7 +955,7 @@ local function get_github_proxies()
 			end
 		end
 	end
-	
+
 	-- 如果没有配置代理，使用默认值
 	if #proxies == 0 then
 		proxies = {
@@ -965,17 +965,17 @@ local function get_github_proxies()
 			"https://ghfast.top/"
 		}
 	end
-	
+
 	-- 添加不使用代理的选项（空字符串表示直连）
 	table.insert(proxies, "")
-	
+
 	return proxies
 end
 
 -- 下载文件
 local function download_file(url, output_path, progress_callback)
 	local download_tools = {"curl", "wget"}
-	
+
 	for _, tool in ipairs(download_tools) do
 		if safe_exec("which " .. tool) ~= "" then
 			local cmd = ""
@@ -984,11 +984,11 @@ local function download_file(url, output_path, progress_callback)
 			elseif tool == "wget" then
 				cmd = string.format("wget --no-check-certificate --timeout=30 --tries=3 -O '%s' '%s'", output_path, url)
 			end
-			
+
 			if progress_callback then
 				progress_callback(50, i18n.translate("Downloading with") .. " " .. tool .. "...")
 			end
-			
+
 			local result = os.execute(cmd)
 			if result == 0 and nixio.fs.access(output_path) then
 				-- 检查文件大小，确保下载完整
@@ -999,16 +999,16 @@ local function download_file(url, output_path, progress_callback)
 			end
 		end
 	end
-	
+
 	return false
 end
 
 function download_easytier()
 	luci.http.prepare_content("application/json")
-	
+
 	local json = require "luci.jsonc"
 	local progress_file = "/tmp/easytier_download_progress"
-	
+
 	-- 检查是否已有下载任务
 	local existing_progress = safe_read_file(progress_file)
 	if existing_progress then
@@ -1023,34 +1023,34 @@ function download_easytier()
 			return
 		end
 	end
-	
+
 	local req_data = json.parse(luci.http.content())
 	if not req_data or not req_data.version then
 		luci.http.write_json({success = false, message = i18n.translate("Missing version parameter")})
 		return
 	end
-	
+
 	local version = req_data.version
-	
+
 	-- 1. 检查依赖和架构
 	local ok, arch_or_error = check_dependencies()
 	if not ok then
 		luci.http.write_json({success = false, message = arch_or_error})
 		return
 	end
-	
+
 	local arch = arch_or_error
 	local proxies = get_github_proxies()
 	local download_dir = "/tmp/easytier_download"
 	local zip_file = download_dir .. "/easytier-linux-" .. arch .. "-" .. version .. ".zip"
-	
+
 	-- 创建下载目录
 	os.execute("mkdir -p " .. download_dir)
-	
+
 	-- 创建取消标志文件
 	local cancel_file = "/tmp/easytier_download_cancel"
 	os.execute("rm -f " .. cancel_file)
-	
+
 	-- 创建进度文件标记任务开始
 	local f = io.open(progress_file, "w")
 	if f then
@@ -1062,17 +1062,17 @@ function download_easytier()
 		}))
 		f:close()
 	end
-	
+
 	-- 检查是否被取消
 	local function check_cancelled()
 		return nixio.fs.access(cancel_file)
 	end
-	
+
 	-- 2. 循环尝试不同的镜像地址下载、解压、验证
 	local download_success = false
 	local download_url = ""
 	local core_file, cli_file, web_file
-	
+
 	for _, proxy in ipairs(proxies) do
 		-- 检查是否被取消
 		if check_cancelled() then
@@ -1081,13 +1081,13 @@ function download_easytier()
 			luci.http.write_json({success = false, message = i18n.translate("Download cancelled")})
 			return
 		end
-		
+
 		download_url = proxy .. "https://github.com/EasyTier/EasyTier/releases/download/" .. version .. "/easytier-linux-" .. arch .. "-" .. version .. ".zip"
-		
+
 		-- 删除之前的失败文件
 		os.execute("rm -f " .. zip_file)
 		os.execute("rm -rf " .. download_dir .. "/extracted")
-		
+
 		-- 下载
 		if download_file(download_url, zip_file) then
 			local stat = nixio.fs.stat(zip_file)
@@ -1099,12 +1099,12 @@ function download_easytier()
 					luci.http.write_json({success = false, message = i18n.translate("Download cancelled")})
 					return
 				end
-				
+
 				-- 解压
 				local extract_dir = download_dir .. "/extracted"
 				os.execute("mkdir -p " .. extract_dir)
 				local unzip_result = os.execute("cd " .. extract_dir .. " && unzip -o " .. zip_file .. " >/dev/null 2>&1")
-				
+
 				if unzip_result == 0 then
 					-- 检查是否被取消
 					if check_cancelled() then
@@ -1113,23 +1113,23 @@ function download_easytier()
 						luci.http.write_json({success = false, message = i18n.translate("Download cancelled")})
 						return
 					end
-					
+
 					-- 查找解压后的目录（使用通配符）
 					local find_cmd = "find " .. extract_dir .. " -maxdepth 1 -type d -name 'easytier-linux-*' 2>/dev/null | head -1"
 					local handle = io.popen(find_cmd)
 					local subdir = handle:read("*a"):match("^%s*(.-)%s*$")
 					handle:close()
-					
+
 					if subdir and subdir ~= "" then
 						core_file = subdir .. "/easytier-core"
 						cli_file = subdir .. "/easytier-cli"
 						web_file = subdir .. "/easytier-web-embed"
-						
+
 						local files_ok = nixio.fs.access(core_file) and nixio.fs.access(cli_file)
 						if arch ~= "mips" and arch ~= "mipsel" then
 							files_ok = files_ok and nixio.fs.access(web_file)
 						end
-						
+
 						if files_ok then
 							-- 检查是否被取消
 							if check_cancelled() then
@@ -1138,13 +1138,13 @@ function download_easytier()
 								luci.http.write_json({success = false, message = i18n.translate("Download cancelled")})
 								return
 							end
-							
+
 							-- 先赋予执行权限，再测试程序
 							local test_files = {core_file, cli_file}
 							if arch ~= "mips" and arch ~= "mipsel" then
 								table.insert(test_files, web_file)
 							end
-							
+
 							local test_ok = true
 							for _, file in ipairs(test_files) do
 								os.execute("chmod +x " .. file)
@@ -1153,7 +1153,7 @@ function download_easytier()
 									break
 								end
 							end
-							
+
 							if test_ok then
 								download_success = true
 								break
@@ -1163,18 +1163,18 @@ function download_easytier()
 				end
 			end
 		end
-		
+
 		-- 删除失败的文件，继续下一个地址
 		os.execute("rm -f " .. zip_file)
 	end
-	
+
 	if not download_success then
 		os.execute("rm -rf " .. download_dir)
 		os.execute("rm -f " .. progress_file)
 		luci.http.write_json({success = false, message = i18n.translate("All download attempts failed")})
 		return
 	end
-	
+
 	-- 检查是否被取消（替换前）
 	if check_cancelled() then
 		os.execute("rm -rf " .. download_dir)
@@ -1182,23 +1182,23 @@ function download_easytier()
 		luci.http.write_json({success = false, message = i18n.translate("Download cancelled")})
 		return
 	end
-	
+
 	-- 3. 从UCI获取路径并安装
 	local uci = require "luci.model.uci".cursor()
 	local easytierbin = uci:get_first("easytier", "easytier", "easytierbin") or "/usr/bin/easytier-core"
 	local easytierwebbin = uci:get_first("easytier", "easytier", "webbin") or "/usr/bin/easytier-web"
-	
+
 	local core_dir = easytierbin:match("^(.*/)[^/]+$") or "/usr/bin/"
-	
+
 	local programs = {
 		{src = core_file, dest = easytierbin},
 		{src = cli_file, dest = core_dir .. "easytier-cli"}
 	}
-	
+
 	if arch ~= "mips" and arch ~= "mipsel" then
 		table.insert(programs, {src = web_file, dest = easytierwebbin})
 	end
-	
+
 	-- 安装并验证
 	for _, prog in ipairs(programs) do
 		local result = os.execute("cp " .. prog.src .. " " .. prog.dest .. " 2>/dev/null")
@@ -1208,9 +1208,9 @@ function download_easytier()
 			luci.http.write_json({success = false, message = i18n.translate("Failed to install program") .. ": " .. prog.dest})
 			return
 		end
-		
+
 		os.execute("chmod +x " .. prog.dest)
-		
+
 		-- 再次验证安装后的程序
 		if not test_binary(prog.dest) then
 			os.execute("rm -rf " .. download_dir)
@@ -1219,14 +1219,14 @@ function download_easytier()
 			return
 		end
 	end
-	
+
 	-- 7. 清理临时文件和版本缓存
 	os.execute("rm -rf " .. download_dir)
 	os.execute("rm -f " .. cancel_file)
 	os.execute("rm -f " .. progress_file)
 	nixio.fs.remove("/tmp/easytier.tag")
 	nixio.fs.remove("/tmp/easytierweb.tag")
-	
+
 	luci.http.write_json({
 		success = true,
 		progress = 100,
@@ -1236,10 +1236,10 @@ end
 
 function download_progress()
 	luci.http.prepare_content("application/json")
-	
+
 	local progress_file = "/tmp/easytier_download_progress"
 	local content = safe_read_file(progress_file)
-	
+
 	if content then
 		local json = require "luci.jsonc"
 		local progress_data = json.parse(content)
@@ -1254,7 +1254,7 @@ function download_progress()
 			return
 		end
 	end
-	
+
 	luci.http.write_json({
 		success = true,
 		progress = 0,
@@ -1265,9 +1265,9 @@ function download_progress()
 end
 function cancel_download()
 	luci.http.prepare_content("application/json")
-	
+
 	-- 创建取消标志文件
 	os.execute("touch /tmp/easytier_download_cancel")
-	
+
 	luci.http.write_json({success = true})
 end
