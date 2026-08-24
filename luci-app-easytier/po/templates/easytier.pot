@@ -1,91 +1,165 @@
 msgid ""
 msgstr "Content-Type: text/plain; charset=UTF-8"
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:648
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:666
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:385
 msgid ""
-"- Program /tmp/easytier-cli uploaded successfully, restart the plugin to "
-"take effect"
+"<br>QUIC proxy-enabled nodes accessing this node will still use the original "
+"method. (--disable-quic-input parameter)"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:640
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:658
-msgid ""
-"- Program /tmp/easytier-core uploaded successfully, restart the plugin to "
-"take effect"
-msgstr ""
-
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:654
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:672
-msgid ""
-"- Program /tmp/easytier-web uploaded successfully, restart the plugin to "
-"take effect"
-msgstr ""
-
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:5
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier_status.lua:4
 msgid ""
 "A simple, secure, decentralized VPN solution for intranet penetration, "
-"implemented in Rust using the Tokio framework. Project URL: <a href="
-"\"https://github.com/EasyTier/EasyTier\" target=\"_blank\">github.com/"
-"EasyTier/EasyTier</a>&nbsp;&nbsp;<a href=\"http://easytier.cn\" target="
-"\"_blank\">Official Documentation</a>&nbsp;&nbsp;<a href=\"http://qm.qq.com/"
-"cgi-bin/qm/qr?"
-"_wv=1027&k=jhP2Z4UsEZ8wvfGPLrs0VwLKn_uz0Q_p&authKey=OGKSQLfg61YPCpVQuvx"
-"%2BxE7hUKBVBEVi9PljrDKbHlle6xqOXx8sOwPPTncMambK&noverify=0&group_code=949700262\" "
-"target=\"_blank\">QQ Group</a>&nbsp;&nbsp;<a href=\"https://doc.oee.icu"
-"\" target=\"_blank\">Beginner Tutorial</a>"
+"implemented in Rust using the Tokio framework. Project URL: <a "
+"href=\"https://github.com/EasyTier/EasyTier\" target=\"_blank\">github.com/"
+"EasyTier/EasyTier</a>&nbsp;&nbsp;<a href=\"http://easytier.cn\" "
+"target=\"_blank\">Official Documentation</a>&nbsp;&nbsp;<a href=\"http://"
+"qm.qq.com/cgi-bin/qm/qr?"
+"_wv=1027&k=jhP2Z4UsEZ8wvfGPLrs0VwLKn_uz0Q_p&authKey=OGKSQLfg61YPCpVQuvx%2BxE7hUKBVBEVi9PljrDKbHlle6xqOXx8sOwPPTncMambK&noverify=0&group_code=949700262\" "
+"target=\"_blank\">QQ Group</a>&nbsp;&nbsp;"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:720
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:599
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:865
+msgid "ACL"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:818
+msgid "ACL Stats"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:614
+msgid "API Listen Address"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:608
 msgid "API Port"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:381
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:648
+msgid "API port"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:460
 msgid "Access Control"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:18
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:364
+msgid "Add"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:410
+msgid "Additional command-line arguments passed to the backend process"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:997
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:1010
+msgid "Address"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:772
+msgid "Address Restricted"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:11
 msgid "Advanced Settings"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:319
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_log.htm:486
+msgid "All Levels"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/controller/easytier.lua:1174
+msgid "All download attempts failed"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:671
+msgid "Allow Auto-create User"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:345
 msgid "Allow Forwarding"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:268
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:274
 msgid "Allow this node to act as an exit node (--enable-exit-node parameter)"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:383
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:462
 msgid "Allow traffic from EasyTier virtual network to LAN"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:384
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:463
 msgid "Allow traffic from EasyTier virtual network to WAN"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:385
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:464
 msgid "Allow traffic from LAN to EasyTier virtual network"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:386
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:465
 msgid "Allow traffic from WAN to EasyTier virtual network"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/view/easytier/easytier_unified_log.htm:210
-msgid "Stop Auto Refresh"
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:839
+msgid "Are you sure you want to reset the database?"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/view/easytier/easytier_unified_log.htm:210
-msgid "Start Auto Refresh"
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:456
+msgid "Auto Configure Firewall"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/view/easytier/easytier_log.htm:30
-#: applications/luci-app-easytier/luasrc/view/easytier/easytierweb_log.htm:30
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:445
+msgid "Auto Configure Interface"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_log.htm:480
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_log.htm:481
 msgid "Auto Refresh"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:325
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:457
+msgid "Automatically add and manage firewall rules"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:641
+msgid ""
+"Automatically add firewall rules to allow WAN access to the API control page"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:604
+msgid ""
+"Automatically add firewall rules to allow WAN access to this WEB console"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:446
+msgid "Automatically create and configure the EasyTier network interface"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:677
+msgid ""
+"Automatically create local user when easytier-core connects with an unknown "
+"username"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:806
+msgid "Available space"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:785
+msgid ""
+"Base URL of the webhook endpoint for token validation and event delivery"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/controller/easytier.lua:569
+msgid "Binary uploaded successfully to"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:495
+msgid "Binary uploaded successfully. Restart the service to apply changes?"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:351
 msgid ""
 "Bind the connector socket to the physical device to avoid routing issues."
 "<br>For example, if the subnet proxy segment conflicts with a peer node, "
@@ -93,171 +167,278 @@ msgid ""
 "parameter)"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:324
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:350
 msgid "Bind to Physical NIC Only"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:394
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:820
+msgid "Cache Max Size"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:821
+msgid "Cache Size"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:724
+msgid "Can also be set via OIDC_CLIENT_SECRET environment variable"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:1104
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:1115
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:847
+msgid "Cancel"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1340
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1415
+msgid "Cancel Download"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1381
+msgid "Cancelling download, may take up to 5 minutes to stop the current task"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:874
+msgid "Caused by"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:474
 msgid "Check IPs"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:583
-msgid "Check for Updates"
-msgstr ""
-
-#: applications/luci-app-easytier/luasrc/view/easytier/easytier_log.htm:31
-#: applications/luci-app-easytier/luasrc/view/easytier/easytierweb_log.htm:31
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_log.htm:493
 msgid "Clear Logs"
 msgstr ""
 
-msgid "Download Log"
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:1102
+msgid "Clear cached version and fetch latest version from GitHub?"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:469
-msgid "Click the button to refresh and view STUN information"
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:758
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:812
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:816
+msgid "Client Config End"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:546
-msgid "Click the button to refresh and view TCP/KCP proxy information"
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:757
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:811
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:815
+msgid "Client Config Start"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:450
-msgid "Click the button to refresh and view connector information"
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:454
+msgid "Close"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:412
-msgid "Click the button to refresh and view local node information"
-msgstr ""
-
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:431
-msgid "Click the button to refresh and view peer information"
-msgstr ""
-
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:508
-msgid "Click the button to refresh and view peer-center information"
-msgstr ""
-
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:489
-msgid "Click the button to refresh and view route information"
-msgstr ""
-
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:565
-msgid ""
-"Click the button to refresh and view the complete local startup parameters"
-msgstr ""
-
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:527
-msgid "Click the button to refresh and view vpn-portal information"
-msgstr ""
-
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:584
-msgid ""
-"Click the button to start checking for updates and refresh the version "
-"display in the status bar above"
-msgstr ""
-
-#: applications/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:35
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:609
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:615
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:621
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:627
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:633
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:639
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:645
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:651
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:657
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:663
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:669
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:675
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:481
 msgid "Collecting data..."
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:39
-msgid "Default"
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:602
+msgid "Command Line"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:260
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:464
+msgid "Command line tool"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:467
+msgid "Compressed archive containing binaries"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:266
 msgid "Compression Algorithm"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:261
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:834
+msgid "Compression RX After"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:833
+msgid "Compression RX Before"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:836
+msgid "Compression TX After"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:835
+msgid "Compression TX Before"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:267
 msgid "Compression algorithm to use (--compression parameter)"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:40
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:43
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:339
+msgid "Configuration"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:22
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:25
 msgid "Configuration File"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:715
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:893
+msgid "Configuration File Content"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:882
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:1003
+msgid "Configuration saved successfully"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:593
 msgid ""
 "Configure the server's listening port for easytier-core to connect. (-c "
 "parameter)"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:721
-msgid ""
-"Listening port of the RESTful server, used as ApiHost by the web frontend. (-a parameter)"
-msgstr ""
-
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:708
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:587
 msgid ""
 "Configure the server's listening protocol for easytier-core to connect. (-p "
 "parameter)"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:19
-msgid "Connection Info"
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:1105
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:1116
+msgid "Confirm"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:390
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:766
+msgid "Connected"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:813
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:817
+msgid "Connected Clients"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:767
+msgid "Connecting"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:580
+msgid "Connection Information"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:822
+msgid "Connection Track"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:879
+msgid "Connection refused"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:470
 msgid "Connectivity Check"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:449
-msgid "Connector Info"
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:594
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:795
+msgid "Connector"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:332
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:794
+msgid "Connectors"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:683
+msgid "Contributors"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:358
 msgid ""
 "Convert TCP traffic to KCP traffic to reduce latency and improve speed."
 "<br>All nodes in the virtual network must be using EasyTier version v2.2.0 "
 "or higher for this feature. (--enable-kcp-proxy parameter)"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:343
-msgid ""
-"Proxy tcp streams with QUIC, improving the latency and throughput on the network with udp packet loss."
-"<br>All nodes in the virtual network must be using EasyTier version v2.3.2 or higher for this feature. "
-"(--enable-quic-proxy parameter)"
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:934
+msgid "Copied"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:236
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:964
+msgid "Copy"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:463
+msgid "Core service binary"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:632
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:677
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:680
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1197
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1199
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1241
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1242
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1244
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1274
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1276
+msgid "Custom Input"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:225
 msgid ""
 "Custom name for the virtual TUN interface (--dev-name parameter)<br>If using "
 "web configuration, please use the same virtual network interface name as in "
 "the web config for firewall allowance"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:581
-msgid ""
-"Customize the storage path for easytier-core. Make sure to provide the full "
-"path and filename. If the specified path has insufficient space, it will "
-"automatically move to /tmp/easytier-core"
-msgstr ""
-
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:587
-msgid ""
-"Customize the storage path for easytier-web. Make sure to provide the full "
-"path and filename, then upload the installer"
-msgstr ""
-
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:703
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:569
 msgid "Database File Path"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:367
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:732
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:856
+msgid "Database Reset Successful"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:1116
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:1121
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:1126
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:1132
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:1141
+msgid "Database reset successfully"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:441
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:687
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:691
 msgid "Debug"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:733
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:21
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:738
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:745
+msgid "Default"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:645
 msgid "Default API Server URL"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:226
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:215
 msgid "Default Protocol"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:214
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:654
+msgid "Defaults to an embedded file (country-level information only)"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:203
 msgid ""
 "Defines the URL of the VPN portal, allowing other VPN clients to connect."
 "<br>Example: wg://0.0.0.0:11011/10.14.14.0/24 means the VPN portal is a "
@@ -265,191 +446,410 @@ msgid ""
 "in the 10.14.14.0/24 network (--vpn-portal parameter)"
 msgstr ""
 
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:914
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:848
+msgid "Delete"
+msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:284
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:739
+msgid "Destination"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:855
+msgid "Destination Peer ID"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:764
+msgid "Direct"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:747
+msgid "Direct Peers"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:290
 msgid "Disable Built-in NAT"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:242
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:231
 msgid "Disable Encryption"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:251
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:257
 msgid "Disable IPv6"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:337
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:363
 msgid "Disable KCP Input"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:348
-msgid "Disable QUIC Input"
-msgstr ""
-
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:311
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:317
 msgid "Disable P2P"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:312
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:318
 msgid ""
 "Disable P2P communication; only use nodes specified by -p to forward packets "
 "(--disable-p2p parameter)"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:315
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:757
+msgid "Disable PKCE"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:763
+msgid "Disable PKCE (Proof Key for Code Exchange) for OIDC authentication"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:382
+msgid "Disable QUIC Input"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:333
+msgid "Disable TCP"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:334
+msgid "Disable TCP hole punching (--disable-tcp-hole-punching parameter)"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:325
 msgid "Disable UDP"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:316
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:326
 msgid "Disable UDP hole punching (--disable-udp-hole-punching parameter)"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:243
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:660
+msgid "Disable User Registration"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:232
 msgid ""
 "Disable encryption for communication with peer nodes. If encryption is "
 "disabled, all other nodes must also have encryption disabled (-u parameter)"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:338
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:368
+msgid "Disable relay kcp"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:341
+msgid "Disable sym"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:364
 msgid ""
 "Disallow other nodes from using KCP proxy TCP streams to this node.<br>KCP "
 "proxy-enabled nodes accessing this node will still use the original method. "
 "(--disable-kcp-input parameter)"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:349
-msgid "Do not allow other nodes to use QUIC to proxy tcp streams to this node."
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:768
+msgid "Disconnected"
 msgstr ""
 
-msgid "When a node with QUIC proxy enabled accesses this node, the original tcp connection is preserved."
-msgstr ""
-
-msgid "<br>QUIC proxy-enabled nodes accessing this node will still use the original method. (--disable-quic-input parameter)"
-msgstr ""
-
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:139
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:130
 msgid "Do Not Listen"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:281
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:383
+msgid "Do not allow other nodes to use QUIC to proxy tcp streams to this node."
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:287
 msgid ""
 "Do not create a TUN device; subnet proxying can still be used to access "
 "nodes (--no-tun parameter)"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:252
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:258
 msgid "Do not use IPv6 (--disable-ipv6 parameter)"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/controller/easytier.lua:9
-#: applications/luci-app-easytier/luasrc/controller/easytier.lua:10
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:891
+msgid "Domain"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:499
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:455
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1368
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1446
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1469
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1480
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1488
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1499
+msgid "Download"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_log.htm:494
+msgid "Download Log"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1118
+msgid "Download Successful"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:436
+msgid "Download Version"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/controller/easytier.lua:1233
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1451
+msgid "Download and installation completed"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/controller/easytier.lua:1081
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/controller/easytier.lua:1099
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/controller/easytier.lua:1113
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/controller/easytier.lua:1138
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/controller/easytier.lua:1182
+msgid "Download cancelled"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1443
+msgid "Download completed successfully"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1119
+msgid "Download completed. Restart service now?"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1457
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1476
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1478
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1484
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1486
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1495
+msgid "Download failed"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:486
+msgid "Download from"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:442
+msgid "Download specified version from GitHub and install to specified path"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/controller/easytier.lua:1020
+msgid "Download task already exists"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1343
+msgid "Download task already exists, continuing..."
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/controller/easytier.lua:989
+msgid "Downloading with"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:449
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1337
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1425
+msgid "Downloading..."
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:404
+msgid "Drag *.tar.gz / *.zip / easytier binaries here or click to select file"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:422
+msgid "Duplicate extra parameter"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:827
+msgid "ERROR: Wireguard VPN Portal Not Started"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/controller/easytier.lua:51
 msgid "EasyTier"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:14
-msgid "EasyTier Configuration"
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/controller/easytier.lua:53
+msgid "EasyTier Core"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:22
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:691
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier_status.lua:3
+msgid "EasyTier Status"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/controller/easytier.lua:54
+msgid "EasyTier Web"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:474
+msgid ""
+"EasyTier console uses easytier-web-embed. The easytier-web binary will be "
+"rejected during upload validation."
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:465
+msgid "Embedded web console"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:13
 msgid "Enable"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:89
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:68
 msgid "Enable DHCP"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:267
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:273
 msgid "Enable Exit Node"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:331
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:357
 msgid "Enable KCP Proxy"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:342
-msgid "Enable QUIC Proxy"
-msgstr ""
-
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:255
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:261
 msgid "Enable Latency First"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:359
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:394
 msgid "Enable Magic DNS"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:247
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:248
 msgid "Enable Multithreading"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:364
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:704
+msgid "Enable OIDC (OpenID Connect) for single sign-on authentication"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:698
+msgid "Enable OIDC Single Sign-On"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:399
 msgid "Enable Private Mode"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:305
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:376
+msgid "Enable QUIC Proxy"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:560
+msgid "Enable Self-hosted Web Console"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:772
+msgid "Enable Webhook Integration"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:311
 msgid ""
 "Enable a SOCKS5 server to allow SOCKS5 clients to access the virtual "
 "network. Leave blank to disable (--socks5 parameter)"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:391
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:471
 msgid ""
 "Enable connectivity check to specify remote device IPs; if all specified IPs "
 "fail to ping, the EasyTier program will restart."
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:248
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:249
 msgid ""
 "Enable multithreaded operation; single-threaded by default (--multi-thread "
 "parameter)"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:277
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:283
 msgid "Enable smoltcp stack for subnet proxying (--use-smoltcp parameter)"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:364
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:729
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:778
+msgid "Enable webhook for token validation and event delivery"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:236
+msgid "Encryption Algorithm"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:438
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:782
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:860
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:872
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:873
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:684
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:691
 msgid "Error"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:626
-msgid "Error: Upload failed!"
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/controller/easytier.lua:646
+msgid "Error: Program not running! Please start the program and refresh"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:271
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:617
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:648
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:731
+msgid "Example"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:277
 msgid "Exit Node Addresses"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:272
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:278
 msgid ""
 "Exit nodes to forward all traffic through. These are virtual IPv4 addresses. "
 "Priority is determined by the order in the list (--exit-nodes parameter)"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:117
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:103
 msgid ""
 "Export the local network to other peers in the VPN, allowing access to other "
 "devices in the current LAN (-n parameter)"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:638
-msgid "File has been uploaded to"
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:409
+msgid "Extra Parameters"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:320
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:892
+msgid ""
+"Failed to connect to RPC server. Please check if the RPC port is set to "
+"15888 in the configuration."
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/controller/easytier.lua:1208
+msgid "Failed to install program"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/controller/easytier.lua:500
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/controller/easytier.lua:556
+msgid "Failed to move file. Insufficient space or permission denied"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:861
+msgid "Failure"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:373
+msgid "Fallback Version"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:474
+msgid "Files will be uploaded to the paths specified above"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:346
 msgid ""
 "Forward RPC packets from all peer nodes, even if they are not in the relay "
 "network whitelist.<br>This can help peer nodes in non-whitelisted networks "
 "establish P2P connections. (--relay-all-peer-rpc parameter)"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:294
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:300
 msgid "Forward Whitelisted Network Traffic"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:354
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:389
 msgid ""
 "Forward a local port to a remote port within the virtual network."
 "<br>Example: udp://0.0.0.0:12345/10.126.126.1:23456 means forwarding local "
@@ -457,25 +857,63 @@ msgid ""
 "entries can be specified. (--port-forward parameter)"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:727
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:404
+msgid "Forwarding Rate"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:909
+msgid "From Instance ID"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:751
+msgid "Frontend base URL to redirect to after successful OIDC callback"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:623
 msgid ""
 "Frontend listening port for the web dashboard server. Leave empty to "
 "disable. (-l parameter)"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:17
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:771
+msgid "Full Cone"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:652
+msgid "GEOIP Database Path"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:10
 msgid "General Settings"
 msgstr ""
 
-#: applications/luci-app-easytier/root/usr/share/rpcd/acl.d/luci-app-easytier.json:3
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:654
+msgid "GeoIP2 database file path used to locate the client"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:897
+msgid "Get Global Peer Map"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:358
+msgid "GitHub Proxy URLs"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:819
+msgid "Global"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/root/usr/share/rpcd/acl.d/luci-app-easytier.json:3
 msgid "Grant UCI access for luci-app-easytier"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:187
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:178
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:698
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:710
 msgid "Hostname"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:90
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:69
 msgid ""
 "IP address will be automatically determined and assigned by EasyTier, "
 "starting from 10.0.0.1 by default. Warning: When using DHCP, if an IP "
@@ -483,86 +921,222 @@ msgid ""
 "parameter)"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:366
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:731
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:697
+msgid "IPv4 Address"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:617
+msgid "IPv6 all"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:482
+msgid ""
+"If the device has insufficient storage space, the upload may fail and "
+"existing programs may be deleted. Please ensure adequate free space before "
+"uploading."
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:167
+msgid ""
+"If this is the Web configuration in the config file, please fill in the same "
+"listening port for firewall allowance."
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:373
+msgid ""
+"If true, allow relay kcp packets from foreign network. default is false (not "
+"forward foreign network kcp packets). (--enable-relay-foreign-network-kcp "
+"parameter)"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:369
+msgid ""
+"If true, disable relay kcp packets. avoid consuming too many bandwidth. "
+"default is false. (--disable-relay-kcp parameter)"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:440
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:686
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:691
 msgid "Info"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:102
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:88
 msgid ""
-"Initial connected peer nodes (-p "
-"parameter)<br>Public server status check: <a href='https://uptime.easytier.cn' target='_blank'>Click here to check</a>"
+"Initial connected peer nodes (-p parameter)<br>Public server status check: "
+"<a href='https://uptime.easytier.cn' target='_blank'>Click here to check</a>"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:206
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:197
 msgid "Instance Name"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:94
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:73
 msgid "Interface IP Address"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:401
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:80
+msgid "Interface IPV6 Address"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:727
+msgid "Interface IPv4"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:728
+msgid "Interface IPv6"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:449
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:1003
+msgid "Interface Netmask"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:796
+msgid "Internal Auth Token"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:481
 msgid "Interval Time (minutes)"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:402
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:482
 msgid ""
 "Interval time for checking connectivity; how often the specified IPs are "
 "pinged."
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:256
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:783
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:807
+msgid "Invalid Service Name"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:930
+msgid "Invalid URL format"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1017
+msgid "Invalid file name"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:752
+msgid "Labels"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:743
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:803
+msgid "Last Update Time"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:700
+msgid "Latency(ms)"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:262
 msgid ""
 "Latency-first mode: attempts to forward traffic via the lowest latency path. "
 "By default, the shortest path is used (--latency-first parameter)"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:138
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:498
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:861
+msgid "Later"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:793
+msgid "List Connector Response"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:824
+msgid "List Mapped Listener Response"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:129
 msgid "Listen"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:135
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:616
+msgid "Listen address for the RESTful server"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:629
+msgid "Listen address for the web dashboard server"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:715
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:755
+msgid "Listener"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:126
 msgid "Listener Port"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:707
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:580
 msgid "Listening Protocol"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:710
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:610
 msgid ""
 "Listening port of the RESTful server, used as ApiHost by the web frontend. (-"
 "a parameter)"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:564
-msgid "Local Startup Parameters"
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_log.htm:498
+msgid "Loading logs..."
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:220
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:384
+msgid "Loading versions..."
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:761
+msgid "Local"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:681
+msgid "Log Level"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:691
+msgid "Log levels"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/controller/easytier.lua:55
+msgid "Logs"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_log.htm:666
+msgid "Logs cleared"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:701
+msgid "Loss Rate"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:209
 msgid "MTU"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:221
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:210
 msgid ""
 "MTU for the TUN device, default is 1380 when unencrypted, and 1360 when "
 "encrypted"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:395
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:475
 msgid ""
 "Make sure the remote device IPs entered here are correct and reachable; "
 "incorrect entries may cause ping failures and repeated program restarts."
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:289
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:295
 msgid ""
 "Manually assign route CIDRs. This disables subnet proxying and WireGuard "
 "routes propagated from peer nodes (--manual-routes parameter)"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:121
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:107
 msgid ""
 "Manually specify the public IP address of this machine, so other nodes can "
 "connect to this node using that address (domain names not supported).<br>For "
@@ -570,108 +1144,442 @@ msgid ""
 "mapped-listeners parameter)"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:72
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:600
+msgid "Mapped Listener"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:806
+msgid "Max Port"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:632
+msgid "Memory"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:857
+msgid "Method Name"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:750
+msgid "Metric Name"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:805
+msgid "Min Port"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/controller/easytier.lua:1029
+msgid "Missing version parameter"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:705
+msgid "NAT Type"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:54
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:854
 msgid "Network Name"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:83
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:61
 msgid "Network Secret"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:84
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1085
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1497
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:1099
+msgid "Network error"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:62
 msgid ""
 "Network secret used to verify whether this node belongs to the VPN network "
 "(--network-secret parameter)"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:280
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:652
+msgid "New Version"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:718
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:732
+msgid "Next Hop Hostname"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:723
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:787
+msgid "Next Hop Hostname Lat First"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:717
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:731
+msgid "Next Hop IPv4"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:722
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:786
+msgid "Next Hop IPv4 Lat First"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:719
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:733
+msgid "Next Hop Latency"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:763
+msgid "No PAT"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:286
 msgid "No TUN Mode"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:411
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:863
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:989
+msgid "No changes to save"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:972
+msgid "No data available"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/controller/easytier.lua:433
+msgid "No file uploaded"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_log.htm:605
+msgid "No logs available"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:906
+msgid "No proxy configured, using default proxy"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/controller/easytier.lua:927
+msgid "No x86-32bit program available"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:746
+msgid "Node ID"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:591
 msgid "Node Info"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:136
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:890
+msgid "None"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/controller/easytier.lua:522
+msgid "Not a valid EasyTier program"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/controller/easytier.lua:478
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/controller/easytier.lua:508
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/controller/easytier.lua:535
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/controller/easytier.lua:563
+msgid "Not a valid EasyTier program or architecture mismatch"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:471
+msgid "Note"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:252
+msgid "Number of Threads"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:127
 msgid ""
 "OFF: Do not listen on any port, only connect to peer nodes (--no-listener "
 "parameter)<br>If used purely as a client (not as a server), you can choose "
 "not to listen on a port"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:363
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:728
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:715
+msgid "OIDC Client ID"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:721
+msgid "OIDC Client Secret"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:749
+msgid "OIDC Frontend Base URL"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:709
+msgid "OIDC Issuer URL"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:728
+msgid "OIDC Redirect URL"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:742
+msgid "OIDC Scopes"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:735
+msgid "OIDC Username Claim"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:744
+msgid "OIDC scopes to request during login"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:868
+msgid "OSPF Route RPC"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:437
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:683
 msgid "Off"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:106
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:113
-msgid "Official Server - tcp://public.easytier.top:11010"
-msgstr ""
-
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:35
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:17
 msgid ""
-"Official Web Console: <a href=\"https://easytier.cn/web\" target=\"_blank"
-"\">https://easytier.cn/web</a><br>Official Configuration File Generator: <a "
-"href=\"https://easytier.cn/web/index.html#/config_generator\" target=\"_blank"
-"\">https://easytier.cn/web/index.html#/config_generator</a><br>Please note "
-"to set the RPC port to 15888"
+"Official Web Console: <a href=\"https://easytier.cn/web\" "
+"target=\"_blank\">https://easytier.cn/web</a><br>Official Configuration File "
+"Generator: <a href=\"https://easytier.cn/web/index.html#/config_generator\" "
+"target=\"_blank\">https://easytier.cn/web/index.html#/config_generator</"
+"a><br>Please note to set the RPC port to 15888"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:295
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:389
+msgid "Online Download"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:431
+msgid "Online Download EasyTier"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1017
+msgid ""
+"Only easytier binaries or compressed archives (.zip, .tar.gz, .tar) are "
+"allowed"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:630
+msgid "Only effective when web port differs from API port or addresses differ"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:301
 msgid ""
 "Only forward traffic for whitelisted networks. By default, all networks are "
 "allowed"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:299
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:305
 msgid ""
-"Only forward traffic for whitelisted networks. Input is a wildcard string, e."
-"g., '*' (all networks), 'def*' (networks prefixed with 'def')<br>Multiple "
+"Only forward traffic for whitelisted networks. Input is a wildcard string, "
+"e.g., '*' (all networks), 'def*' (networks prefixed with 'def')<br>Multiple "
 "networks can be specified. If empty, forwarding is disabled (--relay-network-"
 "whitelist parameter)"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:704
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:773
+msgid "P2P"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:321
+msgid "P2P only"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:721
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:735
+msgid "Path Latency"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:725
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:789
+msgid "Path Latency Lat First"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:720
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:734
+msgid "Path Length"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:724
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:788
+msgid "Path Length Lat First"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:576
 msgid ""
 "Path to the sqlite3 database file used to store all data. (-d parameter)"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:430
-msgid "Peer Info"
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:596
+msgid "Peer Center"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:101
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:869
+msgid "Peer Center RPC"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:991
+msgid ""
+"Peer Center service not available. This feature requires multiple nodes in "
+"the network."
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:712
+msgid "Peer ID"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:592
+msgid "Peer List"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:87
 msgid "Peer Nodes"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:507
-msgid "Peer-Center Info"
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:837
+msgid "Peer RPC Client RX"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:353
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:838
+msgid "Peer RPC Client TX"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:841
+msgid "Peer RPC Duration"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:839
+msgid "Peer RPC Server RX"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:840
+msgid "Peer RPC Server TX"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1397
+msgid "Please enter download version"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:925
+msgid "Please enter proxy URL"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:732
+msgid "Please wait, operation in progress..."
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:388
 msgid "Port Forwarding"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:126
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:762
+msgid "Port Restricted"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:112
 msgid "Portal Address Port"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:369
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:752
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:809
+msgid "Portal Name"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:577
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1187
+msgid "Pre-release"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1411
+msgid "Preparing download..."
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/controller/easytier.lua:1261
+msgid "Preparing..."
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:666
+msgid "Prevent new users from registering accounts"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:421
+msgid "Processing uploaded file, please wait..."
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:433
 msgid "Program Log"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:120
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/controller/easytier.lua:1218
+msgid "Program is incomplete or architecture mismatch"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:813
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:818
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:824
+msgid "Program not found"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:827
+msgid "Program size"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:784
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:808
+msgid "Protocol Name"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:598
+msgid "Proxy"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:711
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:716
+msgid "Proxy CIDRs"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:935
+msgid "Proxy already exists"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:377
+msgid ""
+"Proxy tcp streams with QUIC, improving the latency and throughput on the "
+"network with udp packet loss.<br>All nodes in the virtual network must be "
+"using EasyTier version v2.3.2 or higher for this feature. (--enable-quic-"
+"proxy parameter)"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:106
 msgid "Public Addresses of Specified Listeners"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:27
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:696
-msgid "Quickly restart once without modifying any parameters"
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:804
+msgid "Public IP"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:127
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:713
+msgid "Public IPv4"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:714
+msgid "Public IPv6"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:166
+msgid "QUIC Port"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:457
+msgid "Quick Actions"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:121
+msgid "RPC Access Whitelist"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:113
 msgid ""
 "RPC portal address used for management. 0 means a random port, 12345 means "
 "listening on port 12345 on localhost, 0.0.0.0:12345 means listening on port "
@@ -679,92 +1587,354 @@ msgid ""
 "to avoid failure in obtaining status information (-r parameter)"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:25
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:26
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:694
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:695
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:702
+msgid "RX Traffic"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:811
+msgid "Reachable base URL for this easytier-web instance's internal REST API"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:495
+msgid "Real-time Traffic"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:465
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:655
+msgid "Recommended"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:585
+msgid "Refresh"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:1101
+msgid "Refresh Version"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:1214
+msgid "Refreshing..."
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:372
+msgid "Relay foreign network kcp"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:898
+msgid "Report Peers"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:752
+msgid "Required when frontend and API are deployed separately"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:573
+msgid "Reset Database"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:1088
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:1091
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:1094
+msgid "Reset failed"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:792
+msgid "Response"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:458
 msgid "Restart"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:288
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:1113
+msgid "Restart EasyTier service?"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:499
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:862
+msgid "Restart Now"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:1112
+msgid "Restart Service"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1136
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1140
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:1161
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:1165
+msgid "Restart failed"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:1141
+msgid "Restart service to apply changes?"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1062
+msgid "Restart the service to apply changes?"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:738
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1126
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:1151
+msgid "Restarting service..."
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:770
+msgid "Restricted"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1462
+msgid "Retry"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:294
 msgid "Route CIDR"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:488
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:699
+msgid "Route Cost"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:593
 msgid "Route Info"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:370
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:823
+msgid "Rules"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:610
+msgid "Running"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:434
 msgid ""
 "Runtime log is located at /tmp/easytier.log. View it in the log section "
 "above.<br>Levels: Error < Warning < Info < Debug < Trace"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:753
-msgid ""
-"Runtime log located at /tmp/easytierweb.log, viewable in the log section "
-"above.<br>Levels: Error < Warning < Info < Debug < Trace"
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:690
+msgid "Runtime log located at"
 msgstr ""
 
-
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:304
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:310
 msgid "SOCKS5 Port"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:468
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:595
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:864
+msgid "STUN"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:777
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:799
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:800
 msgid "STUN Info"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:687
-msgid "Self-hosted Web Server"
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:397
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:818
+msgid "Save Configuration"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:714
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:885
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:888
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:891
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:895
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:1006
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:1010
+msgid "Save failed"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:407
+msgid "Select File"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:555
+msgid "Self-hosted Web Console"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:774
+msgid "Server"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:591
 msgid "Server Port"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:371
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:858
+msgid "Service Name"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1133
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:1158
+msgid "Service restarted successfully"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:461
 msgid "Set traffic permission rules between different network zones"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:109
-msgid "Shared Node Address"
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:792
+msgid "Shared secret used to authenticate outbound webhook calls"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:34
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:889
+msgid "Some"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:738
+msgid "Source"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:856
+msgid "Source Peer ID"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:578
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1188
+msgid "Stable"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:805
+msgid ""
+"Stable identifier for this easytier-web instance when routing webhook "
+"callbacks"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_log.htm:716
+msgid "Start Auto Refresh"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:740
+msgid "Start Time"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:16
 msgid "Startup Method"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:116
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:741
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:1023
+msgid "State"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:601
+msgid "Statistics"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/controller/easytier.lua:52
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:756
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:798
+msgid "Status"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_log.htm:713
+msgid "Stop Auto Refresh"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:610
+msgid "Stopped"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:102
 msgid "Subnet Proxy"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:700
-msgid "TCP"
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:450
+msgid "Subnet mask for the EasyTier interface (default: 255.0.0.0)"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:545
-msgid "TCP/KCP Proxy Info"
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:859
+msgid "Success"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:149
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/controller/easytier.lua:516
+msgid "Successfully installed"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:461
+msgid "Supported Files"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:745
+msgid "Supports comma-separated values"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:769
+msgid "Symmetric"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:896
+msgid "Sync Route Info"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/controller/easytier.lua:446
+msgid "System lacks unzip package, cannot extract zip archive"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/controller/easytier.lua:930
+msgid "System lacks unzip, cannot download and extract"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:779
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:802
+msgid "TCP NAT Type"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:337
+msgid "TCP whitelist"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:134
 msgid "TCP/UDP Port"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:150
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:135
 msgid ""
 "TCP/UDP protocol port number: 11010 means TCP/UDP will listen on port 11010."
 "<br>If this is the Web configuration in the config file, please fill in the "
 "same listening port for firewall allowance."
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:95
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:703
+msgid "TX Traffic"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:74
 msgid ""
 "The IPv4 address of this VPN node. If left empty, this node will only "
 "forward packets and will not create a TUN device. (-i parameter)"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:44
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:737
+msgid "The OIDC claim to use as the local username"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:717
+msgid "The OIDC client ID"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:723
+msgid "The OIDC client secret"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:711
+msgid "The OIDC issuer URL for single sign-on authentication"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:730
+msgid ""
+"The OIDC redirect URL (callback URL), must match exactly what is registered "
+"with your Identity Provider"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:647
+msgid "The URL of the API server, used for connecting the web frontend"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:26
 msgid ""
 "The configuration file is located at /etc/easytier/config.toml<br>The "
 "command-line startup parameters and the parameters in this configuration "
@@ -772,139 +1942,327 @@ msgid ""
 "port to enable automatic firewall allowance"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:227
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:216
 msgid ""
 "The default protocol used when connecting to peer nodes (--default-protocol "
 "parameter)"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:188
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:179
 msgid "The hostname used to identify this device (--hostname parameter)"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:73
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:55
 msgid ""
 "The network name used to identify this VPN network (--network-name parameter)"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:368
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:733
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:842
+msgid "This will delete all database files and cannot be recovered"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:862
+msgid "Timeout"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:910
+msgid "To Instance ID"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:798
+msgid "Token for X-Internal-Auth header"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:514
+msgid "Total Download"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:518
+msgid "Total Upload"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:442
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:688
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:691
 msgid "Trace"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:699
-msgid "UDP"
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:851
+msgid "Traffic Bytes Forwarded"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:734
-msgid ""
-"The URL of the API server, used for connecting the web frontend. (--api-host "
-"parameter)<br>Example: http://[current device IP or resolved domain name]:"
-"[API port]"
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:842
+msgid "Traffic Bytes RX"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:194
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:844
+msgid "Traffic Bytes Self RX"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:845
+msgid "Traffic Bytes Self TX"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:843
+msgid "Traffic Bytes TX"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:901
+msgid "Traffic Control Bytes RX"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:903
+msgid "Traffic Control Bytes RX By Instance"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:902
+msgid "Traffic Control Bytes TX"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:904
+msgid "Traffic Control Bytes TX By Instance"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:905
+msgid "Traffic Control Packets RX"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:907
+msgid "Traffic Control Packets RX By Instance"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:906
+msgid "Traffic Control Packets TX"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:908
+msgid "Traffic Control Packets TX By Instance"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:850
+msgid "Traffic Packets Forwarded"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:846
+msgid "Traffic Packets RX"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:848
+msgid "Traffic Packets Self RX"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:849
+msgid "Traffic Packets Self TX"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:847
+msgid "Traffic Packets TX"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:742
+msgid "Transport Type"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:704
+msgid "Tunnel Protocol"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:778
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:801
+msgid "UDP NAT Type"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:726
+msgid "UDP Stun Type"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:329
+msgid "UDP whitelist"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:796
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:797
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:878
+msgid "URL"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:185
 msgid "UUID"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:195
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/controller/easytier.lua:924
+msgid "Unable to detect CPU architecture"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:829
+msgid "Unable to query disk space"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:186
 msgid ""
 "Unique identifier used to recognize this device when connecting to the web "
 "console, for issuing configuration files"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/view/easytier/other_upload.htm:4
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:765
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:649
+msgid "Unknown"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:504
 msgid "Upload"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:20
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:403
+msgid "Upload EasyTier Binary"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/controller/easytier.lua:56
 msgid "Upload Program"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/view/easytier/other_upload.htm:2
-msgid "Upload Program:"
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:493
+msgid "Upload Successful"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:276
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1073
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1078
+msgid "Upload failed"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:415
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1029
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1042
+msgid "Uploading..."
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:639
+msgid "Uptime"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:282
 msgid "Use Userspace TCP/IP Stack"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:110
-msgid ""
-"Use a public shared node to discover peer nodes, same function as the "
-"parameter above (-e parameter)"
-msgstr ""
-
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:285
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:291
 msgid ""
 "Use system kernel to forward subnet proxy packets, disabling built-in NAT (--"
 "proxy-forward-by-system parameter)"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:207
-msgid "Used to identify the VPN node instance on the same machine. (-m parameter)"
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:368
+msgid "Used to accelerate GitHub downloads when fetching binaries online"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:213
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:198
+msgid ""
+"Used to identify the VPN node instance on the same machine. (-m parameter)"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:393
+msgid "Used when unable to fetch the latest version during online download"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:597
+msgid "VPN Portal"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:202
 msgid "VPN Portal URL"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:526
-msgid "VPN-Portal Info"
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:751
+msgid "Value"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:235
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:706
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:647
+msgid "Version"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:709
+msgid "Virtual IP"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:486
+msgid "Virtual Network Interface"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:224
 msgid "Virtual Network Interface Name"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:173
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:635
+msgid "WAN access to API"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:598
+msgid "WAN access to WEB"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:158
 msgid "WG Port"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:157
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:142
 msgid "WS Port"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:158
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:143
 msgid ""
 "WS protocol port number: 11011 means WS will listen on port 11011.<br>If "
 "this is the Web configuration in the config file, please fill in the same "
 "listening port for firewall allowance."
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:165
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:150
 msgid "WSS Port"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:166
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:151
 msgid ""
 "WSS protocol port number: 11012 means WSS will listen on port 11012.<br>If "
 "this is the Web configuration in the config file, please fill in the same "
 "listening port for firewall allowance."
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:365
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:730
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:439
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:479
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:685
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:691
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:836
 msgid "Warning"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:41
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:23
 msgid "Web Configuration"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:25
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:660
 msgid "Web Console"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:726
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:809
+msgid "Web Instance API Base URL"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:803
+msgid "Web Instance ID"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:621
 msgid "Web Interface Port"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:64
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:627
+msgid "Web Listen Address"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:46
 msgid "Web Server Address"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:65
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:47
 msgid ""
 "Web configuration server address. (-w parameter)<br>For a self-hosted Web "
 "server, use the format: udp://server_address:22020/username<br>For the "
@@ -912,503 +2270,271 @@ msgid ""
 "href='https://easytier.cn/web'>easytier.cn/web</a>"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:365
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:466
+msgid "Web console binary"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:790
+msgid "Webhook Secret"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:783
+msgid "Webhook URL"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:384
+msgid ""
+"When a node with QUIC proxy enabled accesses this node, the original tcp "
+"connection is preserved."
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:400
 msgid ""
 "When enabled, nodes with a different network name and password are not "
 "allowed to handshake or relay via this node. (--private-mode parameter)"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:298
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:799
+msgid "When set, API requests with this header bypass session authentication"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:786
+msgid ""
+"When set, incoming tokens are validated via this webhook before local "
+"fallback"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:304
 msgid "Whitelisted Networks"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:174
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:466
+msgid "Will be ignored, use embed version instead"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:810
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:814
+msgid "WireGuard"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:159
 msgid ""
 "WireGuard protocol port number: 11011 means WG will listen on port 11011."
 "<br>If this is the Web configuration in the config file, please fill in the "
 "same listening port for firewall allowance."
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:360
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:395
 msgid ""
 "With Magic DNS, you can access other nodes using domain names, e.g., "
 "<hostname>.et.net. Magic DNS will modify your system DNS settings, please "
 "enable with caution. (--accept-dns parameter)"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:607
-msgid ""
-"You can directly upload the binary programs easytier-core and easytier-cli, "
-"or a compressed .zip archive. Uploading a new version will automatically "
-"overwrite the old one. Download link: <a href='https://github.com/EasyTier/"
-"EasyTier/releases' target='_blank'>github.com/EasyTier/EasyTier</a><br>The "
-"uploaded files will be saved in the /tmp folder. If a custom program path is "
-"specified, the program will be automatically moved to that path when started."
-"<br>"
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:242
+msgid "aes-256-gcm"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/controller/easytier.lua:11
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:241
+msgid "aes-gcm"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:617
+msgid "all interfaces"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/controller/easytier.lua:516
+msgid "binary file(s)"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:881
+msgid "cannot_be_a_base"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:240
+msgid "chacha20"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_log.htm:470
 msgid "core log"
 msgstr ""
 
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:228
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:263
-msgid "default"
-msgstr ""
-
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:591
-msgid "easytier-core Binary Path"
-msgstr ""
-
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:597
-msgid "easytier-web Binary Path"
-msgstr ""
-
-#: applications/luci-app-easytier/luasrc/controller/easytier.lua:14
-msgid "web log"
-msgstr ""
-
-#: applications/luci-app-easytier/luasrc/model/cbi/easytier.lua:264
-msgid "zstd"
-msgstr ""
-
-msgid "GEOIP_DB Path"
-msgstr ""
-
-msgid ""
-"GeoIP2 database file path used to locate the client. Defaults to an embedded file (country-level information only)."
-"<br>Recommended: https://github.com/P3TERX/GeoLite.mmdb (--geoip-db parameter)"
-msgstr ""
-
-msgid "Interface IPV6 Address"
-msgstr ""
-
-msgid ""
-"ipv6 address of this vpn node, can be used together with ipv4 for dual-stack operation"
-"(--ipv6 parameter)"
-msgstr ""
-
-msgid "RPC Access Whitelist"
-msgstr ""
-
-msgid "rpc portal whitelist, only allow these addresses to access rpc portal (--rpc-portal-whitelist parameter)"
-msgstr ""
-
-msgid "QUIC Port"
-msgstr ""
-
-msgid "If this is the Web configuration in the config file, please fill in the same listening port for firewall allowance."
-msgstr ""
-
-msgid "Number of Threads"
-msgstr ""
-
-msgid "the number of threads to use, default is 2, only effective when multi-thread is enabled, must be greater than 2 (--multi-thread-count parameter)"
-msgstr ""
-
-msgid "Forwarding Rate"
-msgstr ""
-
-msgid ""
-"the maximum bps limit for foreign network relay, default is no limit. unit: BPS (bytes per second). "
-"(--foreign-relay-bps-limit parameter)"
-msgstr ""
-
-msgid "Extra Parameters"
-msgstr ""
-
-msgid "Additional command-line arguments passed to the backend process"
-msgstr ""
-
-msgid "ACL rules"
-msgstr ""
-
-msgid "Click the button to refresh and view ACL rules information"
-msgstr ""
-
-msgid "Mapped listener"
-msgstr ""
-
-msgid "Click the button to refresh and view manage mapped listeners"
-msgstr ""
-
-msgid "Encryption Algorithm"
-msgstr ""
-
-msgid "encryption algorithm to use, supported: xor, chacha20, aes-gcm, aes-256-gcm, openssl-aes-gcm, openssl-chacha20, openssl-aes-256-gcm. default (aes-gcm) (--encryption-algorithm parameter)"
-msgstr ""
-
-msgid "Stats"
-msgstr ""
-
-msgid "Click the button to refresh and view statistics information"
-msgstr ""
-
-msgid "WAN access to WEB"
-msgstr ""
-
-msgid "Automatically add firewall rules to allow WAN access to this WEB console"
-msgstr ""
-
-msgid "WAN access to API"
-msgstr ""
-
-msgid "Automatically add firewall rules to allow WAN access to the API control page"
-msgstr ""
-
-msgid "P2P only"
-msgstr ""
-
-msgid "only communicate with peers that already establish p2p connection. (--p2p-only parameter)"
-msgstr ""
-
-msgid "Disable TCP"
-msgstr ""
-
-msgid "Disable TCP hole punching (--disable-tcp-hole-punching parameter)"
-msgstr ""
-
-msgid "Disable sym"
-msgstr ""
-
-msgid "if true, disable udp nat hole punching for symmetric nat (NAT4), which is based on birthday attack and may be blocked by ISP. (--disable-sym-hole-punching parameter)"
-msgstr ""
-
-msgid "UDP whitelist"
-msgstr ""
-
-msgid "udp port whitelist. Supports single ports (53) and ranges (5000-6000). (--udp-whitelist parameter)"
-msgstr ""
-
-msgid "TCP whitelist"
-msgstr ""
-
-msgid "tcp port whitelist. Supports single ports (53) and ranges (5000-6000). (--tcp-whitelist parameter)"
-msgstr ""
-
-msgid "Disable relay kcp"
-msgstr ""
-
-msgid "If true, disable relay kcp packets. avoid consuming too many bandwidth. default is false. (--disable-relay-kcp parameter)"
-msgstr ""
-
-msgid "Relay foreign network kcp"
-msgstr ""
-
-msgid "If true, allow relay kcp packets from foreign network. default is false (not forward foreign network kcp packets). (--enable-relay-foreign-network-kcp parameter)"
-msgstr ""
-
-msgid "Auto Configure Interface"
-msgstr ""
-
-msgid "Automatically create and configure the EasyTier network interface"
-msgstr ""
-
-msgid "Interface Netmask"
-msgstr ""
-
-msgid "Subnet mask for the EasyTier interface (default: 255.0.0.0)"
-msgstr ""
-
-msgid "Auto Configure Firewall"
-msgstr ""
-
-msgid "Automatically add and manage firewall rules"
-msgstr ""
-
-msgid "GitHub Proxy URLs"
-msgstr ""
-
-msgid "Used to accelerate GitHub downloads when fetching binaries online"
-msgstr ""
-
-msgid "Add"
-msgstr ""
-
-msgid "Delete"
-msgstr ""
-
-msgid "No proxy configured"
-msgstr ""
-
-msgid "No proxy configured, using default proxy"
-msgstr ""
-
-msgid "Please enter proxy URL"
-msgstr ""
-
-msgid "Invalid URL format"
-msgstr ""
-
-msgid "Proxy already exists"
-msgstr ""
-
-msgid "Proxy added successfully"
-msgstr ""
-
-msgid "Space-separated list of GitHub proxy URLs for downloading binaries. Leave empty to use default proxies."
-msgstr ""
-
-msgid "Fallback Version"
-msgstr ""
-
-msgid "Fallback version to use when unable to fetch the latest version from GitHub."
-msgstr ""
-
-msgid "Logs"
-msgstr ""
-
-msgid "EasyTier Core"
-msgstr ""
-
-msgid "EasyTier Web"
-msgstr ""
-
-msgid "All Levels"
-msgstr ""
-
-msgid "Auto Refresh"
-msgstr ""
-
-msgid "Stop Auto Refresh"
-msgstr ""
-
-msgid "Start Auto Refresh"
-msgstr ""
-
-msgid "Clear Logs"
-msgstr ""
-
-msgid "Download Log"
-msgstr ""
-
-msgid "Loading logs..."
-msgstr ""
-
-msgid "No logs available"
-msgstr ""
-
-msgid "Logs cleared"
-msgstr ""
-
-msgid "Settings"
-msgstr ""
-
-msgid "Running"
-msgstr ""
-
-msgid "Stopped"
-msgstr ""
-
-msgid "Memory"
-msgstr ""
-
-msgid "Uptime"
-msgstr ""
-
-msgid "Version"
-msgstr ""
-
-msgid "Refresh Version"
-msgstr ""
-
-msgid "Clear cached version and fetch latest version from GitHub?"
-msgstr ""
-
-msgid "Cancel"
-msgstr ""
-
-msgid "Confirm"
-msgstr ""
-
-msgid "Web Console"
-msgstr ""
-
-msgid "Service not running"
-msgstr ""
-
-msgid "Collecting data..."
-msgstr ""
-
-msgid "New"
-msgstr ""
-
-msgid "Unknown"
-msgstr ""
-
-msgid "Quick Actions"
-msgstr ""
-
-msgid "Restart Service"
-msgstr ""
-
-msgid "Restart EasyTier service?"
-msgstr ""
-
-msgid "Please wait, operation in progress..."
-msgstr ""
-
-msgid "Restarting service..."
-msgstr ""
-
-msgid "Upload Program"
-msgstr ""
-
-msgid "Upload EasyTier Binary"
-msgstr ""
-
-msgid "Drag and drop file here or click to browse"
-msgstr ""
-
-msgid "Select File"
-msgstr ""
-
-msgid "Uploading..."
-msgstr ""
-
-msgid "Supported Files"
-msgstr ""
-
-msgid "Core service binary"
-msgstr ""
-
-msgid "Command line tool"
-msgstr ""
-
-msgid "Web console binary"
-msgstr ""
-
-msgid "Embedded web console"
-msgstr ""
-
-msgid "Download from"
-msgstr ""
-
-msgid "Upload Successful"
-msgstr ""
-
-msgid "Binary uploaded successfully. Restart the service to apply changes?"
-msgstr ""
-
-msgid "Restart the service to apply changes?"
-msgstr ""
-
-msgid "Later"
-msgstr ""
-
-msgid "Restart Now"
-msgstr ""
-
-msgid "Invalid file name"
-msgstr ""
-
-msgid "Only easytier binaries or compressed archives (.zip, .tar.gz, .tar) are allowed"
-msgstr ""
-
-msgid "Upload failed"
-msgstr ""
-
-msgid "Network error"
-msgstr ""
-
-msgid "Service restarted successfully"
-msgstr ""
-
-msgid "Restart failed"
-msgstr ""
-
-msgid "No changes to save"
-msgstr ""
-
-msgid "Configuration"
-msgstr ""
-
-msgid "Save Configuration"
-msgstr ""
-
-msgid "Configuration saved successfully"
-msgstr ""
-
-msgid "Save failed"
-msgstr ""
-
-msgid "Recommended"
-msgstr ""
-
-msgid "Will be ignored, use embed version instead"
-msgstr ""
-
-msgid "Note"
-msgstr ""
-
-msgid "Files will be uploaded to the paths specified above"
-msgstr ""
-
-msgid "EasyTier console uses easytier-web-embed. The easytier-web binary will be rejected during upload validation."
-msgstr ""
-
-msgid "Compressed archive containing binaries"
-msgstr ""
-
-msgid "Drag *.tar.gz / *.zip / easytier binaries here or click to select file"
-msgstr ""
-
-msgid "Used when unable to fetch the latest version during online download"
-msgstr ""
-
-msgid "Error: Program not running! Please start the program and refresh"
-msgstr ""
-
-msgid "Status"
-msgstr ""
-
-msgid "Failed to connect to RPC server. Please check if the RPC port is set to 15888 in the configuration."
-msgstr ""
-
-msgid "Self-hosted Web Console"
-msgstr ""
-
-msgid "Enable Self-hosted Web Console"
-msgstr ""
-
-msgid "Log Level"
-msgstr ""
-
-msgid "Runtime log located at"
-msgstr ""
-
-msgid "viewable in the log section"
-msgstr ""
-
-msgid "Log levels"
-msgstr ""
-
-msgid "parameter"
-msgstr ""
-
-msgid "Example"
-msgstr ""
-
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:648
 msgid "current device IP or domain"
 msgstr ""
 
-msgid "API port"
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:217
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:269
+msgid "default"
 msgstr ""
 
-msgid "GeoIP2 database file path used to locate the client"
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:342
+msgid "easytier-core Binary Path"
 msgstr ""
 
-msgid "Defaults to an embedded file (country-level information only)"
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:350
+msgid "easytier-web Binary Path"
 msgstr ""
 
-msgid "GEOIP Database Path"
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/controller/easytier.lua:528
+msgid ""
+"easytier-web is not used by this plugin, please upload easytier-web-embed"
 msgstr ""
 
-msgid "Copy"
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:237
+msgid ""
+"encryption algorithm to use, supported: xor, chacha20, aes-gcm, aes-256-gcm, "
+"openssl-aes-gcm, openssl-chacha20, openssl-aes-256-gcm. default (aes-gcm) (--"
+"encryption-algorithm parameter)"
 msgstr ""
 
-msgid "Copied"
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:877
+msgid "failed to connect to server"
 msgstr ""
 
-msgid "Duplicate extra parameter"
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:876
+msgid "failed to get peer center client"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:875
+msgid "failed to get peer manager client"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:888
+msgid "fragment"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:884
+msgid "host"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:342
+msgid ""
+"if true, disable udp nat hole punching for symmetric nat (NAT4), which is "
+"based on birthday attack and may be blocked by ISP. (--disable-sym-hole-"
+"punching parameter)"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:81
+msgid ""
+"ipv6 address of this vpn node, can be used together with ipv4 for dual-stack "
+"operation(--ipv6 parameter)"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:617
+msgid "localhost only"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:830
+msgid "no running instances found"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:322
+msgid ""
+"only communicate with peers that already establish p2p connection. (--p2p-"
+"only parameter)"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:245
+msgid "openssl-aes-256-gcm"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:243
+msgid "openssl-aes-gcm"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:244
+msgid "openssl-chacha20"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:616
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:629
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:647
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:655
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:666
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:677
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:711
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:717
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:723
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:730
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:737
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:744
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:751
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:763
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:785
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:792
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:798
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:805
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:811
+msgid "parameter"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:883
+msgid "password"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:886
+msgid "path"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:885
+msgid "port"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:887
+msgid "query"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:122
+msgid ""
+"rpc portal whitelist, only allow these addresses to access rpc portal (--rpc-"
+"portal-whitelist parameter)"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:880
+msgid "scheme"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:338
+msgid ""
+"tcp port whitelist. Supports single ports (53) and ranges (5000-6000). (--"
+"tcp-whitelist parameter)"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:405
+msgid ""
+"the maximum bps limit for foreign network relay, default is no limit. unit: "
+"BPS (bytes per second). (--foreign-relay-bps-limit parameter)"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:253
+msgid ""
+"the number of threads to use, default is 2, only effective when multi-thread "
+"is enabled, must be greater than 2 (--multi-thread-count parameter)"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:330
+msgid ""
+"udp port whitelist. Supports single ports (53) and ranges (5000-6000). (--"
+"udp-whitelist parameter)"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:882
+msgid "username"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_web.htm:690
+msgid "viewable in the log section"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_log.htm:473
+msgid "web log"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:239
+msgid "xor"
+msgstr ""
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:270
+msgid "zstd"
 msgstr ""
