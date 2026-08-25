@@ -329,11 +329,11 @@ protocol = "http://"
 	.et-status-card {
 		padding: 16px;
 	}
-	
+
 	.et-metrics-grid {
 		grid-template-columns: 1fr;
 	}
-	
+
 	.et-service-section {
 		padding: 12px 0;
 	}
@@ -528,13 +528,13 @@ function createSVGCircle(percent, color, size) {
 	var radius = (size - 8) / 2;
 	var circumference = 2 * Math.PI * radius;
 	var offset = circumference - (percent / 100) * circumference;
-	
+
 	return '<svg width="' + size + '" height="' + size + '" viewBox="0 0 ' + size + ' ' + size + '" style="transform:rotate(-90deg)">' +
 		'<circle cx="' + size/2 + '" cy="' + size/2 + '" r="' + radius + '" fill="none" stroke="' + (document.documentElement.getAttribute('data-theme') === 'dark' ? '#3e3e3e' : '#e0e0e0') + '" stroke-width="3"/>' +
 		'<circle cx="' + size/2 + '" cy="' + size/2 + '" r="' + radius + '" fill="none" stroke="' + color + '" stroke-width="3" ' +
 		'stroke-dasharray="' + circumference + '" stroke-dashoffset="' + offset + '" ' +
 		'stroke-linecap="round" style="transition:stroke-dashoffset 0.5s ease"/>' +
-		'<text x="' + size/2 + '" y="' + size/2 + '" text-anchor="middle" dy="0.3em" fill="' + color + '" font-size="8" font-weight="bold" transform="rotate(90 ' + size/2 + ' ' + size/2 + ')">' + 
+		'<text x="' + size/2 + '" y="' + size/2 + '" text-anchor="middle" dy="0.3em" fill="' + color + '" font-size="8" font-weight="bold" transform="rotate(90 ' + size/2 + ' ' + size/2 + ')">' +
 		Math.round(percent) + '</text>' +
 		'</svg>';
 }
@@ -609,37 +609,37 @@ function renderService(name, data, isRunning) {
 	html += '<span class="et-status-dot"></span>';
 	html += isRunning ? '<%=translate("Running")%>' : '<%=translate("Stopped")%>';
 	html += '</div></div>';
-	
+
 	if (isRunning) {
 		var cpuPercent = parseCPU(data.cpu || '0%');
 		var memLevel = parseMem(data.mem || '0 MB');
 		var uptimePercent = parseUptime(data.uptime || '0m');
 		var versionInfo = compareVersion(data.version, data.latest);
 		var colors = getComputedStyle(document.documentElement);
-		
+
 		html += '<div class="et-metrics-grid">';
-		
+
 		html += '<div class="et-metric-item">';
 		html += '<div class="et-metric-icon">' + createSVGCircle(cpuPercent, getColorByPercent(cpuPercent, 'cpu'), 36) + '</div>';
 		html += '<div class="et-metric-info">';
 		html += '<div class="et-metric-label">CPU</div>';
 		html += '<div class="et-metric-value">' + (data.cpu || '-') + '</div>';
 		html += '</div></div>';
-		
+
 		html += '<div class="et-metric-item">';
 		html += '<div class="et-metric-icon">' + createSVGIcon('memory', getMemColor(data.mem || '0 MB')) + '</div>';
 		html += '<div class="et-metric-info">';
 		html += '<div class="et-metric-label"><%=translate("Memory")%></div>';
 		html += '<div class="et-metric-value mem-level-' + memLevel + '">' + (data.mem || '-') + '</div>';
 		html += '</div></div>';
-		
+
 		html += '<div class="et-metric-item">';
 		html += '<div class="et-metric-icon">' + createSVGIcon('clock', colors.getPropertyValue('--info').trim()) + '</div>';
 		html += '<div class="et-metric-info">';
 		html += '<div class="et-metric-label"><%=translate("Uptime")%></div>';
 		html += '<div class="et-metric-value">' + (data.uptime || '-') + '</div>';
 		html += '</div></div>';
-		
+
 		var serviceType = name.indexOf('Core') !== -1 ? 'core' : 'web';
 		html += '<div class="et-metric-item" onclick="showVersionModal(\'' + serviceType + '\')" style="cursor:pointer;">';
 		html += '<div class="et-metric-icon">' + createSVGIcon('version', versionInfo.match ? colors.getPropertyValue('--success').trim() : colors.getPropertyValue('--warning').trim()) + '</div>';
@@ -653,15 +653,15 @@ function renderService(name, data, isRunning) {
 		}
 		html += '</div>';
 		html += '</div></div>';
-		
+
 		html += '</div>';
-		
+
 		if (data.port && data.port !== 0) {
 			html += '<button class="et-btn" onclick="window.open(\'<%=protocol%>' + window.location.hostname + ':' + data.port + '\')"><%=translate("Web Console")%></button>';
 		}
 	}
 	// 未运行时不显示额外内容，header的"Stopped"徽章已经足够
-	
+
 	html += '</div>';
 	return html;
 }
@@ -669,7 +669,7 @@ function renderService(name, data, isRunning) {
 function updateStatus(data) {
 	var container = document.getElementById('easytier_status');
 	if (!data || !container) return;
-	
+
 	var html = '';
 	html += renderService('EasyTier Core', {
 		cpu: data.etcpu,
@@ -678,7 +678,7 @@ function updateStatus(data) {
 		version: data.ettag,
 		latest: data.etnewtag
 	}, data.crunning);
-	
+
 	html += renderService('EasyTier Web', {
 		cpu: data.etwebcpu,
 		mem: data.etwebram,
@@ -687,7 +687,7 @@ function updateStatus(data) {
 		latest: data.etnewtag,
 		port: data.port
 	}, data.wrunning);
-	
+
 	container.innerHTML = html;
 }
 
@@ -727,26 +727,26 @@ function closeRestartModal() {
 
 function confirmRestart() {
 	closeRestartModal();
-	
+
 	if (actionCooldown) {
 		showToast('<%=translate("Please wait, operation in progress...")%>');
 		return;
 	}
-	
+
 	actionCooldown = true;
 	setControlsDisabled(true);
 	showToast('<%=translate("Restarting service...")%>');
-	
+
 	var xhr = new XMLHttpRequest();
 	xhr.open('GET', '<%=url("admin", "vpn", "easytier", "restart_service")%>', true);
 	xhr.onload = function() {
-		setTimeout(function() { 
+		setTimeout(function() {
 			actionCooldown = false;
 			setControlsDisabled(false);
 		}, 5000);
 	};
 	xhr.onerror = function() {
-		setTimeout(function() { 
+		setTimeout(function() {
 			actionCooldown = false;
 			setControlsDisabled(false);
 		}, 5000);
@@ -765,20 +765,20 @@ function toggleCore(enabled) {
 		document.getElementById('coreSwitch').checked = !enabled;
 		return;
 	}
-	
+
 	actionCooldown = true;
 	setControlsDisabled(true);
-	
+
 	var xhr = new XMLHttpRequest();
 	xhr.open('GET', '<%=url("admin", "vpn", "easytier", "toggle_core")%>?enabled=' + (enabled ? '1' : '0'), true);
 	xhr.onload = function() {
-		setTimeout(function() { 
+		setTimeout(function() {
 			actionCooldown = false;
 			setControlsDisabled(false);
 		}, 3000);
 	};
 	xhr.onerror = function() {
-		setTimeout(function() { 
+		setTimeout(function() {
 			actionCooldown = false;
 			setControlsDisabled(false);
 		}, 3000);
@@ -791,20 +791,20 @@ function toggleWeb(enabled) {
 		document.getElementById('webSwitch').checked = !enabled;
 		return;
 	}
-	
+
 	actionCooldown = true;
 	setControlsDisabled(true);
-	
+
 	var xhr = new XMLHttpRequest();
 	xhr.open('GET', '<%=url("admin", "vpn", "easytier", "toggle_web")%>?enabled=' + (enabled ? '1' : '0'), true);
 	xhr.onload = function() {
-		setTimeout(function() { 
+		setTimeout(function() {
 			actionCooldown = false;
 			setControlsDisabled(false);
 		}, 3000);
 	};
 	xhr.onerror = function() {
-		setTimeout(function() { 
+		setTimeout(function() {
 			actionCooldown = false;
 			setControlsDisabled(false);
 		}, 3000);
@@ -840,10 +840,10 @@ var lastTunTx = 0;
 function initTunTrafficChart() {
 	var canvas = document.getElementById('tun_traffic_chart');
 	if (!canvas || tunTrafficChart) return;
-	
+
 	canvas.width = canvas.offsetWidth;
 	canvas.height = 200;
-	
+
 	tunTrafficChart = {
 		canvas: canvas,
 		ctx: canvas.getContext('2d'),
@@ -853,31 +853,31 @@ function initTunTrafficChart() {
 
 function updateTunTrafficChart() {
 	if (!tunTrafficChart) return;
-	
+
 	var ctx = tunTrafficChart.ctx;
 	var canvas = tunTrafficChart.canvas;
 	var data = tunTrafficChart.data;
-	
+
 	canvas.width = canvas.offsetWidth;
-	
+
 	var colors = getComputedStyle(document.documentElement);
 	var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-	
+
 	ctx.clearRect(0, 0, canvas.width, canvas.height);
-	
+
 	if (data.labels.length === 0) return;
-	
+
 	var paddingLeft = 70;
 	var paddingRight = 20;
 	var paddingTop = 30;
 	var paddingBottom = 30;
 	var width = canvas.width - paddingLeft - paddingRight;
 	var height = canvas.height - paddingTop - paddingBottom;
-	
+
 	var maxValue = Math.max.apply(null, data.rx.concat(data.tx));
 	if (maxValue === 0) maxValue = 100;
 	maxValue = maxValue * 1.2;
-	
+
 	ctx.strokeStyle = isDark ? '#3e3e3e' : '#e8e8e8';
 	ctx.lineWidth = 1;
 	ctx.beginPath();
@@ -887,7 +887,7 @@ function updateTunTrafficChart() {
 		ctx.lineTo(paddingLeft + width, y);
 	}
 	ctx.stroke();
-	
+
 	ctx.fillStyle = colors.getPropertyValue('--text-secondary').trim();
 	ctx.font = '11px sans-serif';
 	ctx.textAlign = 'right';
@@ -897,36 +897,36 @@ function updateTunTrafficChart() {
 		var value = maxValue * (1 - i / 5);
 		ctx.fillText(formatBytes(value) + '/s', paddingLeft - 10, y);
 	}
-	
+
 	function drawLine(dataArray, color) {
 		if (dataArray.length < 2) return;
-		
+
 		var gradient = ctx.createLinearGradient(0, paddingTop, 0, paddingTop + height);
 		gradient.addColorStop(0, color + '40');
 		gradient.addColorStop(1, color + '00');
-		
+
 		ctx.beginPath();
 		ctx.moveTo(paddingLeft, paddingTop + height);
-		
+
 		for (var i = 0; i < dataArray.length; i++) {
 			var x = paddingLeft + (width / (dataArray.length - 1)) * i;
 			var y = paddingTop + height - (dataArray[i] / maxValue) * height;
 			ctx.lineTo(x, y);
 		}
-		
+
 		ctx.lineTo(paddingLeft + width, paddingTop + height);
 		ctx.closePath();
 		ctx.fillStyle = gradient;
 		ctx.fill();
-		
+
 		ctx.strokeStyle = color;
 		ctx.lineWidth = 2.5;
 		ctx.beginPath();
-		
+
 		for (var i = 0; i < dataArray.length; i++) {
 			var x = paddingLeft + (width / (dataArray.length - 1)) * i;
 			var y = paddingTop + height - (dataArray[i] / maxValue) * height;
-			
+
 			if (i === 0) {
 				ctx.moveTo(x, y);
 			} else {
@@ -934,29 +934,29 @@ function updateTunTrafficChart() {
 			}
 		}
 		ctx.stroke();
-		
+
 		if (dataArray.length > 0) {
 			var lastX = paddingLeft + width;
 			var lastY = paddingTop + height - (dataArray[dataArray.length - 1] / maxValue) * height;
-			
+
 			ctx.beginPath();
 			ctx.arc(lastX, lastY, 4, 0, 2 * Math.PI);
 			ctx.fillStyle = color;
 			ctx.fill();
 		}
 	}
-	
+
 	drawLine(data.rx, colors.getPropertyValue('--success').trim());
 	drawLine(data.tx, colors.getPropertyValue('--info').trim());
-	
+
 	ctx.fillStyle = colors.getPropertyValue('--text-secondary').trim();
 	ctx.font = '10px sans-serif';
 	ctx.textAlign = 'center';
-	
+
 	var isMobile = canvas.width < 600;
 	var maxLabels = isMobile ? 4 : 6;
 	var step = Math.max(1, Math.floor(data.labels.length / maxLabels));
-	
+
 	for (var i = 0; i < data.labels.length; i += step) {
 		var x = paddingLeft + (width / (data.labels.length - 1)) * i;
 		ctx.fillText(data.labels[i], x, paddingTop + height + 20);
@@ -973,14 +973,14 @@ function formatBytes(bytes) {
 
 function updateTunInterface(coreRunning, noTun, devName) {
 	var card = document.getElementById('tun_interface_card');
-	
+
 	if (!coreRunning || noTun) {
 		card.style.display = 'none';
 		return;
 	}
-	
+
 	var ifname = devName || 'tun0';
-	
+
 	var xhr = new XMLHttpRequest();
 	xhr.open('GET', '<%=url("admin", "vpn", "easytier", "get_tun_info")%>?ifname=' + encodeURIComponent(ifname), true);
 	xhr.onload = function() {
@@ -990,20 +990,20 @@ function updateTunInterface(coreRunning, noTun, devName) {
 				if (response.success && response.exists) {
 					card.style.display = 'block';
 					document.getElementById('tun_interface_name').textContent = ifname;
-					
+
 					var html = '';
 					html += '<div class="et-metric-item">';
 					html += '<div class="et-metric-info">';
 					html += '<div class="et-metric-label">IPv4 <%=translate("Address")%></div>';
 					html += '<div class="et-metric-value">' + (response.ip || '-') + '</div>';
 					html += '</div></div>';
-					
+
 					html += '<div class="et-metric-item">';
 					html += '<div class="et-metric-info">';
 					html += '<div class="et-metric-label"><%=translate("Interface Netmask")%></div>';
 					html += '<div class="et-metric-value">' + (response.netmask || '-') + '</div>';
 					html += '</div></div>';
-					
+
 					if (response.ipv6) {
 						html += '<div class="et-metric-item">';
 						html += '<div class="et-metric-info">';
@@ -1011,56 +1011,56 @@ function updateTunInterface(coreRunning, noTun, devName) {
 						html += '<div class="et-metric-value">' + response.ipv6 + '</div>';
 						html += '</div></div>';
 					}
-					
+
 					html += '<div class="et-metric-item">';
 					html += '<div class="et-metric-info">';
 					html += '<div class="et-metric-label">MTU</div>';
 					html += '<div class="et-metric-value">' + (response.mtu || '-') + '</div>';
 					html += '</div></div>';
-					
+
 					html += '<div class="et-metric-item">';
 					html += '<div class="et-metric-info">';
 					html += '<div class="et-metric-label"><%=translate("State")%></div>';
 					html += '<div class="et-metric-value">' + (response.state || '-') + '</div>';
 					html += '</div></div>';
-					
+
 					document.getElementById('tun_interface_info').innerHTML = html;
-					
+
 					if (!tunTrafficChart) {
 						initTunTrafficChart();
 					}
-					
+
 					var now = new Date();
 					var timeStr = now.getHours() + ':' + ('0' + now.getMinutes()).slice(-2) + ':' + ('0' + now.getSeconds()).slice(-2);
-					
+
 					var rxSpeed = 0;
 					var txSpeed = 0;
-					
+
 					if (lastTunRx > 0 && response.rx_bytes > lastTunRx) {
 						rxSpeed = (response.rx_bytes - lastTunRx) / 3;
 					}
 					if (lastTunTx > 0 && response.tx_bytes > lastTunTx) {
 						txSpeed = (response.tx_bytes - lastTunTx) / 3;
 					}
-					
+
 					lastTunRx = response.rx_bytes;
 					lastTunTx = response.tx_bytes;
-					
+
 					document.getElementById('tun_rx_speed').textContent = formatBytes(rxSpeed) + '/s';
 					document.getElementById('tun_tx_speed').textContent = formatBytes(txSpeed) + '/s';
 					document.getElementById('tun_total_rx').textContent = formatBytes(response.rx_bytes);
 					document.getElementById('tun_total_tx').textContent = formatBytes(response.tx_bytes);
-					
+
 					tunTrafficData.labels.push(timeStr);
 					tunTrafficData.rx.push(rxSpeed);
 					tunTrafficData.tx.push(txSpeed);
-					
+
 					if (tunTrafficData.labels.length > 20) {
 						tunTrafficData.labels.shift();
 						tunTrafficData.rx.shift();
 						tunTrafficData.tx.shift();
 					}
-					
+
 					updateTunTrafficChart();
 				} else {
 					card.style.display = 'none';
@@ -1074,19 +1074,19 @@ function updateTunInterface(coreRunning, noTun, devName) {
 }
 
 var firstLoad = true;
-XHR.poll(3, '<%=url("admin", "vpn", "easytier", "api_status")%>', null, function(x, data) {
+XHR.poll(5, '<%=url("admin", "vpn", "easytier", "api_status")%>', null, function(x, data) {
 	if (!data) return;
 	updateStatus(data);
-	
+
 	updateTunInterface(data.crunning, data.no_tun, data.dev_name);
-	
+
 	// 使用配置值初始化开关状态
 	var coreSwitch = document.getElementById('coreSwitch');
 	var webSwitch = document.getElementById('webSwitch');
-	
+
 	coreSwitch.checked = data.cenabled;
 	webSwitch.checked = data.wenabled;
-	
+
 	// 首次加载完成后启用控件
 	if (firstLoad && !actionCooldown) {
 		setControlsDisabled(false);
