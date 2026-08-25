@@ -11,5 +11,3 @@ network_secret = "mysecret"
 
 [[peer]]
 uri = "tcp://public.easytier.top:11010"
-
-

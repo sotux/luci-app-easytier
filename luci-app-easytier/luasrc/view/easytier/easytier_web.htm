@@ -592,7 +592,7 @@ input:disabled + .slider {
 				<input type="number" class="form-control" id="web_port" name="web_port" placeholder="22020" min="1" max="65535">
 				<span class="description"><%:Configure the server's listening port for easytier-core to connect. (-c parameter)%></span>
 			</div>
-		
+
 			<div class="form-group">
 				<div class="checkbox-wrapper">
 					<label for="web_fw_web"><%:WAN access to WEB%></label>
@@ -609,7 +609,7 @@ input:disabled + .slider {
 				<input type="number" class="form-control" id="web_api_port" name="web_api_port" placeholder="11211" min="1" max="65535">
 				<span class="description"><%:Listening port of the RESTful server, used as ApiHost by the web frontend. (-a parameter)%></span>
 			</div>
-			
+
 			<div class="form-group">
 				<label for="web_api_addr"><%:API Listen Address%></label>
 				<input type="text" class="form-control" id="web_api_addr" name="web_api_addr" placeholder="0.0.0.0">
@@ -622,7 +622,7 @@ input:disabled + .slider {
 				<input type="number" class="form-control" id="web_html_port" name="web_html_port" placeholder="11211" min="1" max="65535">
 				<span class="description"><%:Frontend listening port for the web dashboard server. Leave empty to disable. (-l parameter)%></span>
 			</div>
-			
+
 			<div class="form-group">
 				<label for="web_html_addr"><%:Web Listen Address%></label>
 				<input type="text" class="form-control" id="web_html_addr" name="web_html_addr" placeholder="0.0.0.0">
@@ -654,7 +654,7 @@ input:disabled + .slider {
 				<span class="description"><%:GeoIP2 database file path used to locate the client%>. <%:Defaults to an embedded file (country-level information only)%>.<br>
 				<%:Recommended%>: <a href="https://github.com/P3TERX/GeoLite.mmdb" target="_blank">https://github.com/P3TERX/GeoLite.mmdb</a> (--geoip-db <%:parameter%>)</span>
 			</div>
-			
+
 			<div class="form-group">
 				<div class="checkbox-wrapper">
 					<label for="web_disable_registration"><%:Disable User Registration%></label>
@@ -690,7 +690,7 @@ input:disabled + .slider {
 				<span class="description"><%:Runtime log located at%> /tmp/easytierweb.log, <%:viewable in the log section%>.<br>
 				<%:Log levels%>: <%:Error%> < <%:Warning%> < <%:Info%> < <%:Debug%> < <%:Trace%></span>
 			</div>
-			
+
 			<!-- OIDC单点登录配置 -->
 			<div style="margin-top:20px;padding-top:16px;border-top:1px dashed var(--border-color);">
 				<div class="form-group">
@@ -812,8 +812,8 @@ input:disabled + .slider {
 					</div>
 				</div>
 			</div>
-			
-			
+
+
 			<div class="btn-group">
 				<button type="button" class="btn btn-primary" onclick="saveConfig()"><%:Save Configuration%></button>
 			</div>
@@ -870,10 +870,10 @@ var originalConfig = {};
 function showAlert(type, message) {
 	var alertBox = document.getElementById('alert_box');
 	if (!alertBox) return;
-	
+
 	alertBox.className = 'alert alert-' + type + ' show';
 	alertBox.textContent = message;
-	
+
 	setTimeout(function() {
 		hideAlert();
 	}, 3000);
@@ -906,7 +906,7 @@ function loadConfig() {
 			document.getElementById('web_disable_registration').checked = data.web_disable_registration === '1';
 			document.getElementById('web_allow_auto_create_user').checked = data.web_allow_auto_create_user === '1';
 			document.getElementById('web_weblog').value = data.web_weblog || 'off';
-			
+
 			// OIDC配置
 			document.getElementById('web_oidc_enabled').checked = data.web_oidc_enabled === '1';
 			document.getElementById('web_oidc_issuer_url').value = data.web_oidc_issuer_url || '';
@@ -918,7 +918,7 @@ function loadConfig() {
 			document.getElementById('web_oidc_frontend_base_url').value = data.web_oidc_frontend_base_url || '';
 			document.getElementById('web_oidc_disable_pkce').checked = data.web_oidc_disable_pkce === '1';
 			toggleOIDCFields();
-		
+
 			// Webhook配置
 			document.getElementById('web_webhook_enabled').checked = data.web_webhook_enabled === '1';
 			document.getElementById('web_webhook_url').value = data.web_webhook_url || '';
@@ -927,10 +927,10 @@ function loadConfig() {
 			document.getElementById('web_web_instance_id').value = data.web_web_instance_id || '';
 			document.getElementById('web_web_instance_api_base_url').value = data.web_web_instance_api_base_url || '';
 			toggleWebhookFields();
-			
+
 			// 保存原始配置
 			originalConfig = JSON.parse(JSON.stringify(data));
-			
+
 			checkWebStatus();
 		}
 	};
@@ -989,13 +989,13 @@ function saveConfig() {
 		showAlert('info', '<%:No changes to save%>');
 		return;
 	}
-	
+
 	var formData = new FormData();
 	var config = getCurrentConfig();
 	for (var key in config) {
 		formData.append(key, config[key]);
 	}
-	
+
 	var xhr = new XMLHttpRequest();
 	xhr.open('POST', '<%=url("admin", "vpn", "easytier", "save_web_config")%>', true);
 	xhr.onload = function() {
@@ -1036,7 +1036,7 @@ function checkWebStatus() {
 			var data = JSON.parse(xhr.responseText);
 			var consoleCard = document.getElementById('consoleCard');
 			var iframe = document.getElementById('webConsoleFrame');
-			
+
 			if (data.running && data.port) {
 				var newSrc = 'http://' + window.location.hostname + ':' + data.port;
 				// 只在URL变化或iframe未加载时才更新，避免闪烁
@@ -1072,7 +1072,7 @@ function closeResetDbModal() {
 
 function confirmResetDb() {
 	var dbPath = document.getElementById('web_db_path').value || '/etc/easytier/et.db';
-	
+
 	var xhr = new XMLHttpRequest();
 	xhr.open('POST', '<%=url("admin", "vpn", "easytier", "reset_database")%>', true);
 	xhr.setRequestHeader('Content-Type', 'application/json');
@@ -1149,7 +1149,7 @@ function closeRestartModal() {
 function restartWebService() {
 	closeRestartModal();
 	showAlert('info', '<%:Restarting service...%>');
-	
+
 	var xhr = new XMLHttpRequest();
 	xhr.open('GET', '<%=url("admin", "vpn", "easytier", "restart_service")%>', true);
 	xhr.onload = function() {

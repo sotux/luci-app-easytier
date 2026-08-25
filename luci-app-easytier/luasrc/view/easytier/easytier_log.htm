@@ -339,7 +339,7 @@ local translate = i18n.translate
 		padding: 10px 12px;
 		gap: 10px;
 	}
-	
+
 	.log-tabs {
 		width: 100%;
 		justify-content: flex-start;
@@ -351,7 +351,7 @@ local translate = i18n.translate
 		font-size: 12px;
 		border-radius: 6px;
 	}
-	
+
 	.log-controls {
 		width: 100%;
 		justify-content: flex-start;
@@ -376,14 +376,14 @@ local translate = i18n.translate
 		line-height: 1.1;
 		border-radius: 6px;
 	}
-	
+
 	.log-content {
 		height: 60vh;
 		min-height: 320px;
 		font-size: 12px;
 		padding: 12px;
 	}
-	
+
 	.log-btn {
 		flex: 0 0 auto;
 		height: 28px;
@@ -513,7 +513,7 @@ function filterLogLevel() {
 	var filter = document.getElementById('log_level_filter').value;
 	var content = document.getElementById('log_content');
 	var lines = content.querySelectorAll('.log-line');
-	
+
 	for (var i = 0; i < lines.length; i++) {
 		var line = lines[i];
 		if (filter === 'all') {
@@ -547,11 +547,11 @@ function switchLog(type) {
 
 function formatLogLine(line) {
 	if (!line || line.trim() === '') return '';
-	
+
 	var timestamp = '';
 	var content = line.trim();
 	var level = 'INFO';
-	
+
 	// 匹配 ISO 8601 格式: 2026-04-14T20:30:54.744803154+08:00
 	var isoTimeMatch = content.match(/^(\d{4}-\d{2}-\d{2})T(\d{2}:\d{2}:\d{2})\.\d+[+-]\d{2}:\d{2}\s*/);
 	if (isoTimeMatch) {
@@ -565,21 +565,21 @@ function formatLogLine(line) {
 			content = content.substring(simpleTimeMatch[0].length);
 		}
 	}
-	
+
 	// 匹配日志级别
 	var levelMatch = content.match(/^\s*(INFO|WARN|ERROR|DEBUG|TRACE)\s+/i);
 	if (levelMatch) {
 		level = levelMatch[1].toUpperCase();
 		content = content.substring(levelMatch[0].length);
 	}
-	
+
 	var html = '<div class="log-line log-level-' + level + '">';
 	if (timestamp) {
 		html += '<span class="log-timestamp">' + escapeHtml(timestamp) + '</span>';
 	}
 	html += '<span class="log-level-' + level + '">' + escapeHtml(content) + '</span>';
 	html += '</div>';
-	
+
 	return html;
 }
 
@@ -590,34 +590,34 @@ function escapeHtml(text) {
 }
 
 function refreshLog() {
-	var url = currentLog === 'core' 
+	var url = currentLog === 'core'
 		? '<%=url("admin/vpn/easytier/get_log")%>'
 		: '<%=url("admin/vpn/easytier/get_wlog")%>';
-	
+
 	var xhr = new XMLHttpRequest();
 	xhr.open('GET', url, true);
 	xhr.onreadystatechange = function() {
 		if (xhr.readyState === 4 && xhr.status === 200) {
 			var content = document.getElementById('log_content');
 			var rawLog = xhr.responseText || '';
-			
+
 			if (rawLog.trim() === '') {
 				content.innerHTML = '<div class="log-empty"><%=translate("No logs available")%></div>';
 				return;
 			}
-			
+
 			var lines = rawLog.split('\n');
 			var html = '';
-			
+
 			for (var i = 0; i < lines.length; i++) {
 				var line = lines[i];
 				if (!line.trim()) continue;
 				html += formatLogLine(line);
 			}
-			
+
 			content.innerHTML = html;
 			filterLogLevel();
-			
+
 			if (autoRefreshEnabled) {
 				content.scrollTop = content.scrollHeight;
 				updateLogSize();
@@ -628,10 +628,10 @@ function refreshLog() {
 }
 
 function updateLogSize() {
-	var url = currentLog === 'core' 
+	var url = currentLog === 'core'
 		? '<%=url("admin/vpn/easytier/get_log_size")%>'
 		: '<%=url("admin/vpn/easytier/get_wlog_size")%>';
-	
+
 	var xhr = new XMLHttpRequest();
 	xhr.open('GET', url, true);
 	xhr.onreadystatechange = function() {
@@ -640,14 +640,14 @@ function updateLogSize() {
 			var sizeMB = (data.size / 1024 / 1024).toFixed(2);
 			var logPath = currentLog === 'core' ? '/tmp/easytier.log' : '/tmp/easytierweb.log';
 			var sizeClass = '';
-			
+
 			if (sizeMB < 1) sizeClass = 'log-size-1';
 			else if (sizeMB < 2) sizeClass = 'log-size-2';
 			else if (sizeMB < 3) sizeClass = 'log-size-3';
 			else if (sizeMB < 4) sizeClass = 'log-size-4';
 			else sizeClass = 'log-size-5';
-			
-			document.getElementById('log_size_info').innerHTML = 
+
+			document.getElementById('log_size_info').innerHTML =
 				logPath + ': <span class="' + sizeClass + '">' + sizeMB + ' MB</span>';
 		}
 	};
@@ -658,7 +658,7 @@ function clearCurrentLog() {
 	var url = currentLog === 'core'
 		? '<%=url("admin/vpn/easytier/clear_log")%>'
 		: '<%=url("admin/vpn/easytier/clear_wlog")%>';
-	
+
 	var xhr = new XMLHttpRequest();
 	xhr.open('GET', url, true);
 	xhr.onreadystatechange = function() {
@@ -673,15 +673,15 @@ function downloadCurrentLog() {
 	var content = document.getElementById('log_content');
 	var logText = '';
 	var lines = content.querySelectorAll('.log-line');
-	
+
 	for (var i = 0; i < lines.length; i++) {
 		logText += lines[i].innerText + '\n';
 	}
-	
+
 	if (logText.trim() === '') {
 		logText = content.innerText;
 	}
-	
+
 	var blob = new Blob([logText], {type: 'text/plain;charset=utf-8'});
 	var url = window.URL.createObjectURL(blob);
 	var a = document.createElement('a');

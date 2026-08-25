@@ -12,11 +12,11 @@ add_firewall_rule() {
 	local proto="$2"
 	local port="$3"
 	local desc="$4"
-	
+
 	[ -z "$port" ] && return 1
-	
+
 	log_message "INFO" "easytier" "添加防火墙规则 ${rule_name} 放行端口 ${port}" "/tmp/easytier.log"
-	
+
 	uci -q delete "firewall.${rule_name}"
 	uci set "firewall.${rule_name}=rule"
 	uci set "firewall.${rule_name}.name=${rule_name}"
@@ -46,9 +46,9 @@ set_firewall_rules() {
 setup_network_interface() {
 	local tunname="${1:-tun0}"
 	local ipaddr="$2"
-	
+
 	uci -q delete network.EasyTier >/dev/null 2>&1
-	
+
 	if [ -z "$(uci -q get network.EasyTier)" ]; then
 		uci set network.EasyTier='interface'
 		if [ -z "$ipaddr" ]; then
@@ -83,7 +83,7 @@ setup_firewall_zone() {
 # 参数: $1=et_forward 配置值
 setup_forwarding_rules() {
 	local et_forward="$1"
-	
+
 	if [ "${et_forward#*etfwlan}" != "$et_forward" ]; then
 		log_message "INFO" "easytier" "允许从虚拟网络 EasyTier 到局域网 lan 的流量" "/tmp/easytier.log"
 		uci set firewall.easytierfwlan=forwarding
@@ -92,7 +92,7 @@ setup_forwarding_rules() {
 	else
 		uci -q delete firewall.easytierfwlan
 	fi
-	
+
 	if [ "${et_forward#*etfwwan}" != "$et_forward" ]; then
 		log_message "INFO" "easytier" "允许从虚拟网络 EasyTier 到广域网 wan 的流量" "/tmp/easytier.log"
 		uci set firewall.easytierfwwan=forwarding
@@ -101,7 +101,7 @@ setup_forwarding_rules() {
 	else
 		uci -q delete firewall.easytierfwwan
 	fi
-	
+
 	if [ "${et_forward#*lanfwet}" != "$et_forward" ]; then
 		log_message "INFO" "easytier" "允许从局域网 lan 到虚拟网络 EasyTier 的流量" "/tmp/easytier.log"
 		uci set firewall.lanfweasytier=forwarding
@@ -110,7 +110,7 @@ setup_forwarding_rules() {
 	else
 		uci -q delete firewall.lanfweasytier
 	fi
-	
+
 	if [ "${et_forward#*wanfwet}" != "$et_forward" ]; then
 		log_message "INFO" "easytier" "允许从广域网 wan 到虚拟网络 EasyTier 的流量" "/tmp/easytier.log"
 		uci set firewall.wanfweasytier=forwarding
@@ -151,7 +151,7 @@ setup_web_firewall() {
 	local html_port="$3"
 	local fw_web="$4"
 	local fw_api="$5"
-	
+
 	if [ -n "$web_port" ] && [ "$fw_web" = "1" ]; then
 		log_message "INFO" "easytier" "添加防火墙规则 easytier_web 放行服务端口 ${web_port}" "/tmp/easytierweb.log"
 		uci -q delete firewall.easytier_webserver
@@ -163,7 +163,7 @@ setup_web_firewall() {
 		uci set firewall.easytier_webserver.dest_port="$web_port"
 		uci set firewall.easytier_webserver.enabled="1"
 	fi
-	
+
 	if [ -n "$api_port" ] && [ "$fw_api" = "1" ]; then
 		log_message "INFO" "easytier" "添加防火墙规则 easytier_web 放行API端口 ${api_port}" "/tmp/easytierweb.log"
 		uci -q delete firewall.easytier_webapi
@@ -175,7 +175,7 @@ setup_web_firewall() {
 		uci set firewall.easytier_webapi.dest_port="$api_port"
 		uci set firewall.easytier_webapi.enabled="1"
 	fi
-	
+
 	if [ -n "$html_port" ] && [ "$fw_api" = "1" ] && [ "$html_port" != "$api_port" ]; then
 		log_message "INFO" "easytier" "添加防火墙规则 easytier_web 放行html端口 ${html_port}" "/tmp/easytierweb.log"
 		uci -q delete firewall.easytier_webhtml

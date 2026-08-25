@@ -18,18 +18,18 @@ get_tz() {
 get_cpu_arch() {
 	local cputype=$(uname -ms | tr ' ' '_' | tr '[A-Z]' '[a-z]')
 	local cpucore=""
-	
+
 	[ -n "$(echo $cputype | grep -E 'linux.*armv.*')" ] && cpucore="arm"
 	[ -n "$(echo $cputype | grep -E 'linux.*armv7.*')" ] && [ -n "$(cat /proc/cpuinfo | grep vfp)" ] && cpucore="armv7"
 	[ -n "$(echo $cputype | grep -E 'linux.*aarch64.*|linux.*armv8.*')" ] && cpucore="aarch64"
 	[ -n "$(echo $cputype | grep -E 'linux.*86.*')" ] && cpucore="i386"
 	[ -n "$(echo $cputype | grep -E 'linux.*86_64.*')" ] && cpucore="x86_64"
-	
+
 	if [ -n "$(echo $cputype | grep -E 'linux.*mips.*')" ]; then
 		local mipstype=$(echo -n I | hexdump -o 2>/dev/null | awk '{ print substr($2,6,1); exit}')
 		[ "$mipstype" = "0" ] && cpucore="mips" || cpucore="mipsel"
 	fi
-	
+
 	echo "$cpucore"
 }
 
@@ -39,7 +39,7 @@ log_message() {
 	local component="$2"
 	local message="$3"
 	local logfile="${4:-/tmp/easytier.log}"
-	
+
 	echo "$(date '+%Y-%m-%d %H:%M:%S') ${component} : ${message}" >> "$logfile"
 }
 
@@ -48,7 +48,7 @@ manage_log_size() {
 	local logfile="$1"
 	local max_size_kb="${2:-5120}"
 	local keep_lines="${3:-500}"
-	
+
 	while true; do
 		local log_size=$(ls -l "$logfile" 2>/dev/null | awk '{print int($5/1024)}')
 		if [ "${log_size:-0}" -gt "$max_size_kb" ]; then
