@@ -377,10 +377,6 @@ msgstr "连接器"
 msgid "Connectors"
 msgstr "连接器"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:683
-msgid "Contributors"
-msgstr "贡献者"
-
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:358
 msgid ""
 "Convert TCP traffic to KCP traffic to reduce latency and improve speed."
@@ -1417,8 +1413,8 @@ msgid ""
 msgstr ""
 "官方 Web 控制台：<a href=\"https://easytier.cn/web\" "
 "target=\"_blank\">https://easytier.cn/web</a><br>官方配置文件"
-生成器：<a href=\"https://easytier.cn/web/index.html#/config_generator\" "
-target=\"_blank\">https://easytier.cn/web/index.html#/config_generator</"
+"生成器：<a href=\"https://easytier.cn/web/index.html#/config_generator\" "
+"target=\"_blank\">https://easytier.cn/web/index.html#/config_generator</"
 "a><br>注意配置 RPC 端口为 15888"
 
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:389

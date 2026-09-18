@@ -355,10 +355,6 @@ msgstr ""
 msgid "Connectors"
 msgstr ""
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:683
-msgid "Contributors"
-msgstr ""
-
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:358
 msgid ""
 "Convert TCP traffic to KCP traffic to reduce latency and improve speed."
