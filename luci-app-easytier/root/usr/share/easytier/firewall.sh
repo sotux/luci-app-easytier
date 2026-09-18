@@ -143,52 +143,6 @@ clean_firewall_rules() {
 	uci -q delete firewall.easytier_webhtml >/dev/null 2>&1
 }
 
-# 设置 Web 控制台防火墙规则
-# 参数: $1=web_port $2=api_port $3=html_port $4=fw_web $5=fw_api
-setup_web_firewall() {
-	local web_port="$1"
-	local api_port="$2"
-	local html_port="$3"
-	local fw_web="$4"
-	local fw_api="$5"
-
-	if [ -n "$web_port" ] && [ "$fw_web" = "1" ]; then
-		log_message "INFO" "easytier" "添加防火墙规则 easytier_web 放行服务端口 ${web_port}" "/tmp/easytierweb.log"
-		uci -q delete firewall.easytier_webserver
-		uci set firewall.easytier_webserver=rule
-		uci set firewall.easytier_webserver.name="easytier_webserver"
-		uci set firewall.easytier_webserver.target="ACCEPT"
-		uci set firewall.easytier_webserver.src="wan"
-		uci set firewall.easytier_webserver.proto="tcp udp"
-		uci set firewall.easytier_webserver.dest_port="$web_port"
-		uci set firewall.easytier_webserver.enabled="1"
-	fi
-
-	if [ -n "$api_port" ] && [ "$fw_api" = "1" ]; then
-		log_message "INFO" "easytier" "添加防火墙规则 easytier_web 放行API端口 ${api_port}" "/tmp/easytierweb.log"
-		uci -q delete firewall.easytier_webapi
-		uci set firewall.easytier_webapi=rule
-		uci set firewall.easytier_webapi.name="easytier_webapi"
-		uci set firewall.easytier_webapi.target="ACCEPT"
-		uci set firewall.easytier_webapi.src="wan"
-		uci set firewall.easytier_webapi.proto="tcp"
-		uci set firewall.easytier_webapi.dest_port="$api_port"
-		uci set firewall.easytier_webapi.enabled="1"
-	fi
-
-	if [ -n "$html_port" ] && [ "$fw_api" = "1" ] && [ "$html_port" != "$api_port" ]; then
-		log_message "INFO" "easytier" "添加防火墙规则 easytier_web 放行html端口 ${html_port}" "/tmp/easytierweb.log"
-		uci -q delete firewall.easytier_webhtml
-		uci set firewall.easytier_webhtml=rule
-		uci set firewall.easytier_webhtml.name="easytier_webhtml"
-		uci set firewall.easytier_webhtml.target="ACCEPT"
-		uci set firewall.easytier_webhtml.src="wan"
-		uci set firewall.easytier_webhtml.proto="tcp"
-		uci set firewall.easytier_webhtml.dest_port="$html_port"
-		uci set firewall.easytier_webhtml.enabled="1"
-	fi
-}
-
 # 应用防火墙和网络配置更改（延迟后台执行）
 apply_network_changes() {
 	if [ -n "$(uci changes network)" ] || [ -n "$(uci changes firewall)" ]; then

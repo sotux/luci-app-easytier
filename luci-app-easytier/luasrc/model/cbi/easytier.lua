@@ -20,7 +20,6 @@ etcmd = s:taboption("general", ListValue, "etcmd", translate("Startup Method"),
 etcmd.default = "etcmd"
 etcmd:value("etcmd", translate("Default"))
 etcmd:value("config", translate("Configuration File"))
-etcmd:value("web", translate("Web Configuration"))
 
 et_config = s:taboption("general", TextValue, "et_config", translate("Configuration File"),
         translate("The configuration file is located at /etc/easytier/config.toml<br>"
@@ -42,14 +41,6 @@ et_config.write = function(self, section, value)
     end
     nixio.fs.writefile(file, value:gsub("\r\n", "\n"))
 end
-
-web_config = s:taboption("general", Value, "web_config", translate("Web Server Address"),
-        translate("Web configuration server address. (-w parameter)<br>"
-                .. "For a self-hosted Web server, use the format: udp://server_address:22020/username<br>"
-                .. "For the official Web server, use the format: username<br>"
-                .. "Official Web Console: <a href='https://easytier.cn/web'>easytier.cn/web</a>"))
-web_config.placeholder = "admin"
-web_config:depends("etcmd", "web")
 
 network_name = s:taboption("general", Value, "network_name", translate("Network Name"),
         translate("The network name used to identify this VPN network (--network-name parameter)"))
@@ -137,7 +128,6 @@ tcp_port = s:taboption("general", Value, "tcp_port", translate("TCP/UDP Port"),
 tcp_port.datatype = "range(1,65535)"
 tcp_port.default = "11010"
 tcp_port:depends("listenermode", "ON")
-tcp_port:depends("etcmd", "web")
 
 ws_port = s:taboption("general", Value, "ws_port", translate("WS Port"),
         translate("WS protocol port number: 11011 means WS will listen on port 11011.<br>"
@@ -145,7 +135,6 @@ ws_port = s:taboption("general", Value, "ws_port", translate("WS Port"),
 ws_port.datatype = "range(1,65535)"
 ws_port.default = "11011"
 ws_port:depends("listenermode", "ON")
-ws_port:depends("etcmd", "web")
 
 wss_port = s:taboption("general", Value, "wss_port", translate("WSS Port"),
         translate("WSS protocol port number: 11012 means WSS will listen on port 11012.<br>"
@@ -153,7 +142,6 @@ wss_port = s:taboption("general", Value, "wss_port", translate("WSS Port"),
 wss_port.datatype = "range(1,65535)"
 wss_port.default = "11012"
 wss_port:depends("listenermode", "ON")
-wss_port:depends("etcmd", "web")
 
 wg_port = s:taboption("general", Value, "wg_port", translate("WG Port"),
         translate("WireGuard protocol port number: 11011 means WG will listen on port 11011.<br>"
@@ -161,13 +149,11 @@ wg_port = s:taboption("general", Value, "wg_port", translate("WG Port"),
 wg_port.datatype = "range(1,65535)"
 wg_port.placeholder = "11011"
 wg_port:depends("listenermode", "ON")
-wg_port:depends("etcmd", "web")
 
 quic_port = s:taboption("general", Value, "quic_port", translate("QUIC Port"),
         translate("If this is the Web configuration in the config file, please fill in the same listening port for firewall allowance."))
 quic_port.datatype = "range(1,65535)"
 quic_port:depends("listenermode", "ON")
-quic_port:depends("etcmd", "web")
 
 local model = nixio.fs.readfile("/proc/device-tree/model") or ""
 local hostname = nixio.fs.readfile("/proc/sys/kernel/hostname") or ""
@@ -180,19 +166,6 @@ hostname_opt = s:taboption("general", Value, "desvice_name", translate("Hostname
 hostname_opt.placeholder = device_name_default
 hostname_opt.default = device_name_default
 hostname_opt:depends("etcmd", "etcmd")
-hostname_opt:depends("etcmd", "web")
-
-uuid = s:taboption("general", Value, "uuid", translate("UUID"),
-        translate("Unique identifier used to recognize this device when connecting to the web console, for issuing configuration files"))
-uuid.rows = 1
-uuid.wrap = "off"
-uuid:depends("etcmd", "web")
-uuid.cfgvalue = function(self, section)
-    return nixio.fs.readfile("/etc/easytier/et_machine_id") or ""
-end
-uuid.write = function(self, section, value)
-    nixio.fs.writefile("/etc/easytier/et_machine_id", value:gsub("\r\n", "\n"))
-end
 
 instance_name = s:taboption("privacy", Value, "instance_name", translate("Instance Name"),
         translate("Used to identify the VPN node instance on the same machine. (-m parameter)"))
@@ -226,7 +199,6 @@ tunname = s:taboption("privacy", Value, "tunname", translate("Virtual Network In
                 .. "If using web configuration, please use the same virtual network interface name as in the web config for firewall allowance"))
 tunname.placeholder = "tun0"
 tunname:depends("etcmd", "etcmd")
-tunname:depends("etcmd", "web")
 
 disable_encryption = s:taboption("privacy", Flag, "disable_encryption", translate("Disable Encryption"),
         translate("Disable encryption for communication with peer nodes. "

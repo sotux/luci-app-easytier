@@ -346,14 +346,6 @@ local translate = i18n.translate
 			<div id="easytierbin_size" style="font-size:11px;color:var(--text-secondary);margin-top:2px;"></div>
 		</div>
 		<div style="margin-bottom:16px;">
-			<label style="display:block;font-size:13px;color:var(--text-secondary);margin-bottom:4px;">
-				<%=translate("easytier-web Binary Path")%>
-			</label>
-			<input type="text" id="webbin" class="config-input" placeholder="/usr/bin/easytier-web" onblur="checkDiskSpace('webbin')">
-			<div id="webbin_space" style="font-size:11px;color:var(--text-secondary);margin-top:4px;"></div>
-			<div id="webbin_size" style="font-size:11px;color:var(--text-secondary);margin-top:2px;"></div>
-		</div>
-		<div style="margin-bottom:16px;">
 			<label style="display:block;font-size:13px;font-weight:500;color:var(--text-primary);margin-bottom:8px;">
 				<%=translate("GitHub Proxy URLs")%>
 			</label>
@@ -462,8 +454,6 @@ local translate = i18n.translate
 		<ul class="upload-info-list">
 			<li><strong>easytier-core</strong> - <%=translate("Core service binary")%></li>
 			<li><strong>easytier-cli</strong> - <%=translate("Command line tool")%></li>
-			<li><strong>easytier-web-embed</strong> - <%=translate("Embedded web console")%> <span style="color:var(--success);">(<%=translate("Recommended")%>)</span></li>
-			<li><strong>easytier-web</strong> - <%=translate("Web console binary")%> <span style="color:var(--error);">(<%=translate("Will be ignored, use embed version instead")%>)</span></li>
 			<li><strong>*.zip / *.tar.gz</strong> - <%=translate("Compressed archive containing binaries")%></li>
 		</ul>
 		<div style="margin-top:12px;padding:12px;background:rgba(33,150,243,0.1);border-left:3px solid var(--info);border-radius:4px;">
@@ -471,7 +461,7 @@ local translate = i18n.translate
 				<strong><%=translate("Note")%>:</strong>
 			</div>
 			<div style="font-size:12px;color:var(--text-secondary);line-height:1.6;">
-				<%=translate("Files will be uploaded to the paths specified above")%>. <%=translate("EasyTier console uses easytier-web-embed. The easytier-web binary will be rejected during upload validation.")%>
+				<%=translate("Files will be uploaded to the paths specified above")%>
 			</div>
 		</div>
 		<div style="margin-top:12px;padding:12px;background:rgba(244,67,54,0.1);border-left:3px solid var(--error);border-radius:4px;">
@@ -751,7 +741,6 @@ function loadConfig() {
 			try {
 				var config = JSON.parse(xhr.responseText);
 				document.getElementById('easytierbin').value = config.easytierbin || '/usr/bin/easytier-core';
-				document.getElementById('webbin').value = config.webbin || '/usr/bin/easytier-web';
 
 				// 确保是数组
 				var proxys = config.github_proxys || [];
@@ -763,13 +752,11 @@ function loadConfig() {
 				// 保存原始配置
 				originalConfig = {
 					easytierbin: config.easytierbin || '/usr/bin/easytier-core',
-					webbin: config.webbin || '/usr/bin/easytier-web',
 					github_proxys: JSON.stringify(proxyList),
 					fallback_version: config.fallback_version || 'v2.6.4'
 				};
 
 				checkDiskSpace('easytierbin');
-				checkDiskSpace('webbin');
 			} catch (e) {
 				proxyList = [];
 				renderProxyList();
@@ -817,12 +804,6 @@ function checkDiskSpace(inputId) {
 						} else {
 							sizeHtml += (sizeHtml ? ' | ' : '') + '<span style="color:var(--error);opacity:0.6;">easytier-cli: <%=translate("Program not found")%></span>';
 						}
-					} else if (inputId === 'webbin') {
-						if (response.web_size) {
-							sizeHtml = 'easytier-web ' + response.web_size;
-						} else {
-							sizeHtml = '<span style="color:var(--error);opacity:0.6;">easytier-web: <%=translate("Program not found")%></span>';
-						}
 					}
 					sizeDiv.innerHTML = sizeHtml ? '<span style="color:#999;opacity:0.8;"><%=translate("Program size")%>: ' + sizeHtml + '</span>' : '';
 				} else {
@@ -841,7 +822,6 @@ function checkDiskSpace(inputId) {
 function getCurrentConfig() {
 	return {
 		easytierbin: document.getElementById('easytierbin').value || '/usr/bin/easytier-core',
-		webbin: document.getElementById('webbin').value || '/usr/bin/easytier-web',
 		github_proxys: JSON.stringify(proxyList),
 		fallback_version: versionManager.getCurrentVersion() || 'v2.6.4'
 	};
@@ -866,7 +846,6 @@ function saveConfig() {
 
 	var data = {
 		easytierbin: document.getElementById('easytierbin').value || '/usr/bin/easytier-core',
-		webbin: document.getElementById('webbin').value || '/usr/bin/easytier-web',
 		github_proxys: proxyList,
 		fallback_version: versionManager.getCurrentVersion() || 'v2.6.4'
 	};
@@ -961,7 +940,7 @@ window.onload = function() {
 	alertBox = document.getElementById('alert_box');
 	restartModal = document.getElementById('restart_modal');
 
-	var validNames = ['easytier-core', 'easytier-cli', 'easytier-web', 'easytier-web-embed'];
+	var validNames = ['easytier-core', 'easytier-cli'];
 
 	// 拖放事件
 	uploadArea.addEventListener('dragover', function(e) {
@@ -997,7 +976,7 @@ window.onload = function() {
 };
 
 function handleFile(file) {
-	var validNames = ['easytier-core', 'easytier-cli', 'easytier-web', 'easytier-web-embed'];
+	var validNames = ['easytier-core', 'easytier-cli'];
 	var filename = file.name;
 
 	// 检查是否是压缩文件

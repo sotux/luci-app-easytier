@@ -105,7 +105,7 @@ opkg install kmod-tun
 
 1. 安装插件后，进入 **VPN → EasyTier**
 2. 在 **上传程序** 页面上传EasyTier二进制文件或直接安装包含核心的ipk/apk包（easytier.ipk easytier.apk）
-   - 支持单个文件：`easytier-core`, `easytier-cli`, `easytier-web-embed`
+   - 支持单个文件：`easytier-core`, `easytier-cli`
    - 支持压缩包：`.zip`, `.tar.gz`, `.tar`
 3. 在 **EasyTier Core** 页面配置网络参数
 4. 启用并保存配置
@@ -121,7 +121,6 @@ opkg install kmod-tun
 
 - **状态** - 查看运行状态、版本信息、连接信息和实时流量
 - **EasyTier Core** - 配置核心参数（网络名称、密钥、节点等）
-- **自建控制台** - 配置easytier-web控制台
 - **日志** - 查看运行日志，支持级别过滤
 - **上传程序** - 上传和管理EasyTier二进制文件
 
@@ -265,4 +264,3 @@ sed -i 's/util.pcdata/xml.pcdata/g' /usr/lib/lua/luci/model/cbi/easytier.lua
 欢迎提交 Issue 和 Pull Request！
 
 ---
-

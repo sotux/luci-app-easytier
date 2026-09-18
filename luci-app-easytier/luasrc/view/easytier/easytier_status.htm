@@ -466,15 +466,6 @@ input:checked + .slider:before {
 			</label>
 		</div>
 	</div>
-	<div class="et-action-row">
-		<div class="et-action-label">EasyTier Web</div>
-		<div class="et-action-controls">
-			<label class="switch">
-				<input type="checkbox" id="webSwitch" disabled>
-				<span class="slider"></span>
-			</label>
-		</div>
-	</div>
 </div>
 
 <div class="et-status-card et-status-empty" id="easytier_status">
@@ -640,7 +631,7 @@ function renderService(name, data, isRunning) {
 		html += '<div class="et-metric-value">' + (data.uptime || '-') + '</div>';
 		html += '</div></div>';
 
-		var serviceType = name.indexOf('Core') !== -1 ? 'core' : 'web';
+		var serviceType = 'core';
 		html += '<div class="et-metric-item" onclick="showVersionModal(\'' + serviceType + '\')" style="cursor:pointer;">';
 		html += '<div class="et-metric-icon">' + createSVGIcon('version', versionInfo.match ? colors.getPropertyValue('--success').trim() : colors.getPropertyValue('--warning').trim()) + '</div>';
 		html += '<div class="et-metric-info">';
@@ -655,10 +646,6 @@ function renderService(name, data, isRunning) {
 		html += '</div></div>';
 
 		html += '</div>';
-
-		if (data.port && data.port !== 0) {
-			html += '<button class="et-btn" onclick="window.open(\'<%=protocol%>' + window.location.hostname + ':' + data.port + '\')"><%=translate("Web Console")%></button>';
-		}
 	}
 	// 未运行时不显示额外内容，header的"Stopped"徽章已经足够
 
@@ -678,15 +665,6 @@ function updateStatus(data) {
 		version: data.ettag,
 		latest: data.etnewtag
 	}, data.crunning);
-
-	html += renderService('EasyTier Web', {
-		cpu: data.etwebcpu,
-		mem: data.etwebram,
-		uptime: data.etwebsta,
-		version: data.etwebtag,
-		latest: data.etnewtag,
-		port: data.port
-	}, data.wrunning);
 
 	container.innerHTML = html;
 }
@@ -710,7 +688,6 @@ function showToast(message) {
 
 function setControlsDisabled(disabled) {
 	document.getElementById('coreSwitch').disabled = disabled;
-	document.getElementById('webSwitch').disabled = disabled;
 	document.getElementById('restartBtn').disabled = disabled;
 }
 
@@ -786,46 +763,12 @@ function toggleCore(enabled) {
 	xhr.send();
 }
 
-function toggleWeb(enabled) {
-	if (firstLoad || actionCooldown) {
-		document.getElementById('webSwitch').checked = !enabled;
-		return;
-	}
-
-	actionCooldown = true;
-	setControlsDisabled(true);
-
-	var xhr = new XMLHttpRequest();
-	xhr.open('GET', '<%=url("admin", "vpn", "easytier", "toggle_web")%>?enabled=' + (enabled ? '1' : '0'), true);
-	xhr.onload = function() {
-		setTimeout(function() {
-			actionCooldown = false;
-			setControlsDisabled(false);
-		}, 3000);
-	};
-	xhr.onerror = function() {
-		setTimeout(function() {
-			actionCooldown = false;
-			setControlsDisabled(false);
-		}, 3000);
-	};
-	xhr.send();
-}
-
 document.getElementById('coreSwitch').addEventListener('change', function() {
 	if (firstLoad) {
 		this.checked = !this.checked;
 		return;
 	}
 	toggleCore(this.checked);
-});
-
-document.getElementById('webSwitch').addEventListener('change', function() {
-	if (firstLoad) {
-		this.checked = !this.checked;
-		return;
-	}
-	toggleWeb(this.checked);
 });
 
 var tunTrafficData = {
@@ -1082,10 +1025,8 @@ XHR.poll(5, '<%=url("admin", "vpn", "easytier", "api_status")%>', null, function
 
 	// 使用配置值初始化开关状态
 	var coreSwitch = document.getElementById('coreSwitch');
-	var webSwitch = document.getElementById('webSwitch');
 
 	coreSwitch.checked = data.cenabled;
-	webSwitch.checked = data.wenabled;
 
 	// 首次加载完成后启用控件
 	if (firstLoad && !actionCooldown) {

@@ -469,9 +469,6 @@ local translate = i18n.translate
 			<button class="log-tab active" data-log="core" onclick="switchLog('core')">
 				<%=translate("core log")%>
 			</button>
-			<button class="log-tab" data-log="web" onclick="switchLog('web')">
-				<%=translate("web log")%>
-			</button>
 			<a class="log-wiki-link" href="https://deepwiki.com/EasyTier/EasyTier" target="_blank">
 				<img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki">
 			</a>
@@ -590,9 +587,7 @@ function escapeHtml(text) {
 }
 
 function refreshLog() {
-	var url = currentLog === 'core'
-		? '<%=url("admin/vpn/easytier/get_log")%>'
-		: '<%=url("admin/vpn/easytier/get_wlog")%>';
+	var url = '<%=url("admin/vpn/easytier/get_log")%>';
 
 	var xhr = new XMLHttpRequest();
 	xhr.open('GET', url, true);
@@ -628,9 +623,7 @@ function refreshLog() {
 }
 
 function updateLogSize() {
-	var url = currentLog === 'core'
-		? '<%=url("admin/vpn/easytier/get_log_size")%>'
-		: '<%=url("admin/vpn/easytier/get_wlog_size")%>';
+	var url = '<%=url("admin/vpn/easytier/get_log_size")%>';
 
 	var xhr = new XMLHttpRequest();
 	xhr.open('GET', url, true);
@@ -638,7 +631,7 @@ function updateLogSize() {
 		if (xhr.readyState === 4 && xhr.status === 200) {
 			var data = JSON.parse(xhr.responseText);
 			var sizeMB = (data.size / 1024 / 1024).toFixed(2);
-			var logPath = currentLog === 'core' ? '/tmp/easytier.log' : '/tmp/easytierweb.log';
+			var logPath = '/tmp/easytier.log';
 			var sizeClass = '';
 
 			if (sizeMB < 1) sizeClass = 'log-size-1';
@@ -655,9 +648,7 @@ function updateLogSize() {
 }
 
 function clearCurrentLog() {
-	var url = currentLog === 'core'
-		? '<%=url("admin/vpn/easytier/clear_log")%>'
-		: '<%=url("admin/vpn/easytier/clear_wlog")%>';
+	var url = '<%=url("admin/vpn/easytier/clear_log")%>';
 
 	var xhr = new XMLHttpRequest();
 	xhr.open('GET', url, true);
@@ -686,7 +677,7 @@ function downloadCurrentLog() {
 	var url = window.URL.createObjectURL(blob);
 	var a = document.createElement('a');
 	a.href = url;
-	a.download = 'easytier-' + currentLog + '-log.txt';
+	a.download = 'easytier-core-log.txt';
 	document.body.appendChild(a);
 	a.click();
 	setTimeout(function() {

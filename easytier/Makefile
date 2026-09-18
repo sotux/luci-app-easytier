@@ -51,16 +51,6 @@ define Package/$(PKG_NAME)/description
   A simple, decentralized mesh VPN with WireGuard support.
 endef
 
-define Package/$(PKG_NAME)/config
-	config EASYTIER_INCLUDE_WEBCONSOLE
-		bool "Include Web Console (easytier-web)"
-		depends on PACKAGE_$(PKG_NAME)
-		depends on !(mips || mipsel)
-		default y
-		help
-		  Install the easytier-web web console.
-endef
-
 define Build/Prepare
 	mkdir -p $(PKG_BUILD_DIR)
 	if [ ! -f $(PKG_BUILD_DIR)/easytier-core ]; then \
@@ -79,10 +69,6 @@ define Package/$(PKG_NAME)/install
 	chmod 0755 $(1)/usr/bin/easytier-core
 	$(CP) $(PKG_BUILD_DIR)/easytier-cli $(1)/usr/bin/
 	chmod 0755 $(1)/usr/bin/easytier-cli
-ifdef CONFIG_EASYTIER_INCLUDE_WEBCONSOLE
-	$(CP) $(PKG_BUILD_DIR)/easytier-web-embed $(1)/usr/bin/easytier-web
-	chmod 0755 $(1)/usr/bin/easytier-web
-endif
 endef
 
 $(eval $(call BuildPackage,$(PKG_NAME)))

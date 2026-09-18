@@ -52,7 +52,7 @@ jobs:
           - mipsel_74kc
           - mipsel_mips32
           - x86_64
-          
+
         sdk:
           - 22.03.7
           - SNAPSHOT
@@ -68,7 +68,7 @@ jobs:
             /opt/openwrt-sdk-${{ matrix.arch }}-${{ matrix.sdk }}
             dl
           key: sdk-${{ matrix.arch }}-${{ matrix.sdk }}
-          
+
       - name: Create i18n uci-defaults file
         run: |
           mkdir -p luci-app-easytier/root/etc/uci-defaults
@@ -82,7 +82,7 @@ jobs:
           exit 0
           EOF
           chmod +x luci-app-easytier/root/etc/uci-defaults/luci-i18n-easytier-zh-cn
-          
+
       - name: Building packages
         uses: openwrt/gh-action-sdk@main
         env:
@@ -116,8 +116,8 @@ jobs:
 
           ## What each package does / 每个包的作用
 
-          - \`easytier\`: EasyTier core binaries installed to \`/usr/bin\`, including \`easytier-core\`, \`easytier-cli\`, and the embedded web console binary when supported by the architecture. / EasyTier 核心程序包，安装到 \`/usr/bin\`，包含 \`easytier-core\`、\`easytier-cli\`，并在架构支持时集成自建 Web 控制台程序。
-          - \`easytier-noweb\`: EasyTier core binaries installed to \`/usr/bin\`, without the embedded web console. Use this on devices with limited storage or when you do not need the self-hosted web console. / 不包含自建 Web 控制台的核心程序包，同样安装到 \`/usr/bin\`。适合存储空间不足或不需要自建 Web 控制台的设备。
+          - \`easytier\`: EasyTier core binaries installed to \`/usr/bin\`, including \`easytier-core\` and \`easytier-cli\`. / EasyTier 核心程序包，安装到 \`/usr/bin\`，包含 \`easytier-core\` 与 \`easytier-cli\`。
+          - \`easytier-noweb\`: Same core binaries as \`easytier\` (\`easytier-core\`, \`easytier-cli\`), kept as an interchangeable alias for existing users. / 与 \`easytier\` 内容相同（\`easytier-core\`、\`easytier-cli\`），保留作为可互换的兼容包。
           - \`luci-app-easytier\`: LuCI web interface, init script, UCI config, upload/download tools, and service management pages. / LuCI 管理界面，包含启动脚本、UCI 配置、上传/下载工具和服务管理页面。
           - \`luci-i18n-easytier-zh-cn\`: Simplified Chinese translation for the LuCI interface. / LuCI 界面的简体中文语言包。
 
@@ -145,8 +145,8 @@ jobs:
           opkg install /tmp/luci-i18n-easytier-zh-cn_*.ipk
           \`\`\`
 
-          For the no-web core package:
-          如果安装不含 Web 控制台的核心包：
+          For the easytier-noweb core package:
+          如果使用 easytier-noweb 核心包：
 
           \`\`\`sh
           opkg update
@@ -166,8 +166,8 @@ jobs:
           apk add --allow-untrusted /tmp/luci-i18n-easytier-zh-cn_*.apk
           \`\`\`
 
-          For the no-web core package:
-          如果安装不含 Web 控制台的核心包：
+          For the easytier-noweb core package:
+          如果使用 easytier-noweb 核心包：
 
           \`\`\`sh
           apk add --allow-untrusted /tmp/easytier-noweb_*.apk
@@ -197,8 +197,8 @@ jobs:
 
           https://github.com/EasyTier/EasyTier/releases
 
-          In LuCI, go to VPN -> EasyTier -> Upload Program, set the program directory, save it, and upload \`easytier-core\`, \`easytier-cli\`, and optionally \`easytier-web-embed\`.
-          在 LuCI 中进入 VPN -> EasyTier -> 上传程序，设置程序目录并保存，然后上传 \`easytier-core\`、\`easytier-cli\`，以及可选的 \`easytier-web-embed\`。
+          In LuCI, go to VPN -> EasyTier -> Upload Program, set the program directory, save it, and upload \`easytier-core\` and \`easytier-cli\`.
+          在 LuCI 中进入 VPN -> EasyTier -> 上传程序，设置程序目录并保存，然后上传 \`easytier-core\` 与 \`easytier-cli\`。
 
           ## After installation / 安装后
 
@@ -213,7 +213,7 @@ jobs:
           - Missing TUN support: install or enable \`kmod-tun\`. / 缺少 TUN 支持：安装或启用 \`kmod-tun\`。
           - LuCI menu not visible: refresh the browser, clear LuCI cache, or run \`rm -f /tmp/luci-indexcache /tmp/luci-modulecache/*\` and re-login. / LuCI 菜单不显示：刷新浏览器、清理 LuCI 缓存，或执行 \`rm -f /tmp/luci-indexcache /tmp/luci-modulecache/*\` 后重新登录。
           - Online download fails: check DNS, gateway, and GitHub connectivity; configure acceleration mirror URLs or upload files manually. / 在线下载失败：检查 DNS、网关和 GitHub 连通性；配置加速镜像地址或手动上传程序。
-          - Not enough storage: install \`easytier-noweb\`, or install only LuCI and upload binaries to a larger custom directory. / 存储空间不足：安装 \`easytier-noweb\`，或只安装 LuCI 并把程序上传到容量更大的自定义目录。
+          - Not enough storage: install only LuCI and upload binaries to a larger custom directory (such as mounted USB storage). / 存储空间不足：只安装 LuCI，并把程序上传到容量更大的自定义目录（例如挂载的 USB 存储）。
           - Service does not start: verify the program path, executable permission, and configuration; then restart with \`/etc/init.d/easytier restart\`. / 服务无法启动：检查程序路径、可执行权限和配置，然后执行 \`/etc/init.d/easytier restart\`。
 
           EOF
@@ -266,7 +266,6 @@ jobs:
              - 每个压缩包内包含 **`README_PACKAGE.md`** 中英双语说明，包含各包作用、安装顺序、IPK/APK安装方法和常见问题处理
 
              ${{ github.event.inputs.text }}
-           
+
             tag_name: ${{ env.TAG }}
             files: release/*.zip
- 

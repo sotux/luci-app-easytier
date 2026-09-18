@@ -66,7 +66,7 @@ download_binary() {
 		   wget --no-check-certificate --timeout=10 --tries=3 -O /tmp/easytier.zip "${proxy}${download_url}"; then
 
 			unzip -j -q -o /tmp/easytier.zip -d /tmp
-			chmod +x /tmp/easytier-core /tmp/easytier-cli /tmp/easytier-web /tmp/easytier-web-embed 2>/dev/null || true
+			chmod +x /tmp/easytier-core /tmp/easytier-cli 2>/dev/null || true
 			rm -rf /tmp/easytier.zip
 
 			log_message "INFO" "easytier" "下载成功" "/tmp/easytier.log"
@@ -100,13 +100,6 @@ check_and_download() {
 				mv -f /tmp/easytier-core "${path}/" 2>/dev/null
 				mv -f /tmp/easytier-cli "${path}/" 2>/dev/null
 				chmod +x "$easytierbin" 2>/dev/null
-			fi
-
-			if [ "$(uci -q get easytier.@easytier[0].web_enabled)" = "1" ]; then
-				local webbin=$(uci -q get easytier.@easytier[0].webbin)
-				[ -z "$webbin" ] && webbin="/usr/bin/easytier-web"
-				mv -f /tmp/easytier-web-embed "$webbin" 2>/dev/null || true
-				chmod +x "$webbin" 2>/dev/null
 			fi
 
 			return 0

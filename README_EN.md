@@ -99,7 +99,7 @@ opkg install kmod-tun
 
 1. After installing the plugin, navigate to **VPN → EasyTier**
 2. Upload EasyTier binary files on the **Upload Program** page, or directly install the ipk/apk package containing the core (easytier.ipk / easytier.apk)
-   - Supports single files: `easytier-core`, `easytier-cli`, `easytier-web-embed`
+   - Supports single files: `easytier-core`, `easytier-cli`
    - Supports compressed packages: `.zip`, `.tar.gz`, `.tar`
 3. Configure network parameters on the **EasyTier Core** page
 4. Enable and save the configuration
@@ -115,7 +115,6 @@ Two configuration methods are supported:
 
 - **Status** - View running status, version info, connection info, and real-time traffic
 - **EasyTier Core** - Configure core parameters (network name, secret key, nodes, etc.)
-- **Self-hosted Console** - Configure easytier-web console
 - **Logs** - View running logs with level filtering support
 - **Upload Program** - Upload and manage EasyTier binary files
 
