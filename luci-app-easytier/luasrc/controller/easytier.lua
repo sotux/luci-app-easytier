@@ -59,8 +59,6 @@ function index()
 	entry({"admin", "vpn", "easytier", "clear_version_cache"}, call("clear_version_cache")).leaf = true
 	entry({"admin", "vpn", "easytier", "api_status"}, call("act_status")).leaf = true
 	entry({"admin", "vpn", "easytier", "api_conninfo"}, call("act_conninfo")).leaf = true
-	entry({"admin", "vpn", "easytier", "restart_service"}, call("restart_service")).leaf = true
-	entry({"admin", "vpn", "easytier", "toggle_core"}, call("toggle_core")).leaf = true
 end
 
 function act_status()
@@ -68,7 +66,6 @@ function act_status()
 	local sys  = require "luci.sys"
 	local uci  = require "luci.model.uci".cursor()
 	e.crunning = luci.sys.call("pgrep easytier-core >/dev/null") == 0
-	e.cenabled = uci:get_first("easytier", "easytier", "enabled") == "1"
 
 	-- 使用 Lua 原生计算运行时长
 	e.etsta = calc_uptime("/tmp/easytier_time")
@@ -268,26 +265,4 @@ function act_conninfo()
 
 	luci.http.prepare_content("application/json")
 	luci.http.write_json(e)
-end
-
-
-function restart_service()
-	luci.http.prepare_content("application/json")
-	luci.sys.exec("/etc/init.d/easytier restart >/dev/null 2>&1 &")
-	luci.http.write_json({success = true})
-end
-
-function toggle_core()
-	local enabled = luci.http.formvalue("enabled")
-	local uci = require "luci.model.uci".cursor()
-	uci:set("easytier", uci:get_first("easytier", "easytier"), "enabled", enabled)
-	uci:commit("easytier")
-
-	if enabled == "1" then
-		luci.sys.exec("/etc/init.d/easytier start >/dev/null 2>&1 &")
-	else
-		luci.sys.exec("/etc/init.d/easytier restart >/dev/null 2>&1 &")
-	end
-	luci.http.prepare_content("application/json")
-	luci.http.write_json({success = true})
 end

@@ -300,31 +300,6 @@ protocol = "http://"
 	opacity: 0.9;
 }
 
-.et-toast {
-	position: fixed;
-	top: 80px;
-	left: 50%;
-	transform: translateX(-50%);
-	background: var(--info);
-	color: white;
-	padding: 14px 20px;
-	border-radius: 8px;
-	box-shadow: 0 4px 16px rgba(0,0,0,0.3);
-	z-index: 10001;
-	opacity: 0;
-	transition: opacity 0.3s ease-in-out;
-	font-size: 14px;
-	font-weight: 500;
-	min-width: 320px;
-	text-align: center;
-	pointer-events: none;
-}
-
-.et-toast.show {
-	opacity: 1;
-	pointer-events: auto;
-}
-
 @media (max-width: 768px) {
 	.et-status-card {
 		padding: 16px;
@@ -339,134 +314,7 @@ protocol = "http://"
 	}
 }
 
-.et-quick-actions {
-	background: var(--card-bg);
-	border-radius: 12px;
-	padding: 20px;
-	box-shadow: 0 2px 8px var(--card-shadow);
-	margin-bottom: 20px;
-	margin-top: 20px;
-}
-
-.et-quick-title {
-	font-size: 18px;
-	font-weight: 600;
-	color: var(--text-primary);
-	margin-bottom: 16px;
-}
-
-.et-action-row {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding: 12px 0;
-	border-bottom: 1px solid var(--border-color);
-}
-
-.et-action-row:last-child {
-	border-bottom: none;
-}
-
-.et-action-label {
-	font-size: 14px;
-	font-weight: 500;
-	color: var(--text-primary);
-}
-
-.et-action-controls {
-	display: flex;
-	align-items: center;
-	gap: 12px;
-}
-
-.switch {
-	position: relative;
-	display: inline-block;
-	width: 48px;
-	height: 26px;
-}
-
-.switch input {
-	opacity: 0;
-	width: 0;
-	height: 0;
-}
-
-.slider {
-	position: absolute;
-	cursor: pointer;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background-color: #ccc;
-	transition: .3s;
-	border-radius: 26px;
-}
-
-.slider:before {
-	position: absolute;
-	content: "";
-	height: 20px;
-	width: 20px;
-	left: 3px;
-	bottom: 3px;
-	background-color: white;
-	transition: .3s;
-	border-radius: 50%;
-}
-
-input:checked + .slider {
-	background-color: var(--success);
-}
-
-input:checked + .slider:before {
-	transform: translateX(22px);
-}
-
-.et-restart-btn {
-	padding: 6px 16px;
-	background: #FF5722;
-	color: white;
-	border: none;
-	border-radius: 6px;
-	cursor: pointer;
-	font-size: 13px;
-	transition: all 0.3s;
-}
-
-.et-restart-btn:hover {
-	opacity: 0.9;
-	transform: translateY(-1px);
-}
-
-.et-restart-btn:active {
-	transform: translateY(0);
-}
-
-.et-restart-btn:disabled,
-.switch input:disabled + .slider {
-	opacity: 0.5;
-	cursor: not-allowed;
-	pointer-events: none;
-}
 </style>
-
-<div class="et-quick-actions">
-	<div class="et-action-row">
-		<div class="et-quick-title"><%=translate("Quick Actions")%></div>
-		<button class="et-restart-btn" id="restartBtn" onclick="restartService(); return false;"><%=translate("Restart")%></button>
-	</div>
-	<div class="et-action-row">
-		<div class="et-action-label">EasyTier Core</div>
-		<div class="et-action-controls">
-			<label class="switch">
-				<input type="checkbox" id="coreSwitch" disabled>
-				<span class="slider"></span>
-			</label>
-		</div>
-	</div>
-</div>
 
 <div class="et-status-card et-status-empty" id="easytier_status">
 	<div class="et-empty"><%=translate("Collecting data...")%></div>
@@ -668,108 +516,6 @@ function updateStatus(data) {
 
 	container.innerHTML = html;
 }
-
-var actionCooldown = false;
-
-function showToast(message) {
-	var toast = document.getElementById('etToast');
-	if (!toast) {
-		toast = document.createElement('div');
-		toast.id = 'etToast';
-		toast.className = 'et-toast';
-		document.body.appendChild(toast);
-	}
-	toast.textContent = message;
-	toast.classList.add('show');
-	setTimeout(function() {
-		toast.classList.remove('show');
-	}, 3000);
-}
-
-function setControlsDisabled(disabled) {
-	document.getElementById('coreSwitch').disabled = disabled;
-	document.getElementById('restartBtn').disabled = disabled;
-}
-
-var firstLoad = true;
-
-function showRestartModal() {
-	if (firstLoad) return;
-	document.getElementById('restart_modal').classList.add('show');
-}
-
-function closeRestartModal() {
-	document.getElementById('restart_modal').classList.remove('show');
-}
-
-function confirmRestart() {
-	closeRestartModal();
-
-	if (actionCooldown) {
-		showToast('<%=translate("Please wait, operation in progress...")%>');
-		return;
-	}
-
-	actionCooldown = true;
-	setControlsDisabled(true);
-	showToast('<%=translate("Restarting service...")%>');
-
-	var xhr = new XMLHttpRequest();
-	xhr.open('GET', '<%=url("admin", "vpn", "easytier", "restart_service")%>', true);
-	xhr.onload = function() {
-		setTimeout(function() {
-			actionCooldown = false;
-			setControlsDisabled(false);
-		}, 5000);
-	};
-	xhr.onerror = function() {
-		setTimeout(function() {
-			actionCooldown = false;
-			setControlsDisabled(false);
-		}, 5000);
-	};
-	xhr.send();
-}
-
-function restartService() {
-	if (firstLoad) return false;
-	showRestartModal();
-	return false;
-}
-
-function toggleCore(enabled) {
-	if (firstLoad || actionCooldown) {
-		document.getElementById('coreSwitch').checked = !enabled;
-		return;
-	}
-
-	actionCooldown = true;
-	setControlsDisabled(true);
-
-	var xhr = new XMLHttpRequest();
-	xhr.open('GET', '<%=url("admin", "vpn", "easytier", "toggle_core")%>?enabled=' + (enabled ? '1' : '0'), true);
-	xhr.onload = function() {
-		setTimeout(function() {
-			actionCooldown = false;
-			setControlsDisabled(false);
-		}, 3000);
-	};
-	xhr.onerror = function() {
-		setTimeout(function() {
-			actionCooldown = false;
-			setControlsDisabled(false);
-		}, 3000);
-	};
-	xhr.send();
-}
-
-document.getElementById('coreSwitch').addEventListener('change', function() {
-	if (firstLoad) {
-		this.checked = !this.checked;
-		return;
-	}
-	toggleCore(this.checked);
-});
 
 var tunTrafficData = {
 	labels: [],
@@ -1016,23 +762,11 @@ function updateTunInterface(coreRunning, noTun, devName) {
 	xhr.send();
 }
 
-var firstLoad = true;
 XHR.poll(5, '<%=url("admin", "vpn", "easytier", "api_status")%>', null, function(x, data) {
 	if (!data) return;
 	updateStatus(data);
 
 	updateTunInterface(data.crunning, data.no_tun, data.dev_name);
-
-	// 使用配置值初始化开关状态
-	var coreSwitch = document.getElementById('coreSwitch');
-
-	coreSwitch.checked = data.cenabled;
-
-	// 首次加载完成后启用控件
-	if (firstLoad && !actionCooldown) {
-		setControlsDisabled(false);
-		firstLoad = false;
-	}
 });
 //]]>
 </script>
@@ -1044,17 +778,6 @@ XHR.poll(5, '<%=url("admin", "vpn", "easytier", "api_status")%>', null, function
 		<div class="version-modal-buttons">
 			<button class="version-modal-btn version-modal-btn-cancel" onclick="closeVersionModal(); return false;"><%=translate("Cancel")%></button>
 			<button class="version-modal-btn version-modal-btn-confirm" onclick="confirmRefreshVersion(); return false;"><%=translate("Confirm")%></button>
-		</div>
-	</div>
-</div>
-
-<div class="version-modal" id="restart_modal">
-	<div class="version-modal-content">
-		<div class="version-modal-title"><%=translate("Restart Service")%></div>
-		<div class="version-modal-message"><%=translate("Restart EasyTier service?")%></div>
-		<div class="version-modal-buttons">
-			<button class="version-modal-btn version-modal-btn-cancel" onclick="closeRestartModal(); return false;"><%=translate("Cancel")%></button>
-			<button class="version-modal-btn version-modal-btn-confirm" onclick="confirmRestart(); return false;"><%=translate("Confirm")%></button>
 		</div>
 	</div>
 </div>

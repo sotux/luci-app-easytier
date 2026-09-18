@@ -128,7 +128,7 @@ local text = translate("Hello World")
 
 ```javascript
 // Method 1: Lua injects translation
-var msg = '<%=translate("Restart")%>';
+var msg = '<%=translate("Cancel")%>';
 alert(msg);
 
 // Method 2: API returns translation
@@ -145,8 +145,8 @@ xhr.onload = function() {
 msgid "Hello World"
 msgstr "你好世界"
 
-msgid "Restart"
-msgstr "重启"
+msgid "Cancel"
+msgstr "取消"
 ```
 
 ## API Design

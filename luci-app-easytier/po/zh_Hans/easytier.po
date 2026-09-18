@@ -1049,10 +1049,6 @@ msgstr "节点 RPC 服务端接收流量"
 msgid "Peer RPC Server TX"
 msgstr "节点 RPC 服务端发送流量"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:732
-msgid "Please wait, operation in progress..."
-msgstr "请稍候，操作进行中..."
-
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:388
 msgid "Port Forwarding"
 msgstr "端口转发"
@@ -1118,10 +1114,6 @@ msgstr "公网 IPv6"
 msgid "QUIC Port"
 msgstr "QUIC 端口"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:457
-msgid "Quick Actions"
-msgstr "快捷操作"
-
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:121
 msgid "RPC Access Whitelist"
 msgstr "RPC 门户白名单"
@@ -1168,23 +1160,6 @@ msgstr "上报节点信息"
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:792
 msgid "Response"
 msgstr "响应"
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:458
-msgid "Restart"
-msgstr "重启"
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:1113
-msgid "Restart EasyTier service?"
-msgstr "确认重启 EasyTier 服务？"
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:1112
-msgid "Restart Service"
-msgstr "重启服务"
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:738
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1126
-msgid "Restarting service..."
-msgstr "正在重启服务..."
 
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:770
 msgid "Restricted"

@@ -977,10 +977,6 @@ msgstr ""
 msgid "Peer RPC Server TX"
 msgstr ""
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:732
-msgid "Please wait, operation in progress..."
-msgstr ""
-
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:388
 msgid "Port Forwarding"
 msgstr ""
@@ -1043,10 +1039,6 @@ msgstr ""
 msgid "QUIC Port"
 msgstr ""
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:457
-msgid "Quick Actions"
-msgstr ""
-
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:121
 msgid "RPC Access Whitelist"
 msgstr ""
@@ -1089,23 +1081,6 @@ msgstr ""
 
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:792
 msgid "Response"
-msgstr ""
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:458
-msgid "Restart"
-msgstr ""
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:1113
-msgid "Restart EasyTier service?"
-msgstr ""
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:1112
-msgid "Restart Service"
-msgstr ""
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:738
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1126
-msgid "Restarting service..."
 msgstr ""
 
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:770
