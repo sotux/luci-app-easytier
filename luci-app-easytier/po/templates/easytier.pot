@@ -32,10 +32,6 @@ msgstr ""
 msgid "Access Control"
 msgstr ""
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:364
-msgid "Add"
-msgstr ""
-
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:410
 msgid "Additional command-line arguments passed to the backend process"
 msgstr ""
@@ -55,10 +51,6 @@ msgstr ""
 
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_log.htm:486
 msgid "All Levels"
-msgstr ""
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/controller/easytier.lua:1174
-msgid "All download attempts failed"
 msgstr ""
 
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:345
@@ -106,18 +98,6 @@ msgstr ""
 msgid "Automatically create and configure the EasyTier network interface"
 msgstr ""
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:806
-msgid "Available space"
-msgstr ""
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/controller/easytier.lua:569
-msgid "Binary uploaded successfully to"
-msgstr ""
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:495
-msgid "Binary uploaded successfully. Restart the service to apply changes?"
-msgstr ""
-
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:351
 msgid ""
 "Bind the connector socket to the physical device to avoid routing issues."
@@ -141,15 +121,6 @@ msgstr ""
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:1104
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:1115
 msgid "Cancel"
-msgstr ""
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1340
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1415
-msgid "Cancel Download"
-msgstr ""
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1381
-msgid "Cancelling download, may take up to 5 minutes to stop the current task"
 msgstr ""
 
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:874
@@ -180,10 +151,6 @@ msgstr ""
 msgid "Client Config Start"
 msgstr ""
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:454
-msgid "Close"
-msgstr ""
-
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:609
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:615
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:621
@@ -202,14 +169,6 @@ msgstr ""
 
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:602
 msgid "Command Line"
-msgstr ""
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:464
-msgid "Command line tool"
-msgstr ""
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:467
-msgid "Compressed archive containing binaries"
 msgstr ""
 
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:266
@@ -236,10 +195,6 @@ msgstr ""
 msgid "Compression algorithm to use (--compression parameter)"
 msgstr ""
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:339
-msgid "Configuration"
-msgstr ""
-
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:22
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:25
 msgid "Configuration File"
@@ -247,10 +202,6 @@ msgstr ""
 
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:893
 msgid "Configuration File Content"
-msgstr ""
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:882
-msgid "Configuration saved successfully"
 msgstr ""
 
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:1105
@@ -311,23 +262,6 @@ msgstr ""
 msgid "Copy"
 msgstr ""
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:463
-msgid "Core service binary"
-msgstr ""
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:632
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:677
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:680
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1197
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1199
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1241
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1242
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1244
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1274
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1276
-msgid "Custom Input"
-msgstr ""
-
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:225
 msgid ""
 "Custom name for the virtual TUN interface (--dev-name parameter)<br>If using "
@@ -353,10 +287,6 @@ msgid ""
 "<br>Example: wg://0.0.0.0:11011/10.14.14.0/24 means the VPN portal is a "
 "WireGuard server listening on vpn.example.com:11010, and the VPN clients are "
 "in the 10.14.14.0/24 network (--vpn-portal parameter)"
-msgstr ""
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:914
-msgid "Delete"
 msgstr ""
 
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:739
@@ -483,74 +413,6 @@ msgstr ""
 msgid "Download Log"
 msgstr ""
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1118
-msgid "Download Successful"
-msgstr ""
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:436
-msgid "Download Version"
-msgstr ""
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/controller/easytier.lua:1233
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1451
-msgid "Download and installation completed"
-msgstr ""
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/controller/easytier.lua:1081
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/controller/easytier.lua:1099
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/controller/easytier.lua:1113
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/controller/easytier.lua:1138
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/controller/easytier.lua:1182
-msgid "Download cancelled"
-msgstr ""
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1443
-msgid "Download completed successfully"
-msgstr ""
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1119
-msgid "Download completed. Restart service now?"
-msgstr ""
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1457
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1476
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1478
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1484
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1486
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1495
-msgid "Download failed"
-msgstr ""
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:486
-msgid "Download from"
-msgstr ""
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:442
-msgid "Download specified version from GitHub and install to specified path"
-msgstr ""
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/controller/easytier.lua:1020
-msgid "Download task already exists"
-msgstr ""
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1343
-msgid "Download task already exists, continuing..."
-msgstr ""
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/controller/easytier.lua:989
-msgid "Downloading with"
-msgstr ""
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:449
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1337
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1425
-msgid "Downloading..."
-msgstr ""
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:404
-msgid "Drag *.tar.gz / *.zip / easytier binaries here or click to select file"
-msgstr ""
-
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:422
 msgid "Duplicate extra parameter"
 msgstr ""
@@ -671,25 +533,8 @@ msgid ""
 "15888 in the configuration."
 msgstr ""
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/controller/easytier.lua:1208
-msgid "Failed to install program"
-msgstr ""
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/controller/easytier.lua:500
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/controller/easytier.lua:556
-msgid "Failed to move file. Insufficient space or permission denied"
-msgstr ""
-
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:861
 msgid "Failure"
-msgstr ""
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:373
-msgid "Fallback Version"
-msgstr ""
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:474
-msgid "Files will be uploaded to the paths specified above"
 msgstr ""
 
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:346
@@ -731,10 +576,6 @@ msgstr ""
 msgid "Get Global Peer Map"
 msgstr ""
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:358
-msgid "GitHub Proxy URLs"
-msgstr ""
-
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:819
 msgid "Global"
 msgstr ""
@@ -759,13 +600,6 @@ msgstr ""
 
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:697
 msgid "IPv4 Address"
-msgstr ""
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:482
-msgid ""
-"If the device has insufficient storage space, the upload may fail and "
-"existing programs may be deleted. Please ensure adequate free space before "
-"uploading."
 msgstr ""
 
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:167
@@ -837,14 +671,6 @@ msgstr ""
 msgid "Invalid Service Name"
 msgstr ""
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:930
-msgid "Invalid URL format"
-msgstr ""
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1017
-msgid "Invalid file name"
-msgstr ""
-
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:752
 msgid "Labels"
 msgstr ""
@@ -862,10 +688,6 @@ msgstr ""
 msgid ""
 "Latency-first mode: attempts to forward traffic via the lowest latency path. "
 "By default, the shortest path is used (--latency-first parameter)"
-msgstr ""
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:498
-msgid "Later"
 msgstr ""
 
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:793
@@ -891,10 +713,6 @@ msgstr ""
 
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_log.htm:498
 msgid "Loading logs..."
-msgstr ""
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:384
-msgid "Loading versions..."
 msgstr ""
 
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:761
@@ -967,10 +785,6 @@ msgstr ""
 msgid "Min Port"
 msgstr ""
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/controller/easytier.lua:1029
-msgid "Missing version parameter"
-msgstr ""
-
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:705
 msgid "NAT Type"
 msgstr ""
@@ -982,11 +796,6 @@ msgstr ""
 
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:61
 msgid "Network Secret"
-msgstr ""
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1085
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1497
-msgid "Network error"
 msgstr ""
 
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:62
@@ -1032,28 +841,12 @@ msgstr ""
 msgid "No TUN Mode"
 msgstr ""
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:863
-msgid "No changes to save"
-msgstr ""
-
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:972
 msgid "No data available"
 msgstr ""
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/controller/easytier.lua:433
-msgid "No file uploaded"
-msgstr ""
-
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_log.htm:605
 msgid "No logs available"
-msgstr ""
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:906
-msgid "No proxy configured, using default proxy"
-msgstr ""
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/controller/easytier.lua:927
-msgid "No x86-32bit program available"
 msgstr ""
 
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:746
@@ -1066,21 +859,6 @@ msgstr ""
 
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:890
 msgid "None"
-msgstr ""
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/controller/easytier.lua:522
-msgid "Not a valid EasyTier program"
-msgstr ""
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/controller/easytier.lua:478
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/controller/easytier.lua:508
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/controller/easytier.lua:535
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/controller/easytier.lua:563
-msgid "Not a valid EasyTier program or architecture mismatch"
-msgstr ""
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:471
-msgid "Note"
 msgstr ""
 
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:252
@@ -1109,20 +887,6 @@ msgid ""
 "Generator: <a href=\"https://easytier.cn/web/index.html#/config_generator\" "
 "target=\"_blank\">https://easytier.cn/web/index.html#/config_generator</"
 "a><br>Please note to set the RPC port to 15888"
-msgstr ""
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:389
-msgid "Online Download"
-msgstr ""
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:431
-msgid "Online Download EasyTier"
-msgstr ""
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1017
-msgid ""
-"Only easytier binaries or compressed archives (.zip, .tar.gz, .tar) are "
-"allowed"
 msgstr ""
 
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:301
@@ -1213,14 +977,6 @@ msgstr ""
 msgid "Peer RPC Server TX"
 msgstr ""
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1397
-msgid "Please enter download version"
-msgstr ""
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:925
-msgid "Please enter proxy URL"
-msgstr ""
-
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:732
 msgid "Please wait, operation in progress..."
 msgstr ""
@@ -1241,39 +997,8 @@ msgstr ""
 msgid "Portal Name"
 msgstr ""
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:577
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1187
-msgid "Pre-release"
-msgstr ""
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1411
-msgid "Preparing download..."
-msgstr ""
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/controller/easytier.lua:1261
-msgid "Preparing..."
-msgstr ""
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:421
-msgid "Processing uploaded file, please wait..."
-msgstr ""
-
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:433
 msgid "Program Log"
-msgstr ""
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/controller/easytier.lua:1218
-msgid "Program is incomplete or architecture mismatch"
-msgstr ""
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:813
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:818
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:824
-msgid "Program not found"
-msgstr ""
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:827
-msgid "Program size"
 msgstr ""
 
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:784
@@ -1288,10 +1013,6 @@ msgstr ""
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:711
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:716
 msgid "Proxy CIDRs"
-msgstr ""
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:935
-msgid "Proxy already exists"
 msgstr ""
 
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:377
@@ -1346,10 +1067,6 @@ msgstr ""
 msgid "Real-time Traffic"
 msgstr ""
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:465
-msgid "Recommended"
-msgstr ""
-
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:585
 msgid "Refresh"
 msgstr ""
@@ -1382,21 +1099,8 @@ msgstr ""
 msgid "Restart EasyTier service?"
 msgstr ""
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:499
-msgid "Restart Now"
-msgstr ""
-
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:1112
 msgid "Restart Service"
-msgstr ""
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1136
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1140
-msgid "Restart failed"
-msgstr ""
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1062
-msgid "Restart the service to apply changes?"
 msgstr ""
 
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:738
@@ -1406,10 +1110,6 @@ msgstr ""
 
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:770
 msgid "Restricted"
-msgstr ""
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1462
-msgid "Retry"
 msgstr ""
 
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:294
@@ -1453,31 +1153,12 @@ msgstr ""
 msgid "STUN Info"
 msgstr ""
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:397
-msgid "Save Configuration"
-msgstr ""
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:885
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:888
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:891
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:895
-msgid "Save failed"
-msgstr ""
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:407
-msgid "Select File"
-msgstr ""
-
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:774
 msgid "Server"
 msgstr ""
 
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:858
 msgid "Service Name"
-msgstr ""
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1133
-msgid "Service restarted successfully"
 msgstr ""
 
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:461
@@ -1494,11 +1175,6 @@ msgstr ""
 
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:856
 msgid "Source Peer ID"
-msgstr ""
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:578
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1188
-msgid "Stable"
 msgstr ""
 
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_log.htm:716
@@ -1548,28 +1224,12 @@ msgstr ""
 msgid "Success"
 msgstr ""
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/controller/easytier.lua:516
-msgid "Successfully installed"
-msgstr ""
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:461
-msgid "Supported Files"
-msgstr ""
-
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:769
 msgid "Symmetric"
 msgstr ""
 
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:896
 msgid "Sync Route Info"
-msgstr ""
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/controller/easytier.lua:446
-msgid "System lacks unzip package, cannot extract zip archive"
-msgstr ""
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/controller/easytier.lua:930
-msgid "System lacks unzip, cannot download and extract"
 msgstr ""
 
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:779
@@ -1744,14 +1404,6 @@ msgstr ""
 msgid "URL"
 msgstr ""
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/controller/easytier.lua:924
-msgid "Unable to detect CPU architecture"
-msgstr ""
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:829
-msgid "Unable to query disk space"
-msgstr ""
-
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:765
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:649
 msgid "Unknown"
@@ -1761,27 +1413,8 @@ msgstr ""
 msgid "Upload"
 msgstr ""
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:403
-msgid "Upload EasyTier Binary"
-msgstr ""
-
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/controller/easytier.lua:56
 msgid "Upload Program"
-msgstr ""
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:493
-msgid "Upload Successful"
-msgstr ""
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1073
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1078
-msgid "Upload failed"
-msgstr ""
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:415
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1029
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1042
-msgid "Uploading..."
 msgstr ""
 
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:639
@@ -1798,17 +1431,9 @@ msgid ""
 "proxy-forward-by-system parameter)"
 msgstr ""
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:368
-msgid "Used to accelerate GitHub downloads when fetching binaries online"
-msgstr ""
-
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:198
 msgid ""
 "Used to identify the VPN node instance on the same machine. (-m parameter)"
-msgstr ""
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:393
-msgid "Used when unable to fetch the latest version during online download"
 msgstr ""
 
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:597
@@ -1914,10 +1539,6 @@ msgstr ""
 msgid "aes-gcm"
 msgstr ""
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/controller/easytier.lua:516
-msgid "binary file(s)"
-msgstr ""
-
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:881
 msgid "cannot_be_a_base"
 msgstr ""
@@ -1933,10 +1554,6 @@ msgstr ""
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:217
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:269
 msgid "default"
-msgstr ""
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:342
-msgid "easytier-core Binary Path"
 msgstr ""
 
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:237

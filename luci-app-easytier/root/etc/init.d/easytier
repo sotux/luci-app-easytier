@@ -8,7 +8,6 @@ USE_PROCD=1
 EASYTIER_LIB_DIR="/usr/share/easytier"
 [ -f "${EASYTIER_LIB_DIR}/utils.sh" ] && . "${EASYTIER_LIB_DIR}/utils.sh"
 [ -f "${EASYTIER_LIB_DIR}/firewall.sh" ] && . "${EASYTIER_LIB_DIR}/firewall.sh"
-[ -f "${EASYTIER_LIB_DIR}/download.sh" ] && . "${EASYTIER_LIB_DIR}/download.sh"
 
 check() {
     if [ ! -z "$checkip" ]; then
@@ -73,70 +72,6 @@ fi
 
 shell_quote() {
 	printf "'%s'" "$(printf "%s" "$1" | sed "s/'/'\\\\''/g")"
-}
-
-check_bin() {
-	# 优先使用 UCI 配置的代理列表（list 类型），否则使用默认值
-	local proxys=""
-	local proxy_list=$(uci -q get easytier.@easytier[0].github_proxys)
-
-	# 判断是否有多个代理
-	if [ ! -z "$proxy_list" ]; then
-		if [[ "$(grep "list github_proxys" /etc/config/easytier | awk '{print $3}' | wc -l)" -eq 1 ]]; then
-			proxys="$proxy_list"
-		else
-			proxys=$(cat /etc/config/easytier | grep 'list github_proxys' | awk -F 'list github_proxys' '{print $2}' | sed "s/'/\n/g" | tr -d " ' ")
-		fi
-	fi
-
-	# 如果没有配置代理，使用默认值
-	if [ -z "$proxys" ]; then
-		proxys="https://ghproxy.net/ https://gh-proxy.com/ https://cdn.gh-proxy.com/ https://ghfast.top/"
-	fi
-
-	curltest=`which curl`
-	user_agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36'
-
-	if [ -z "$curltest" ] || [ ! -s "`which curl`" ] ; then
-       		tag="$( wget --no-check-certificate -T 5 -t 3 --user-agent "$user_agent" --max-redirect=0 --output-document=-  https://api.github.com/repos/EasyTier/EasyTier/releases/latest  2>&1 | grep 'tag_name' | cut -d\" -f4 )"
-       		[ -z "$tag" ] && tag="$( wget --no-check-certificate -T 5 -t 3 --user-agent "$user_agent" --quiet --output-document=-  https://api.github.com/repos/EasyTier/EasyTier/releases/latest  2>&1 | grep 'tag_name' | cut -d\" -f4 )"
-   	 else
-       		tag="$( curl -k --connect-timeout 3 --user-agent "$user_agent"  https://api.github.com/repos/EasyTier/EasyTier/releases/latest  2>&1 | grep 'tag_name' | cut -d\" -f4 )"
-       		[ -z "$tag" ] && tag="$( curl -Lk --connect-timeout 3 --user-agent "$user_agent" -s  https://api.github.com/repos/EasyTier/EasyTier/releases/latest  2>&1 | grep 'tag_name' | cut -d\" -f4 )"
-   	fi
-	# 如果获取失败，从 UCI 配置或使用默认版本
-	if [ -z "$tag" ]; then
-		tag=$(uci -q get easytier.@easytier[0].fallback_version)
-		[ -z "$tag" ] && tag="v2.6.4"
-	fi
-	echo "$(date '+%Y-%m-%d %H:%M:%S') easytier : 开始在线下载${tag}版本，${proxy}https://github.com/EasyTier/EasyTier/releases/download/${tag}/easytier-linux-${cpucore}-${tag}.zip下载较慢耐心等候" >>/tmp/easytier.log
-	if ! command -v unzip >/dev/null 2>&1; then
-		echo "$(date '+%Y-%m-%d %H:%M:%S') easytier : 系统缺少 unzip，无法解压下载的 EasyTier 压缩包，请安装 unzip 后重试" >>/tmp/easytier.log
-		return 1
-	fi
-        mkdir -p "$path"
-	for proxy in $proxys ; do
-	        if curl -L -k -o /tmp/easytier.zip --connect-timeout 10 --retry 3 "${proxy}https://github.com/EasyTier/EasyTier/releases/download/${tag}/easytier-linux-${cpucore}-${tag}.zip" || \
-		wget --no-check-certificate --timeout=10 --tries=3 -O /tmp/easytier.zip "${proxy}https://github.com/EasyTier/EasyTier/releases/download/${tag}/easytier-linux-${cpucore}-${tag}.zip" ; then
-			unzip -j -q -o /tmp/easytier.zip -d /tmp
-	         	chmod +x /tmp/easytier-core /tmp/easytier-cli || true
-	         	if [ "$(uci -q get easytier.@easytier[0].enabled)" = "1" ] ; then
-	         		mv -f /tmp/easytier-core ${path}/
-	         		mv -f /tmp/easytier-cli ${path}/
-	         		chmod +x "$easytierbin"
-	         		if [ "$($easytierbin -h 2>&1 | wc -l)" -gt 3 ] ; then
-                   			echo "$(date '+%Y-%m-%d %H:%M:%S') easytier : ${easytierbin} 下载成功" >>/tmp/easytier.log
-                 		else
-                    			echo "$(date '+%Y-%m-%d %H:%M:%S') easytier : ${proxy}https://github.com/EasyTier/EasyTier/releases/download/${tag}/easytier-linux-${cpucore}-${tag}.zip 下载不完整，请手动下载上传程序" >>/tmp/easytier.log
-                 		fi
-	         	fi
-
-                	rm -rf /tmp/easytier.zip
-			break
- 		 else
-			echo "$(date '+%Y-%m-%d %H:%M:%S') easytier : ${proxy}https://github.com/EasyTier/EasyTier/releases/download/${tag}/easytier-linux-${cpucore}-${tag}.zip 下载失败，请手动下载上传程序" >>/tmp/easytier.log
-		fi
-	done
 }
 
 check_config() {
@@ -418,8 +353,8 @@ start_et() {
 			fi
 		fi
 		if [ ! -f "$easytierbin" ] || [ "$(($($easytierbin -h 2>&1 | wc -l)))" -lt 3 ] ; then
-			echo "$(date '+%Y-%m-%d %H:%M:%S') easytier : $easytierbin 不存在或程序不完整，开始在线下载..." >>/tmp/easytier.log
-                	check_bin
+			echo "$(date '+%Y-%m-%d %H:%M:%S') easytier : ${easytierbin} 不存在或程序不完整，请将 easytier-core 与 easytier-cli 安装到该路径后重试" >>/tmp/easytier.log
+			return 1
 		fi
 
                 ver="$($easytierbin -V | awk {'print $2'} | tr -d '~')"

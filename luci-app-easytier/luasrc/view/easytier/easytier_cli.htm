@@ -301,17 +301,6 @@ local uci = require 'luci.model.uci'.cursor()
 }
 
 .et-table.two-column tr:nth-child(2n) td:last-child {
-	background: #ffffff !important;
-}
-
-.et-table.two-column tr:nth-child(2n+1) td:last-child {
-	background: #f5f5f5 !important;
-}
-	text-align: left;
-	border-right: 3px solid #ccc !important;
-}
-
-.et-table.two-column tr:nth-child(2n) td:last-child {
 	background: #f5f5f5 !important;
 }
 
@@ -334,15 +323,6 @@ local uci = require 'luci.model.uci'.cursor()
 	.et-table.two-column tr:nth-child(2n+1) td:last-child {
 		background: transparent !important;
 	}
-}
-	background: var(--tab-hover);
-	font-weight: 600;
-	text-align: left;
-	border-right: 2px solid var(--border-color);
-}
-
-.et-table.node-table td:not(:first-child) {
-	text-align: left;
 }
 
 .et-empty {

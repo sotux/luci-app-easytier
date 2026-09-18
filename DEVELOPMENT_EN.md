@@ -93,7 +93,6 @@ User Request → Lua Controller → Render HTM Template → Return HTML
 controller/easytier.lua
 ├── index()                    # Route registration
 ├── act_status()              # Status API
-├── upload_binary()           # Upload API
 └── ...
 
 view/easytier/status.htm
@@ -129,7 +128,7 @@ local text = translate("Hello World")
 
 ```javascript
 // Method 1: Lua injects translation
-var msg = '<%=translate("Upload successful")%>';
+var msg = '<%=translate("Restart")%>';
 alert(msg);
 
 // Method 2: API returns translation
@@ -146,8 +145,8 @@ xhr.onload = function() {
 msgid "Hello World"
 msgstr "你好世界"
 
-msgid "Upload successful"
-msgstr "上传成功"
+msgid "Restart"
+msgstr "重启"
 ```
 
 ## API Design
@@ -168,7 +167,7 @@ end
 ```lua
 function act_status()
     local uci = require "luci.model.uci".cursor()
-    
+
     luci.http.prepare_content("application/json")
     luci.http.write_json({
         success = true,
@@ -188,7 +187,7 @@ function updateStatus() {
         if (xhr.status === 200) {
             var data = JSON.parse(xhr.responseText);
             if (data.success) {
-                document.getElementById('status').textContent = 
+                document.getElementById('status').textContent =
                     data.running ? 'Running' : 'Stopped';
             }
         }
@@ -239,12 +238,12 @@ uci:commit("easytier")
 function get_log()
     local log_file = "/tmp/easytier.log"
     local log = ""
-    
+
     if luci.sys.call("[ -f '" .. log_file .. "' ]") == 0 then
         -- Remove ANSI color codes
         log = luci.sys.exec("sed 's/\\x1b\\[[0-9;]*m//g' " .. log_file)
     end
-    
+
     luci.http.write(log)
 end
 ```
@@ -259,19 +258,19 @@ function loadLog() {
         if (xhr.status === 200) {
             var lines = xhr.responseText.split('\n');
             var html = '';
-            
+
             for (var i = 0; i < lines.length; i++) {
                 var line = lines[i];
                 var level = 'info';
-                
+
                 if (line.indexOf('ERROR') !== -1) level = 'error';
                 else if (line.indexOf('WARN') !== -1) level = 'warn';
                 else if (line.indexOf('DEBUG') !== -1) level = 'debug';
-                
-                html += '<div class="log-line log-' + level + '">' + 
+
+                html += '<div class="log-line log-' + level + '">' +
                         escapeHtml(line) + '</div>';
             }
-            
+
             document.getElementById('log_content').innerHTML = html;
         }
     };
@@ -301,7 +300,7 @@ function escapeHtml(text) {
     .container {
         padding: 10px;
     }
-    
+
     .grid {
         grid-template-columns: 1fr;
     }
@@ -353,7 +352,6 @@ Must be tested on the following environments:
 
 - [ ] Configuration save and load
 - [ ] Service start and stop
-- [ ] File upload
 - [ ] Log display
 - [ ] Status updates
 - [ ] Internationalization switching

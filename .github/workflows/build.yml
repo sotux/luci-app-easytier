@@ -118,7 +118,7 @@ jobs:
 
           - \`easytier\`: EasyTier core binaries installed to \`/usr/bin\`, including \`easytier-core\` and \`easytier-cli\`. / EasyTier 核心程序包，安装到 \`/usr/bin\`，包含 \`easytier-core\` 与 \`easytier-cli\`。
           - \`easytier-noweb\`: Same core binaries as \`easytier\` (\`easytier-core\`, \`easytier-cli\`), kept as an interchangeable alias for existing users. / 与 \`easytier\` 内容相同（\`easytier-core\`、\`easytier-cli\`），保留作为可互换的兼容包。
-          - \`luci-app-easytier\`: LuCI web interface, init script, UCI config, upload/download tools, and service management pages. / LuCI 管理界面，包含启动脚本、UCI 配置、上传/下载工具和服务管理页面。
+          - \`luci-app-easytier\`: LuCI web interface, init script, UCI config, and service management pages. / LuCI 管理界面，包含启动脚本、UCI 配置和服务管理页面。
           - \`luci-i18n-easytier-zh-cn\`: Simplified Chinese translation for the LuCI interface. / LuCI 界面的简体中文语言包。
 
           ## Recommended install order / 推荐安装顺序
@@ -127,11 +127,8 @@ jobs:
           2. Install \`luci-app-easytier\`. / 再安装 \`luci-app-easytier\`。
           3. Install \`luci-i18n-easytier-zh-cn\` if you need Simplified Chinese. / 如需中文界面，再安装 \`luci-i18n-easytier-zh-cn\`。
 
-          If you need the EasyTier binaries in a custom directory, do not install \`easytier\` or \`easytier-noweb\`. Install only \`luci-app-easytier\` and the language package, then open LuCI -> VPN -> EasyTier -> Upload Program, set the program directory, save it, and upload the official EasyTier release files manually.
-          如果需要把 EasyTier 程序安装到自定义目录，不要安装 \`easytier\` 或 \`easytier-noweb\`。只安装 \`luci-app-easytier\` 和语言包，然后进入 LuCI -> VPN -> EasyTier -> 上传程序，设置程序目录并保存，再手动上传官方 EasyTier Release 中的程序文件。
-
-          You can also use the online download function on the Upload Program page. This requires network access to GitHub. If GitHub access is slow or unavailable, configure acceleration mirror URLs before downloading.
-          也可以在“上传程序”页面使用在线下载功能。该功能需要设备能正常访问 GitHub；如果访问慢或无法访问，请先配置加速镜像地址。
+          If you need the EasyTier binaries in a custom directory, install \`luci-app-easytier\` only, place the official \`easytier-core\` and \`easytier-cli\` files there, and point the \`easytierbin\` UCI option to \`easytier-core\`.
+          如果需要把 EasyTier 程序安装到自定义目录，只安装 \`luci-app-easytier\`，把官方的 \`easytier-core\` 与 \`easytier-cli\` 放到该目录，并通过 UCI 项 \`easytierbin\` 指向 \`easytier-core\`。
 
           ## IPK installation / IPK 安装方法
 
@@ -175,7 +172,7 @@ jobs:
           apk add --allow-untrusted /tmp/luci-i18n-easytier-zh-cn_*.apk
           \`\`\`
 
-          ## Install LuCI only and upload binaries manually / 只安装 LuCI 并手动上传程序
+          ## Install LuCI only and place binaries manually / 只安装 LuCI 并手动放置程序
 
           IPK:
 
@@ -192,13 +189,19 @@ jobs:
           apk add --allow-untrusted /tmp/luci-i18n-easytier-zh-cn_*.apk
           \`\`\`
 
-          Then download the matching EasyTier Linux release from:
-          然后从以下地址下载匹配架构的 EasyTier Linux 官方 Release 包：
+          Download the matching EasyTier Linux release from:
+          从以下地址下载匹配架构的 EasyTier Linux 官方 Release 包：
 
           https://github.com/EasyTier/EasyTier/releases
 
-          In LuCI, go to VPN -> EasyTier -> Upload Program, set the program directory, save it, and upload \`easytier-core\` and \`easytier-cli\`.
-          在 LuCI 中进入 VPN -> EasyTier -> 上传程序，设置程序目录并保存，然后上传 \`easytier-core\` 与 \`easytier-cli\`。
+          Put \`easytier-core\` and \`easytier-cli\` into \`/usr/bin\` (or another directory), then point the \`easytierbin\` UCI option to \`easytier-core\` and restart the service:
+          将 \`easytier-core\` 与 \`easytier-cli\` 解压到 \`/usr/bin\`（或其他目录），然后用 UCI 项 \`easytierbin\` 指向 \`easytier-core\`，再重启服务：
+
+          \`\`\`sh
+          uci set easytier.@easytier[0].easytierbin='/usr/bin/easytier-core'
+          uci commit easytier
+          /etc/init.d/easytier restart
+          \`\`\`
 
           ## After installation / 安装后
 
@@ -212,8 +215,7 @@ jobs:
           - Wrong architecture or package format: download the zip that matches your device architecture and firmware version. / 架构或包格式错误：请下载与设备架构和固件版本匹配的压缩包。
           - Missing TUN support: install or enable \`kmod-tun\`. / 缺少 TUN 支持：安装或启用 \`kmod-tun\`。
           - LuCI menu not visible: refresh the browser, clear LuCI cache, or run \`rm -f /tmp/luci-indexcache /tmp/luci-modulecache/*\` and re-login. / LuCI 菜单不显示：刷新浏览器、清理 LuCI 缓存，或执行 \`rm -f /tmp/luci-indexcache /tmp/luci-modulecache/*\` 后重新登录。
-          - Online download fails: check DNS, gateway, and GitHub connectivity; configure acceleration mirror URLs or upload files manually. / 在线下载失败：检查 DNS、网关和 GitHub 连通性；配置加速镜像地址或手动上传程序。
-          - Not enough storage: install only LuCI and upload binaries to a larger custom directory (such as mounted USB storage). / 存储空间不足：只安装 LuCI，并把程序上传到容量更大的自定义目录（例如挂载的 USB 存储）。
+          - Not enough storage: install only \`luci-app-easytier\` and keep the EasyTier binaries in a larger directory (such as mounted USB storage) by setting the \`easytierbin\` UCI option. / 存储空间不足：只安装 \`luci-app-easytier\`，并把 EasyTier 程序放在容量更大的目录（例如挂载的 USB 存储），通过 UCI 项 \`easytierbin\` 指向它。
           - Service does not start: verify the program path, executable permission, and configuration; then restart with \`/etc/init.d/easytier restart\`. / 服务无法启动：检查程序路径、可执行权限和配置，然后执行 \`/etc/init.d/easytier restart\`。
 
           EOF

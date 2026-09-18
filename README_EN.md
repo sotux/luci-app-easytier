@@ -15,8 +15,7 @@ OpenWrt LuCI web interface for managing [EasyTier](https://github.com/EasyTier/E
 - 🌍 Full Chinese/English internationalization support
 - 📊 Real-time traffic monitoring and network interface status display
 - 🔄 Real-time performance metrics and version information
-- 📦 Support for compressed packages and binary file uploads
-- 🔧 Flexible configuration management with backup and restore
+-  Flexible configuration management with backup and restore
 
 ## 📋 Compatibility
 
@@ -47,7 +46,7 @@ apk add --allow-untrusted /tmp/luci-app-easytier_*.apk
 ```
 
 4. Refresh your browser or re-login to LuCI interface
-5. Upload EasyTier binary in **VPN → EasyTier**
+5. Make sure `easytier-core` and `easytier-cli` exist in `/usr/bin` (provided by the core package, or placed manually)
 
 ### Method 2: GitHub Actions Auto-build
 
@@ -97,10 +96,8 @@ opkg install kmod-tun
 
 ### Initial Configuration
 
-1. After installing the plugin, navigate to **VPN → EasyTier**
-2. Upload EasyTier binary files on the **Upload Program** page, or directly install the ipk/apk package containing the core (easytier.ipk / easytier.apk)
-   - Supports single files: `easytier-core`, `easytier-cli`
-   - Supports compressed packages: `.zip`, `.tar.gz`, `.tar`
+1. After installing the plugin and a core package, navigate to **VPN → EasyTier**
+2. Make sure `easytier-core` and `easytier-cli` exist in `/usr/bin` (for a custom path, set the `easytierbin` UCI option)
 3. Configure network parameters on the **EasyTier Core** page
 4. Enable and save the configuration
 
@@ -116,7 +113,6 @@ Two configuration methods are supported:
 - **Status** - View running status, version info, connection info, and real-time traffic
 - **EasyTier Core** - Configure core parameters (network name, secret key, nodes, etc.)
 - **Logs** - View running logs with level filtering support
-- **Upload Program** - Upload and manage EasyTier binary files
 
 ## 🛠️ Development Guide
 
@@ -185,7 +181,6 @@ luci-app-easytier/
 │   └── view/easytier/
 │       ├── easytier_status.htm   # Status page template
 │       ├── easytier_log.htm      # Log page
-│       ├── easytier_upload.htm   # Upload page
 │       └── ...
 ├── root/
 │   ├── etc/
@@ -193,7 +188,8 @@ luci-app-easytier/
 │   │   ├── init.d/easytier       # Init script
 │   │   └── easytier/             # Config directory
 │   └── usr/share/easytier/
-│       └── download.sh           # Download script
+│       ├── firewall.sh           # Firewall management script
+│       └── utils.sh              # Shared helper functions
 ├── po/
 │   ├── zh_Hans/easytier.po       # Simplified Chinese translation
 │   └── templates/easytier.pot    # Translation template

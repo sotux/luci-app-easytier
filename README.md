@@ -21,8 +21,7 @@ OpenWrt LuCI界面，用于管理 [EasyTier](https://github.com/EasyTier/EasyTie
 - 🌍 完整的中文/英文国际化支持
 - 📊 实时流量监控和网卡状态显示
 - 🔄 实时显示性能占用和版本信息
-- 📦 支持压缩包和二进制文件上传
-- 🔧 灵活的配置管理和备份恢复
+-  灵活的配置管理和备份恢复
 
 ## 📋 兼容性
 
@@ -53,7 +52,7 @@ apk add --allow-untrusted /tmp/luci-app-easytier_*.apk
 ```
 
 4. 刷新浏览器或重新登录LuCI界面
-5. 在 **VPN → EasyTier** 中上传EasyTier二进制程序
+5. 确认 `easytier-core` 与 `easytier-cli` 已存在于 `/usr/bin`（由核心包提供，也可手动放置）
 
 ### 方式二：GitHub Actions自动编译
 
@@ -103,10 +102,8 @@ opkg install kmod-tun
 
 ### 首次配置
 
-1. 安装插件后，进入 **VPN → EasyTier**
-2. 在 **上传程序** 页面上传EasyTier二进制文件或直接安装包含核心的ipk/apk包（easytier.ipk easytier.apk）
-   - 支持单个文件：`easytier-core`, `easytier-cli`
-   - 支持压缩包：`.zip`, `.tar.gz`, `.tar`
+1. 安装插件与核心包后，进入 **VPN → EasyTier**
+2. 确认 `easytier-core` 与 `easytier-cli` 已存在于 `/usr/bin`（如需自定义路径，可用 UCI 项 `easytierbin` 指定）
 3. 在 **EasyTier Core** 页面配置网络参数
 4. 启用并保存配置
 
@@ -122,7 +119,6 @@ opkg install kmod-tun
 - **状态** - 查看运行状态、版本信息、连接信息和实时流量
 - **EasyTier Core** - 配置核心参数（网络名称、密钥、节点等）
 - **日志** - 查看运行日志，支持级别过滤
-- **上传程序** - 上传和管理EasyTier二进制文件
 
 ## 🛠️ 开发指南
 
@@ -191,7 +187,6 @@ luci-app-easytier/
 │   └── view/easytier/
 │       ├── easytier_status.htm   # 状态页面模板
 │       ├── easytier_log.htm      # 日志页面
-│       ├── easytier_upload.htm   # 上传页面
 │       └── ...
 ├── root/
 │   ├── etc/
@@ -199,7 +194,8 @@ luci-app-easytier/
 │   │   ├── init.d/easytier       # 启动脚本
 │   │   └── easytier/             # 配置目录
 │   └── usr/share/easytier/
-│       └── download.sh           # 下载脚本
+│       ├── firewall.sh           # 防火墙管理脚本
+│       └── utils.sh              # 公共函数
 ├── po/
 │   ├── zh_Hans/easytier.po       # 简体中文翻译
 │   └── templates/easytier.pot    # 翻译模板
