@@ -13,8 +13,7 @@ OpenWrt LuCI web interface for managing [EasyTier](https://github.com/EasyTier/E
 - 🎨 Modern UI design with automatic light/dark theme switching
 - 📱 Perfect adaptation for mobile and desktop devices
 - 🌍 Full Chinese/English internationalization support
-- 📊 Real-time traffic monitoring and network interface status display
-- 🔄 Real-time performance metrics and version information
+-  Real-time performance metrics and version information
 -  Flexible configuration management with backup and restore
 
 ## 📋 Compatibility
@@ -110,7 +109,7 @@ Two configuration methods are supported:
 
 ### Function Pages
 
-- **Status** - View running status, version info, connection info, and real-time traffic
+- **Status** - View running status, version info, and connection info
 - **EasyTier Core** - Configure core parameters (network name, secret key, nodes, etc.)
 - **Logs** - View running logs with level filtering support
 

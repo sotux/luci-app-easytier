@@ -52,7 +52,6 @@ function index()
 	entry({"admin", "vpn", "easytier", "status"}, cbi("easytier_status"),_("Status"), 1).leaf = true
 	entry({"admin", "vpn", "easytier", "config"}, cbi("easytier"),_("EasyTier Core"), 2).leaf = true
 	entry({"admin", "vpn", "easytier", "log"}, template("easytier/easytier_log"),_("Logs"), 3).leaf = true
-	entry({"admin", "vpn", "easytier", "get_tun_info"}, call("get_tun_info")).leaf = true
 	entry({"admin", "vpn", "easytier", "get_log"}, call("get_log")).leaf = true
 	entry({"admin", "vpn", "easytier", "get_log_size"}, call("get_log_size")).leaf = true
 	entry({"admin", "vpn", "easytier", "clear_log"}, call("clear_log")).leaf = true
@@ -102,73 +101,8 @@ function act_status()
 		if f then f:write(e.ettag); f:close() end
 	end
 
-	e.no_tun = uci:get_first("easytier", "easytier", "no_tun") == "1"
-	e.dev_name = uci:get_first("easytier", "easytier", "tunname") or "tun0"
-
 	luci.http.prepare_content("application/json")
 	luci.http.write_json(e)
-end
-
-function get_tun_info()
-	luci.http.prepare_content("application/json")
-
-	local ifname = luci.http.formvalue("ifname") or "tun0"
-
-	local exists = luci.sys.exec("ip link show " .. ifname .. " >/dev/null 2>&1 && echo 1 || echo 0")
-	if not exists:match("1") then
-		luci.http.write('{"success":false,"exists":false}')
-		return
-	end
-
-	local ifconfig_out = luci.sys.exec("ifconfig " .. ifname .. " 2>/dev/null")
-
-	local ip = ifconfig_out:match("inet addr:([%d%.]+)") or ifconfig_out:match("inet ([%d%.]+)")
-
-	local netmask = ""
-	local netmask_full = ifconfig_out:match("Mask:([%d%.]+)") or ifconfig_out:match("netmask ([%d%.]+)")
-
-	if not netmask_full or netmask_full == "" then
-		local ip_output = luci.sys.exec("ip -4 addr show " .. ifname .. " 2>/dev/null | grep 'inet ' | head -n1 | awk '{print $2}'")
-		local cidr = ip_output:match("/(%d+)")
-		if cidr then
-			cidr = tonumber(cidr)
-			local mask = 0xFFFFFFFF - (2 ^ (32 - cidr) - 1)
-			netmask = string.format("%d.%d.%d.%d",
-				math.floor(mask / 16777216) % 256,
-				math.floor(mask / 65536) % 256,
-				math.floor(mask / 256) % 256,
-				mask % 256)
-		end
-	else
-		netmask = netmask_full
-	end
-
-	local ipv6_cmd = luci.sys.exec("ip -6 addr show " .. ifname .. " 2>/dev/null | grep 'inet6' | head -n1 | awk '{print $2}'")
-	local ipv6 = ipv6_cmd:gsub("%s", "")
-	if ipv6 == "" then ipv6 = nil end
-
-	local mtu = ifconfig_out:match("MTU:(%d+)") or luci.sys.exec("ip link show " .. ifname .. " 2>/dev/null | head -n1 | sed -n 's/.*mtu \\([0-9]*\\).*/\\1/p'"):gsub("%s", "")
-
-	local state = "UNKNOWN"
-	if ifconfig_out:match("UP") then
-		state = "UP"
-	elseif ifconfig_out:match("DOWN") then
-		state = "DOWN"
-	end
-
-	local rx = luci.sys.exec("cat /sys/class/net/" .. ifname .. "/statistics/rx_bytes 2>/dev/null || echo 0"):gsub("%s", "")
-	local tx = luci.sys.exec("cat /sys/class/net/" .. ifname .. "/statistics/tx_bytes 2>/dev/null || echo 0"):gsub("%s", "")
-
-	local response = string.format('{"success":true,"exists":true,"ip":"%s","netmask":"%s","mtu":"%s","state":"%s","rx_bytes":%s,"tx_bytes":%s',
-		ip or "", netmask, mtu, state, rx, tx)
-
-	if ipv6 then
-		response = response .. ',"ipv6":"' .. ipv6 .. '"'
-	end
-
-	response = response .. '}'
-
-	luci.http.write(response)
 end
 
 function get_log()

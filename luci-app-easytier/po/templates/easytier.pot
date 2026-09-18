@@ -36,11 +36,6 @@ msgstr ""
 msgid "Additional command-line arguments passed to the backend process"
 msgstr ""
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:997
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:1010
-msgid "Address"
-msgstr ""
-
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:772
 msgid "Address Restricted"
 msgstr ""
@@ -398,17 +393,6 @@ msgstr ""
 msgid "Domain"
 msgstr ""
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:499
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:455
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1368
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1446
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1469
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1480
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1488
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1499
-msgid "Download"
-msgstr ""
-
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_log.htm:494
 msgid "Download Log"
 msgstr ""
@@ -649,11 +633,6 @@ msgstr ""
 
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:728
 msgid "Interface IPv6"
-msgstr ""
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:449
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:1003
-msgid "Interface Netmask"
 msgstr ""
 
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:481
@@ -1055,10 +1034,6 @@ msgstr ""
 msgid "RX Traffic"
 msgstr ""
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:495
-msgid "Real-time Traffic"
-msgstr ""
-
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:585
 msgid "Refresh"
 msgstr ""
@@ -1268,14 +1243,6 @@ msgstr ""
 msgid "To Instance ID"
 msgstr ""
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:514
-msgid "Total Download"
-msgstr ""
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:518
-msgid "Total Upload"
-msgstr ""
-
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:442
 msgid "Trace"
 msgstr ""
@@ -1384,10 +1351,6 @@ msgstr ""
 msgid "Unknown"
 msgstr ""
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:504
-msgid "Upload"
-msgstr ""
-
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/controller/easytier.lua:56
 msgid "Upload Program"
 msgstr ""
@@ -1430,10 +1393,6 @@ msgstr ""
 
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:709
 msgid "Virtual IP"
-msgstr ""
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:486
-msgid "Virtual Network Interface"
 msgstr ""
 
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:224

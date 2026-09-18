@@ -56,11 +56,6 @@ msgstr "访问控制"
 msgid "Additional command-line arguments passed to the backend process"
 msgstr "运行 EasyTier Core 时额外增加的命令参数"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:997
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:1010
-msgid "Address"
-msgstr "地址"
-
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:772
 msgid "Address Restricted"
 msgstr "地址受限型"
@@ -431,17 +426,6 @@ msgstr "不使用 IPv6（--disable-ipv6 参数）"
 msgid "Domain"
 msgstr "域名"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:499
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:455
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1368
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1446
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1469
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1480
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1488
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:1499
-msgid "Download"
-msgstr "下载"
-
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_log.htm:494
 msgid "Download Log"
 msgstr "下载日志"
@@ -703,11 +687,6 @@ msgstr "接口 IPv4"
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:728
 msgid "Interface IPv6"
 msgstr "接口 IPv6"
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:449
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:1003
-msgid "Interface Netmask"
-msgstr "接口子网掩码"
 
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:481
 msgid "Interval Time (minutes)"
@@ -1133,10 +1112,6 @@ msgstr ""
 msgid "RX Traffic"
 msgstr "下载"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:495
-msgid "Real-time Traffic"
-msgstr "实时流量"
-
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:585
 msgid "Refresh"
 msgstr "立即刷新"
@@ -1354,14 +1329,6 @@ msgstr "超时"
 msgid "To Instance ID"
 msgstr "目标实例 ID"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:514
-msgid "Total Download"
-msgstr "总下载量"
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:518
-msgid "Total Upload"
-msgstr "总上传量"
-
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:442
 msgid "Trace"
 msgstr "跟踪"
@@ -1470,10 +1437,6 @@ msgstr "地址"
 msgid "Unknown"
 msgstr "未知"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:504
-msgid "Upload"
-msgstr "上传"
-
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/controller/easytier.lua:56
 msgid "Upload Program"
 msgstr "上传程序"
@@ -1519,10 +1482,6 @@ msgstr "版本"
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:709
 msgid "Virtual IP"
 msgstr "虚拟 IP"
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:486
-msgid "Virtual Network Interface"
-msgstr "虚拟网卡接口"
 
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:224
 msgid "Virtual Network Interface Name"
