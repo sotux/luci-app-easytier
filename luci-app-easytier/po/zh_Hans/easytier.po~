@@ -11,7 +11,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:357
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:385
 msgid ""
 "<br>QUIC proxy-enabled nodes accessing this node will still use the original "
 "method. (--disable-quic-input parameter)"
@@ -30,32 +30,33 @@ msgid ""
 "_wv=1027&k=jhP2Z4UsEZ8wvfGPLrs0VwLKn_uz0Q_p&authKey=OGKSQLfg61YPCpVQuvx%2BxE7hUKBVBEVi9PljrDKbHlle6xqOXx8sOwPPTncMambK&noverify=0&group_code=949700262\" "
 "target=\"_blank\">QQ Group</a>&nbsp;&nbsp;"
 msgstr ""
-"一个简单、安全、去中心化的内网穿透 VPN 组网方案，使用 Rust 语言和 Tokio 框架"
-"实现。项目地址：<a href=\"https://github.com/EasyTier/EasyTier\" "
-"target=\"_blank\">github.com/EasyTier/EasyTier</a>&nbsp;&nbsp;<a "
-"href=\"http://easytier.cn\" target=\"_blank\">官网文档</a>&nbsp;&nbsp;<a "
-"href=\"http://qm.qq.com/cgi-bin/qm/qr?"
+"一个简单、安全、去中心化的内网穿透 VPN 组网方案，"
+"使用 Rust 语言和 Tokio 框架实现。项目地址：<a "
+"href=\"https://github.com/EasyTier/EasyTier\" target=\"_blank\">github.com/"
+"EasyTier/EasyTier</a>&nbsp;&nbsp;<a href=\"http://easytier.cn\" "
+"target=\"_blank\">官网文档</a>&nbsp;&nbsp;<a href=\"http://"
+"qm.qq.com/cgi-bin/qm/qr?"
 "_wv=1027&k=jhP2Z4UsEZ8wvfGPLrs0VwLKn_uz0Q_p&authKey=OGKSQLfg61YPCpVQuvx%2BxE7hUKBVBEVi9PljrDKbHlle6xqOXx8sOwPPTncMambK&noverify=0&group_code=949700262\" "
 "target=\"_blank\">QQ 群</a>&nbsp;&nbsp;"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:436
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:688
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:599
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:865
 msgid "ACL"
 msgstr "ACL 规则"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:641
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:818
 msgid "ACL Stats"
 msgstr "ACL 统计数据"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:432
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:460
 msgid "Access Control"
 msgstr "访问控制"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:382
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:410
 msgid "Additional command-line arguments passed to the backend process"
 msgstr "运行 EasyTier Core 时额外增加的命令参数"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:595
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:772
 msgid "Address Restricted"
 msgstr "地址受限型"
 
@@ -63,56 +64,56 @@ msgstr "地址受限型"
 msgid "Advanced Settings"
 msgstr "高级设置"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_log.htm:483
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_log.htm:486
 msgid "All Levels"
 msgstr "全部级别"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:317
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:345
 msgid "Allow Forwarding"
 msgstr "允许转发"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:246
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:274
 msgid "Allow this node to act as an exit node (--enable-exit-node parameter)"
 msgstr "允许此节点作为出口节点（--enable-exit-node 参数）"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:434
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:462
 msgid "Allow traffic from EasyTier virtual network to LAN"
 msgstr "允许从 EasyTier 虚拟网络到 LAN 的流量"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:435
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:463
 msgid "Allow traffic from EasyTier virtual network to WAN"
 msgstr "允许从 EasyTier 虚拟网络到 WAN 的流量"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:436
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:464
 msgid "Allow traffic from LAN to EasyTier virtual network"
 msgstr "允许从 LAN 到 EasyTier 虚拟网络的流量"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:437
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:465
 msgid "Allow traffic from WAN to EasyTier virtual network"
 msgstr "允许从 WAN 到 EasyTier 虚拟网络的流量"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:428
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:456
 msgid "Auto Configure Firewall"
 msgstr "自动配置防火墙"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:417
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:445
 msgid "Auto Configure Interface"
 msgstr "自动配置接口"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_log.htm:477
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_log.htm:478
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_log.htm:480
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_log.htm:481
 msgid "Auto Refresh"
 msgstr "自动刷新"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:429
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:457
 msgid "Automatically add and manage firewall rules"
 msgstr "自动添加和管理防火墙规则"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:418
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:446
 msgid "Automatically create and configure the EasyTier network interface"
 msgstr "自动创建并配置 EasyTier 网络接口"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:323
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:351
 msgid ""
 "Bind the connector socket to the physical device to avoid routing issues."
 "<br>For example, if the subnet proxy segment conflicts with a peer node, "
@@ -122,146 +123,148 @@ msgstr ""
 "将连接器的套接字绑定到物理设备以避免路由问题。<br>例如，当子网代理网段与某个"
 "节点发生冲突时，绑定物理网卡后即可与该节点正常通信。（--bind-device 参数）"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:322
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:350
 msgid "Bind to Physical NIC Only"
 msgstr "仅使用物理网卡"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:643
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:820
 msgid "Cache Max Size"
 msgstr "缓存最大大小"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:644
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:821
 msgid "Cache Size"
 msgstr "缓存大小"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:491
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:1104
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:1115
 msgid "Cancel"
 msgstr "取消"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:697
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:874
 msgid "Caused by"
 msgstr "由以下原因引起："
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:446
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:474
 msgid "Check IPs"
 msgstr "检查 IP"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_log.htm:490
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_log.htm:493
 msgid "Clear Logs"
 msgstr "清除日志"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:489
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:1102
 msgid "Clear cached version and fetch latest version from GitHub?"
 msgstr "清除缓存版本信息以重新获取版本号信息？"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:581
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:635
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:639
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:758
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:812
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:816
 msgid "Client Config End"
 msgstr "客户端配置结束"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:580
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:634
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:638
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:757
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:811
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:815
 msgid "Client Config Start"
 msgstr "客户端配置开始"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:446
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:452
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:458
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:464
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:470
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:476
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:482
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:488
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:494
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:500
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:506
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:512
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:320
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:609
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:615
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:621
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:627
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:633
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:639
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:645
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:651
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:657
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:663
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:669
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:675
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:481
 msgid "Collecting data..."
 msgstr "正在获取数据..."
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:439
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:602
 msgid "Command Line"
 msgstr "启动参数"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:238
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:266
 msgid "Compression Algorithm"
 msgstr "压缩算法"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:657
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:834
 msgid "Compression RX After"
 msgstr "接收后压缩"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:656
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:833
 msgid "Compression RX Before"
 msgstr "接收前压缩"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:659
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:836
 msgid "Compression TX After"
 msgstr "发送后压缩"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:658
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:835
 msgid "Compression TX Before"
 msgstr "发送前压缩"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:239
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:267
 msgid "Compression algorithm to use (--compression parameter)"
 msgstr "使用的压缩算法（--compression 参数）"
 
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:22
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:24
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:25
 msgid "Configuration File"
 msgstr "配置文件"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:716
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:893
 msgid "Configuration File Content"
 msgstr "配置文件内容"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:492
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:1105
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:1116
 msgid "Confirm"
 msgstr "确认"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:589
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:766
 msgid "Connected"
 msgstr "已连接"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:636
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:640
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:813
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:817
 msgid "Connected Clients"
 msgstr "已连接客户端"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:590
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:767
 msgid "Connecting"
 msgstr "连接中"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:417
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:580
 msgid "Connection Information"
 msgstr "连接信息"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:645
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:822
 msgid "Connection Track"
 msgstr "连接追踪"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:702
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:879
 msgid "Connection refused"
 msgstr "连接被拒绝"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:442
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:470
 msgid "Connectivity Check"
 msgstr "通断检测"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:431
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:618
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:594
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:795
 msgid "Connector"
 msgstr "连接器"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:617
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:794
 msgid "Connectors"
 msgstr "连接器"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:330
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:358
 msgid ""
 "Convert TCP traffic to KCP traffic to reduce latency and improve speed."
 "<br>All nodes in the virtual network must be using EasyTier version v2.2.0 "
@@ -270,15 +273,15 @@ msgstr ""
 "将 TCP 流量转换为 KCP 流量，以降低传输延迟并提升速度。<br>KCP 代理功能要求虚"
 "拟网内所有节点的 EasyTier 版本均不低于 v2.2.0。（--enable-kcp-proxy 参数）"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:757
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:934
 msgid "Copied"
 msgstr "已复制"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:787
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:964
 msgid "Copy"
 msgstr "复制"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:198
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:225
 msgid ""
 "Custom name for the virtual TUN interface (--dev-name parameter)<br>If using "
 "web configuration, please use the same virtual network interface name as in "
@@ -287,7 +290,7 @@ msgstr ""
 "自定义虚拟 TUN 网卡接口名称（--dev-name 参数）<br>如果使用 Web 配置，请填写"
 "与 Web 配置一致的虚拟网卡名称，以便防火墙放行"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:413
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:441
 msgid "Debug"
 msgstr "调试"
 
@@ -295,11 +298,11 @@ msgstr "调试"
 msgid "Default"
 msgstr "默认"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:188
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:215
 msgid "Default Protocol"
 msgstr "默认协议"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:176
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:203
 msgid ""
 "Defines the URL of the VPN portal, allowing other VPN clients to connect."
 "<br>Example: wg://0.0.0.0:11011/10.14.14.0/24 means the VPN portal is a "
@@ -311,84 +314,84 @@ msgstr ""
 "听的 WireGuard 服务器，且 VPN 客户端位于 10.14.14.0/24 网络中（--vpn-portal "
 "参数）"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:562
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:739
 msgid "Destination"
 msgstr "目标地址"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:678
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:855
 msgid "Destination Peer ID"
 msgstr "目标节点 ID"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:587
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:764
 msgid "Direct"
 msgstr "直连"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:570
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:747
 msgid "Direct Peers"
 msgstr "直连节点"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:262
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:290
 msgid "Disable Built-in NAT"
 msgstr "禁用内置 NAT"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:203
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:231
 msgid "Disable Encryption"
 msgstr "禁用加密"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:229
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:257
 msgid "Disable IPv6"
 msgstr "禁用 IPv6"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:335
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:363
 msgid "Disable KCP Input"
 msgstr "禁用 KCP 输入"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:289
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:317
 msgid "Disable P2P"
 msgstr "禁用 P2P"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:290
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:318
 msgid ""
 "Disable P2P communication; only use nodes specified by -p to forward packets "
 "(--disable-p2p parameter)"
 msgstr "禁用 P2P 通信；仅使用 -p 指定的节点转发数据包（--disable-p2p 参数）"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:354
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:382
 msgid "Disable QUIC Input"
 msgstr "禁用 QUIC 输入"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:305
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:333
 msgid "Disable TCP"
 msgstr "禁用 TCP"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:306
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:334
 msgid "Disable TCP hole punching (--disable-tcp-hole-punching parameter)"
 msgstr "禁用 TCP 打洞功能（--disable-tcp-hole-punching 参数）"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:297
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:325
 msgid "Disable UDP"
 msgstr "禁用 UDP"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:298
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:326
 msgid "Disable UDP hole punching (--disable-udp-hole-punching parameter)"
 msgstr "禁用 UDP 打洞功能（--disable-udp-hole-punching 参数）"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:204
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:232
 msgid ""
 "Disable encryption for communication with peer nodes. If encryption is "
 "disabled, all other nodes must also have encryption disabled (-u parameter)"
 msgstr ""
 "禁用与对等节点通信的加密；若关闭加密，其他节点也必须关闭加密（-u 参数）"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:340
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:368
 msgid "Disable relay kcp"
 msgstr "禁止节点转发 KCP"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:313
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:341
 msgid "Disable sym"
 msgstr "禁用对称 NAT 打洞"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:336
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:364
 msgid ""
 "Disallow other nodes from using KCP proxy TCP streams to this node.<br>KCP "
 "proxy-enabled nodes accessing this node will still use the original method. "
@@ -397,41 +400,41 @@ msgstr ""
 "不允许其他节点通过 KCP 代理 TCP 流到达此节点。<br>已启用 KCP 代理的节点访问此"
 "节点时，仍将使用原始连接方式。（--disable-kcp-input 参数）"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:591
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:768
 msgid "Disconnected"
 msgstr "已断开连接"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:121
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:130
 msgid "Do Not Listen"
 msgstr "不监听"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:355
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:383
 msgid "Do not allow other nodes to use QUIC to proxy tcp streams to this node."
 msgstr "不允许其他节点通过 QUIC 代理 TCP 流到达此节点。"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:259
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:287
 msgid ""
 "Do not create a TUN device; subnet proxying can still be used to access "
 "nodes (--no-tun parameter)"
 msgstr "不创建 TUN 设备；仍可使用子网代理访问节点（--no-tun 参数）"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:230
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:258
 msgid "Do not use IPv6 (--disable-ipv6 parameter)"
 msgstr "不使用 IPv6（--disable-ipv6 参数）"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:714
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:891
 msgid "Domain"
 msgstr "域名"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_log.htm:491
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_log.htm:494
 msgid "Download Log"
 msgstr "下载日志"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:394
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:422
 msgid "Duplicate extra parameter"
 msgstr "重复的额外参数"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:650
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:827
 msgid "ERROR: Wireguard VPN Portal Not Started"
 msgstr "错误：WireGuard VPN 门户未启动"
 
@@ -451,39 +454,39 @@ msgstr "EasyTier 状态总览"
 msgid "Enable"
 msgstr "启用"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:59
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:68
 msgid "Enable DHCP"
 msgstr "启用 DHCP"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:245
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:273
 msgid "Enable Exit Node"
 msgstr "启用出口节点"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:329
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:357
 msgid "Enable KCP Proxy"
 msgstr "启用 KCP 代理"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:233
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:261
 msgid "Enable Latency First"
 msgstr "启用延迟优先"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:366
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:394
 msgid "Enable Magic DNS"
 msgstr "启用魔法 DNS"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:220
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:248
 msgid "Enable Multithreading"
 msgstr "启用多线程"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:371
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:399
 msgid "Enable Private Mode"
 msgstr "启用私有模式"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:348
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:376
 msgid "Enable QUIC Proxy"
 msgstr "启用 QUIC 代理"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:283
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:311
 msgid ""
 "Enable a SOCKS5 server to allow SOCKS5 clients to access the virtual "
 "network. Leave blank to disable (--socks5 parameter)"
@@ -491,7 +494,7 @@ msgstr ""
 "启用 SOCKS5 服务器，允许 SOCKS5 客户端访问虚拟网络；留空则关闭（--socks5 参"
 "数）"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:443
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:471
 msgid ""
 "Enable connectivity check to specify remote device IPs; if all specified IPs "
 "fail to ping, the EasyTier program will restart."
@@ -499,37 +502,37 @@ msgstr ""
 "启用通断检测后，可指定对端设备 IP；当所有指定的 IP 均无法 ping 通时，"
 "EasyTier 程序将重启"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:221
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:249
 msgid ""
 "Enable multithreaded operation; single-threaded by default (--multi-thread "
 "parameter)"
 msgstr "启用多线程运行；默认单线程（--multi-thread 参数）"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:255
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:283
 msgid "Enable smoltcp stack for subnet proxying (--use-smoltcp parameter)"
 msgstr "为子网代理启用 smoltcp 协议栈（--use-smoltcp 参数）"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:208
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:236
 msgid "Encryption Algorithm"
 msgstr "加密算法"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:410
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:605
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:683
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:695
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:696
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:438
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:782
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:860
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:872
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:873
 msgid "Error"
 msgstr "错误"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/controller/easytier.lua:185
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/controller/easytier.lua:646
 msgid "Error: Program not running! Please start the program and refresh"
 msgstr "错误：程序未运行！请先启动程序后刷新"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:249
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:277
 msgid "Exit Node Addresses"
 msgstr "出口节点地址"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:250
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:278
 msgid ""
 "Exit nodes to forward all traffic through. These are virtual IPv4 addresses. "
 "Priority is determined by the order in the list (--exit-nodes parameter)"
@@ -537,28 +540,28 @@ msgstr ""
 "用于转发所有流量的出口节点；这些为虚拟 IPv4 地址，优先级按列表顺序确定（--"
 "exit-nodes 参数）"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:94
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:103
 msgid ""
 "Export the local network to other peers in the VPN, allowing access to other "
 "devices in the current LAN (-n parameter)"
 msgstr ""
 "将本地网络导出到 VPN 中的其他对等节点，可访问当前 LAN 内的其他设备（-n 参数）"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:381
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:409
 msgid "Extra Parameters"
 msgstr "额外参数"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:715
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:892
 msgid ""
 "Failed to connect to RPC server. Please check if the RPC port is set to "
 "15888 in the configuration."
 msgstr "无法连接到 RPC 服务器，请检查配置中 RPC 端口是否设置为 15888"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:684
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:861
 msgid "Failure"
 msgstr "失败"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:318
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:346
 msgid ""
 "Forward RPC packets from all peer nodes, even if they are not in the relay "
 "network whitelist.<br>This can help peer nodes in non-whitelisted networks "
@@ -567,11 +570,11 @@ msgstr ""
 "转发所有对等节点的 RPC 数据包，即使它们不在中继网络白名单中。<br>这可帮助不在"
 "白名单中的网络中的对等节点建立 P2P 连接。（--relay-all-peer-rpc 参数）"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:272
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:300
 msgid "Forward Whitelisted Network Traffic"
 msgstr "转发白名单网络的流量"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:361
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:389
 msgid ""
 "Forward a local port to a remote port within the virtual network."
 "<br>Example: udp://0.0.0.0:12345/10.126.126.1:23456 means forwarding local "
@@ -582,15 +585,15 @@ msgstr ""
 "0.0.0.0:12345/10.126.126.1:23456，表示将本地 UDP 端口 12345 转发到虚拟网络中"
 "的 10.126.126.1:23456。<br>可指定多个。（--port-forward 参数）"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:376
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:404
 msgid "Forwarding Rate"
 msgstr "转发速率"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:732
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:909
 msgid "From Instance ID"
 msgstr "来源实例 ID"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:594
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:771
 msgid "Full Cone"
 msgstr "全锥型"
 
@@ -598,11 +601,11 @@ msgstr "全锥型"
 msgid "General Settings"
 msgstr "基本设置"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:720
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:897
 msgid "Get Global Peer Map"
 msgstr "获取全局节点映射表"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:642
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:819
 msgid "Global"
 msgstr "全局"
 
@@ -610,13 +613,13 @@ msgstr "全局"
 msgid "Grant UCI access for luci-app-easytier"
 msgstr "授予 UCI 访问 luci-app-easytier 的权限"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:164
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:521
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:533
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:178
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:698
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:710
 msgid "Hostname"
 msgstr "主机名"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:60
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:69
 msgid ""
 "IP address will be automatically determined and assigned by EasyTier, "
 "starting from 10.0.0.1 by default. Warning: When using DHCP, if an IP "
@@ -626,17 +629,17 @@ msgstr ""
 "由 EasyTier 自动确定并设置 IP 地址，默认从 10.0.0.1 开始。警告：在使用 DHCP "
 "时，如果网络中出现 IP 冲突，IP 将自动更改。（-d 参数）"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:520
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:697
 msgid "IPv4 Address"
 msgstr "IPv4 地址"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:154
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:167
 msgid ""
 "If this is the Web configuration in the config file, please fill in the same "
 "listening port for firewall allowance."
 msgstr "如果是配置文件中的 Web 配置，请填写相同的监听端口以便防火墙放行"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:345
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:373
 msgid ""
 "If true, allow relay kcp packets from foreign network. default is false (not "
 "forward foreign network kcp packets). (--enable-relay-foreign-network-kcp "
@@ -645,7 +648,7 @@ msgstr ""
 "如果开启，则作为共享节点时也可以转发其他网络的 KCP 数据包；默认关闭（不转发）"
 "（--enable-relay-foreign-network-kcp 参数）"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:341
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:369
 msgid ""
 "If true, disable relay kcp packets. avoid consuming too many bandwidth. "
 "default is false. (--disable-relay-kcp parameter)"
@@ -653,11 +656,11 @@ msgstr ""
 "如果开启，则禁止节点转发 KCP 数据包，防止过度消耗流量；默认关闭（--disable-"
 "relay-kcp 参数）"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:412
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:440
 msgid "Info"
 msgstr "信息"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:79
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:88
 msgid ""
 "Initial connected peer nodes (-p parameter)<br>Public server status check: "
 "<a href='https://uptime.easytier.cn' target='_blank'>Click here to check</a>"
@@ -665,59 +668,55 @@ msgstr ""
 "初始连接的对等节点（-p 参数）<br>公共服务器可用状态查询：<a href='https://"
 "uptime.easytier.cn' target='_blank'>点此查询</a>"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:170
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:197
 msgid "Instance Name"
 msgstr "实例名称"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:64
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:73
 msgid "Interface IP Address"
 msgstr "接口 IPv4 地址"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:71
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:80
 msgid "Interface IPV6 Address"
 msgstr "接口 IPv6 地址"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:550
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:727
 msgid "Interface IPv4"
 msgstr "接口 IPv4"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:551
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:728
 msgid "Interface IPv6"
 msgstr "接口 IPv6"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:421
-msgid "Interface Netmask"
-msgstr "接口子网掩码"
-
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:453
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:481
 msgid "Interval Time (minutes)"
 msgstr "间隔时间（分钟）"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:454
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:482
 msgid ""
 "Interval time for checking connectivity; how often the specified IPs are "
 "pinged."
 msgstr "检测间隔的时间，每隔多久检测指定的 IP 通断一次"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:606
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:630
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:783
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:807
 msgid "Invalid Service Name"
 msgstr "无效的服务名称"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:575
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:752
 msgid "Labels"
 msgstr "标签"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:566
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:626
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:743
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:803
 msgid "Last Update Time"
 msgstr "最后更新时间"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:523
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:700
 msgid "Latency(ms)"
 msgstr "延迟（ms）"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:234
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:262
 msgid ""
 "Latency-first mode: attempts to forward traffic via the lowest latency path. "
 "By default, the shortest path is used (--latency-first parameter)"
@@ -725,58 +724,58 @@ msgstr ""
 "延迟优先模式，将尝试使用最低延迟路径转发流量，默认使用最短路径（--latency-"
 "first 参数）"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:616
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:793
 msgid "List Connector Response"
 msgstr "连接器列表响应"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:647
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:824
 msgid "List Mapped Listener Response"
 msgstr "列出映射监听器响应"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:120
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:129
 msgid "Listen"
 msgstr "监听"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:538
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:578
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:715
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:755
 msgid "Listener"
 msgstr "监听器"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:117
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:126
 msgid "Listener Port"
 msgstr "监听端口"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_log.htm:495
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_log.htm:498
 msgid "Loading logs..."
 msgstr "加载日志中..."
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:584
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:761
 msgid "Local"
 msgstr "本机"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/controller/easytier.lua:54
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/controller/easytier.lua:55
 msgid "Logs"
 msgstr "日志"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_log.htm:657
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_log.htm:666
 msgid "Logs cleared"
 msgstr "日志已清除"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:524
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:701
 msgid "Loss Rate"
 msgstr "丢包率"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:182
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:209
 msgid "MTU"
 msgstr "MTU"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:183
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:210
 msgid ""
 "MTU for the TUN device, default is 1380 when unencrypted, and 1360 when "
 "encrypted"
 msgstr "TUN 设备的 MTU，默认值为非加密时的 1380，加密时为 1360"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:447
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:475
 msgid ""
 "Make sure the remote device IPs entered here are correct and reachable; "
 "incorrect entries may cause ping failures and repeated program restarts."
@@ -784,7 +783,7 @@ msgstr ""
 "确保这里的对端设备 IP 地址填写正确且可访问，若填写错误将会导致无法 ping 通，"
 "程序反复重启"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:267
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:295
 msgid ""
 "Manually assign route CIDRs. This disables subnet proxying and WireGuard "
 "routes propagated from peer nodes (--manual-routes parameter)"
@@ -792,7 +791,7 @@ msgstr ""
 "手动分配路由 CIDR，将禁用子网代理和从对等节点传播的 WireGuard 路由。（--"
 "manual-routes 参数）"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:98
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:107
 msgid ""
 "Manually specify the public IP address of this machine, so other nodes can "
 "connect to this node using that address (domain names not supported).<br>For "
@@ -803,111 +802,111 @@ msgstr ""
 "<br>例如：tcp://123.123.123.123:11223，可以指定多个。（--mapped-listeners 参"
 "数）"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:437
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:600
 msgid "Mapped Listener"
 msgstr "映射监听"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:629
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:806
 msgid "Max Port"
 msgstr "最大端口"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:430
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:632
 msgid "Memory"
 msgstr "内存"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:680
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:857
 msgid "Method Name"
 msgstr "方法名"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:573
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:750
 msgid "Metric Name"
 msgstr "指标名称"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:628
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:805
 msgid "Min Port"
 msgstr "最小端口"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:528
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:705
 msgid "NAT Type"
 msgstr "NAT 类型"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:45
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:677
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:54
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:854
 msgid "Network Name"
 msgstr "网络名称"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:52
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:61
 msgid "Network Secret"
 msgstr "网络密钥"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:53
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:62
 msgid ""
 "Network secret used to verify whether this node belongs to the VPN network "
 "(--network-secret parameter)"
 msgstr "网络密钥，用于验证此节点是否属于 VPN 网络（--network-secret 参数）"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:450
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:652
 msgid "New Version"
 msgstr "发现新版本"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:541
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:555
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:718
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:732
 msgid "Next Hop Hostname"
 msgstr "下一跳主机名"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:546
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:610
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:723
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:787
 msgid "Next Hop Hostname Lat First"
 msgstr "下一跳主机名（延迟优先）"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:540
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:554
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:717
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:731
 msgid "Next Hop IPv4"
 msgstr "下一跳 IPv4"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:545
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:609
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:722
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:786
 msgid "Next Hop IPv4 Lat First"
 msgstr "下一跳 IPv4（延迟优先）"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:542
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:556
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:719
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:733
 msgid "Next Hop Latency"
 msgstr "下一跳延迟"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:586
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:763
 msgid "No PAT"
 msgstr "无端口映射"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:258
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:286
 msgid "No TUN Mode"
 msgstr "无 TUN 模式"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:795
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:972
 msgid "No data available"
 msgstr "暂无数据"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_log.htm:600
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_log.htm:605
 msgid "No logs available"
 msgstr "暂无日志"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:569
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:746
 msgid "Node ID"
 msgstr "节点 ID"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:428
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:591
 msgid "Node Info"
 msgstr "本机信息"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:713
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:890
 msgid "None"
 msgstr "无"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:224
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:252
 msgid "Number of Threads"
 msgstr "线程数"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:118
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:127
 msgid ""
 "OFF: Do not listen on any port, only connect to peer nodes (--no-listener "
 "parameter)<br>If used purely as a client (not as a server), you can choose "
@@ -916,11 +915,11 @@ msgstr ""
 "关闭：不监听任何端口，只连接到对等节点（--no-listener 参数）<br>单纯作为客户"
 "端使用（不作为服务器）可以不监听端口"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:691
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:868
 msgid "OSPF Route RPC"
 msgstr "OSPF 路由 RPC"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:409
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:437
 msgid "Off"
 msgstr "关闭"
 
@@ -933,18 +932,18 @@ msgid ""
 "a><br>Please note to set the RPC port to 15888"
 msgstr ""
 "官方 Web 控制台：<a href=\"https://easytier.cn/web\" "
-"target=\"_blank\">https://easytier.cn/web</a><br>官方配置文件生成器：<a "
-"href=\"https://easytier.cn/web/index.html#/config_generator\" "
+"target=\"_blank\">https://easytier.cn/web</a><br>官方配置文件"
+"生成器：<a href=\"https://easytier.cn/web/index.html#/config_generator\" "
 "target=\"_blank\">https://easytier.cn/web/index.html#/config_generator</"
 "a><br>注意配置 RPC 端口为 15888"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:273
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:301
 msgid ""
 "Only forward traffic for whitelisted networks. By default, all networks are "
 "allowed"
 msgstr "仅转发白名单网络的流量，默认允许所有网络"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:277
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:305
 msgid ""
 "Only forward traffic for whitelisted networks. Input is a wildcard string, "
 "e.g., '*' (all networks), 'def*' (networks prefixed with 'def')<br>Multiple "
@@ -955,115 +954,115 @@ msgstr ""
 "def为前缀的网络）<br>可以指定多个网络。如果参数为空，则禁用转发。（--relay-"
 "network-whitelist 参数）"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:596
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:773
 msgid "P2P"
 msgstr "P2P"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:293
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:321
 msgid "P2P only"
 msgstr "仅 P2P"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:544
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:558
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:721
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:735
 msgid "Path Latency"
 msgstr "路径延迟"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:548
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:612
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:725
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:789
 msgid "Path Latency Lat First"
 msgstr "路径延迟（延迟优先）"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:543
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:557
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:720
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:734
 msgid "Path Length"
 msgstr "路径长度"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:547
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:611
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:724
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:788
 msgid "Path Length Lat First"
 msgstr "路径长度（延迟优先）"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:433
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:596
 msgid "Peer Center"
 msgstr "节点中心"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:692
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:869
 msgid "Peer Center RPC"
 msgstr "节点中心 RPC"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:814
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:991
 msgid ""
 "Peer Center service not available. This feature requires multiple nodes in "
 "the network."
 msgstr "节点中心服务不可用，此功能要求网络中包含多个节点。"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:535
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:712
 msgid "Peer ID"
 msgstr "节点 ID"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:429
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:592
 msgid "Peer List"
 msgstr "节点列表"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:78
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:87
 msgid "Peer Nodes"
 msgstr "节点/服务器"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:660
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:837
 msgid "Peer RPC Client RX"
 msgstr "节点 RPC 客户端接收流量"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:661
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:838
 msgid "Peer RPC Client TX"
 msgstr "节点 RPC 客户端发送流量"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:664
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:841
 msgid "Peer RPC Duration"
 msgstr "节点 RPC 持续时间"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:662
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:839
 msgid "Peer RPC Server RX"
 msgstr "节点 RPC 服务端接收流量"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:663
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:840
 msgid "Peer RPC Server TX"
 msgstr "节点 RPC 服务端发送流量"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:360
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:388
 msgid "Port Forwarding"
 msgstr "端口转发"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:585
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:762
 msgid "Port Restricted"
 msgstr "端口受限型"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:103
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:112
 msgid "Portal Address Port"
 msgstr "门户地址端口"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:632
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:809
 msgid "Portal Name"
 msgstr "门户名称"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:405
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:433
 msgid "Program Log"
 msgstr "程序日志"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:607
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:631
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:784
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:808
 msgid "Protocol Name"
 msgstr "协议名称"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:435
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:598
 msgid "Proxy"
 msgstr "代理信息"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:534
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:539
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:711
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:716
 msgid "Proxy CIDRs"
 msgstr "代理网段"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:349
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:377
 msgid ""
 "Proxy tcp streams with QUIC, improving the latency and throughput on the "
 "network with udp packet loss.<br>All nodes in the virtual network must be "
@@ -1074,31 +1073,31 @@ msgstr ""
 "能要求虚拟网内所有节点的 EasyTier 版本均不低于 v2.3.2。（--enable-quic-proxy "
 "参数）"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:97
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:106
 msgid "Public Addresses of Specified Listeners"
 msgstr "指定监听器的公网地址"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:627
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:804
 msgid "Public IP"
 msgstr "公网 IP"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:536
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:713
 msgid "Public IPv4"
 msgstr "公网 IPv4"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:537
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:714
 msgid "Public IPv6"
 msgstr "公网 IPv6"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:153
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:166
 msgid "QUIC Port"
 msgstr "QUIC 端口"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:112
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:121
 msgid "RPC Access Whitelist"
 msgstr "RPC 门户白名单"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:104
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:113
 msgid ""
 "RPC portal address used for management. 0 means a random port, 12345 means "
 "listening on port 12345 on localhost, 0.0.0.0:12345 means listening on port "
@@ -1109,59 +1108,59 @@ msgstr ""
 "口，0.0.0.0:12345 表示在所有接口上监听 12345 端口。<br>默认值为 0，建议选 "
 "15888 防止无法获取状态信息（-r 参数）"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:525
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:702
 msgid "RX Traffic"
 msgstr "下载"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:422
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:585
 msgid "Refresh"
 msgstr "立即刷新"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:488
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:1101
 msgid "Refresh Version"
 msgstr "刷新版本"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:1037
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:1214
 msgid "Refreshing..."
 msgstr "正在刷新..."
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:344
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:372
 msgid "Relay foreign network kcp"
 msgstr "转发其他网络的 KCP"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:721
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:898
 msgid "Report Peers"
 msgstr "上报节点信息"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:615
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:792
 msgid "Response"
 msgstr "响应"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:593
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:770
 msgid "Restricted"
 msgstr "受限型"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:266
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:294
 msgid "Route CIDR"
 msgstr "路由 CIDR"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:522
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:699
 msgid "Route Cost"
 msgstr "路由开销"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:430
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:593
 msgid "Route Info"
 msgstr "路由信息"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:646
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:823
 msgid "Rules"
 msgstr "规则"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:408
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:610
 msgid "Running"
 msgstr "运行中"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:406
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:434
 msgid ""
 "Runtime log is located at /tmp/easytier.log. View it in the log section "
 "above.<br>Levels: Error < Warning < Info < Debug < Trace"
@@ -1169,50 +1168,50 @@ msgstr ""
 "运行日志在 /tmp/easytier.log，可在上方日志查看<br>详细程度：错误<警告<信息<调"
 "试<跟踪"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:282
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:310
 msgid "SOCKS5 Port"
 msgstr "SOCKS5 端口"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:432
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:687
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:595
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:864
 msgid "STUN"
 msgstr "STUN 信息"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:600
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:622
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:623
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:777
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:799
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:800
 msgid "STUN Info"
 msgstr "STUN 信息"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:597
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:774
 msgid "Server"
 msgstr "服务器"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:681
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:858
 msgid "Service Name"
 msgstr "服务名"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:433
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:461
 msgid "Set traffic permission rules between different network zones"
 msgstr "设置不同网络区域之间的流量允许规则"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:712
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:889
 msgid "Some"
 msgstr "有"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:561
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:738
 msgid "Source"
 msgstr "源地址"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:679
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:856
 msgid "Source Peer ID"
 msgstr "源节点 ID"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_log.htm:707
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_log.htm:716
 msgid "Start Auto Refresh"
 msgstr "开启自动刷新"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:563
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:740
 msgid "Start Time"
 msgstr "开始时间"
 
@@ -1220,62 +1219,63 @@ msgstr "开始时间"
 msgid "Startup Method"
 msgstr "启动方式"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:564
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:741
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:1023
 msgid "State"
 msgstr "状态"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:438
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:601
 msgid "Statistics"
 msgstr "统计数据"
 
 #: ../../../luci-app-easytier/luci-app-easytier/luasrc/controller/easytier.lua:52
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:579
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:621
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:756
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:798
 msgid "Status"
 msgstr "状态"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_log.htm:704
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_log.htm:713
 msgid "Stop Auto Refresh"
 msgstr "停止自动刷新"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:408
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:610
 msgid "Stopped"
 msgstr "已停止"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:93
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:102
 msgid "Subnet Proxy"
 msgstr "子网代理"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:422
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:450
 msgid "Subnet mask for the EasyTier interface (default: 255.0.0.0)"
 msgstr "EasyTier 接口的子网掩码（默认值：255.0.0.0）"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:682
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:859
 msgid "Success"
 msgstr "成功"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:592
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:769
 msgid "Symmetric"
 msgstr "对称型"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:719
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:896
 msgid "Sync Route Info"
 msgstr "同步路由信息"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:602
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:625
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:779
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:802
 msgid "TCP NAT Type"
 msgstr "TCP NAT 类型"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:309
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:337
 msgid "TCP whitelist"
 msgstr "TCP 端口白名单"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:125
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:134
 msgid "TCP/UDP Port"
 msgstr "TCP/UDP 端口"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:126
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:135
 msgid ""
 "TCP/UDP protocol port number: 11010 means TCP/UDP will listen on port 11010."
 "<br>If this is the Web configuration in the config file, please fill in the "
@@ -1284,11 +1284,11 @@ msgstr ""
 "TCP/UDP 协议端口号：11010 表示 TCP/UDP 将在 11010 上监听。<br>如果是配置文件"
 "中的 Web 配置，请填写相同的监听端口以便防火墙放行"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:526
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:703
 msgid "TX Traffic"
 msgstr "上传"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:65
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:74
 msgid ""
 "The IPv4 address of this VPN node. If left empty, this node will only "
 "forward packets and will not create a TUN device. (-i parameter)"
@@ -1296,7 +1296,7 @@ msgstr ""
 "此 VPN 节点的 IPv4 地址，如果为空，则此节点将仅转发数据包，不会创建 TUN 设备"
 "（-i 参数）"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:25
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:26
 msgid ""
 "The configuration file is located at /etc/easytier/config.toml<br>The "
 "command-line startup parameters and the parameters in this configuration "
@@ -1306,146 +1306,150 @@ msgstr ""
 "配置文件在 /etc/easytier/config.toml<br>命令行的启动参数和此配置文件的参数不"
 "会同步<br>注意填写 TUN 网卡名和端口用以自动防火墙放行"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:189
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:216
 msgid ""
 "The default protocol used when connecting to peer nodes (--default-protocol "
 "parameter)"
 msgstr "连接对等节点时使用的默认协议（--default-protocol 参数）"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:165
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:179
 msgid "The hostname used to identify this device (--hostname parameter)"
 msgstr "用于标识此设备的主机名（--hostname 参数）"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:46
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:55
 msgid ""
 "The network name used to identify this VPN network (--network-name parameter)"
 msgstr "用于识别此 VPN 网络的网络名称（--network-name 参数）"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:685
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:862
 msgid "Timeout"
 msgstr "超时"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:733
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:910
 msgid "To Instance ID"
 msgstr "目标实例 ID"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:414
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:442
 msgid "Trace"
 msgstr "跟踪"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:674
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:851
 msgid "Traffic Bytes Forwarded"
 msgstr "转发流量字节"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:665
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:842
 msgid "Traffic Bytes RX"
 msgstr "接收流量字节"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:667
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:844
 msgid "Traffic Bytes Self RX"
 msgstr "本机接收流量字节"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:668
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:845
 msgid "Traffic Bytes Self TX"
 msgstr "本机发送流量字节"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:666
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:843
 msgid "Traffic Bytes TX"
 msgstr "发送流量字节"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:724
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:901
 msgid "Traffic Control Bytes RX"
 msgstr "流量控制接收字节数"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:726
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:903
 msgid "Traffic Control Bytes RX By Instance"
 msgstr "按实例统计接收字节数"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:725
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:902
 msgid "Traffic Control Bytes TX"
 msgstr "流量控制发送字节数"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:727
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:904
 msgid "Traffic Control Bytes TX By Instance"
 msgstr "按实例统计发送字节数"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:728
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:905
 msgid "Traffic Control Packets RX"
 msgstr "流量控制接收数据包"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:730
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:907
 msgid "Traffic Control Packets RX By Instance"
 msgstr "按实例统计接收数据包"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:729
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:906
 msgid "Traffic Control Packets TX"
 msgstr "流量控制发送数据包"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:731
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:908
 msgid "Traffic Control Packets TX By Instance"
 msgstr "按实例统计发送数据包"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:673
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:850
 msgid "Traffic Packets Forwarded"
 msgstr "转发数据包数"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:669
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:846
 msgid "Traffic Packets RX"
 msgstr "接收数据包数"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:671
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:848
 msgid "Traffic Packets Self RX"
 msgstr "本机接收数据包数"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:672
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:849
 msgid "Traffic Packets Self TX"
 msgstr "本机发送数据包数"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:670
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:847
 msgid "Traffic Packets TX"
 msgstr "发送数据包数"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:565
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:742
 msgid "Transport Type"
 msgstr "传输协议"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:527
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:704
 msgid "Tunnel Protocol"
 msgstr "隧道协议"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:601
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:624
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:778
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:801
 msgid "UDP NAT Type"
 msgstr "UDP NAT 类型"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:549
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:726
 msgid "UDP Stun Type"
 msgstr "UDP STUN 类型"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:301
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:329
 msgid "UDP whitelist"
 msgstr "UDP 端口白名单"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:619
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:620
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:701
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:796
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:797
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:878
 msgid "URL"
 msgstr "地址"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:588
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:447
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:765
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:649
 msgid "Unknown"
 msgstr "未知"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:437
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/controller/easytier.lua:56
+msgid "Upload Program"
+msgstr "上传程序"
+
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:639
 msgid "Uptime"
 msgstr "运行时长"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:254
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:282
 msgid "Use Userspace TCP/IP Stack"
 msgstr "使用用户态 TCP/IP 协议栈"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:263
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:291
 msgid ""
 "Use system kernel to forward subnet proxy packets, disabling built-in NAT (--"
 "proxy-forward-by-system parameter)"
@@ -1453,45 +1457,45 @@ msgstr ""
 "通过系统内核转发子网代理数据包，禁用内置 NAT（--proxy-forward-by-system 参"
 "数）"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:171
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:198
 msgid ""
 "Used to identify the VPN node instance on the same machine. (-m parameter)"
 msgstr "用于在同一台机器中标识此 VPN 节点的实例名称（-m 参数）"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:434
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:597
 msgid "VPN Portal"
 msgstr "VPN 门户"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:175
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:202
 msgid "VPN Portal URL"
 msgstr "VPN 门户 URL"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:574
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:751
 msgid "Value"
 msgstr "值"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:529
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:445
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:706
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_status.htm:647
 msgid "Version"
 msgstr "版本"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:532
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:709
 msgid "Virtual IP"
 msgstr "虚拟 IP"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:197
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:224
 msgid "Virtual Network Interface Name"
 msgstr "虚拟网卡名称"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:146
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:158
 msgid "WG Port"
 msgstr "WireGuard 端口"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:132
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:142
 msgid "WS Port"
 msgstr "WS 端口"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:133
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:143
 msgid ""
 "WS protocol port number: 11011 means WS will listen on port 11011.<br>If "
 "this is the Web configuration in the config file, please fill in the same "
@@ -1500,11 +1504,11 @@ msgstr ""
 "WS 协议端口号：11011 表示 WS 将在 11011 上监听。<br>如果是配置文件中的 Web 配"
 "置，请填写相同的监听端口以便防火墙放行"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:139
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:150
 msgid "WSS Port"
 msgstr "WSS 端口"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:140
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:151
 msgid ""
 "WSS protocol port number: 11012 means WSS will listen on port 11012.<br>If "
 "this is the Web configuration in the config file, please fill in the same "
@@ -1513,17 +1517,18 @@ msgstr ""
 "WSS 协议端口号：11012 表示 WSS 将在 11012 上监听。<br>如果是配置文件中的 Web "
 "配置，请填写相同的监听端口以便防火墙放行"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:411
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:439
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_upload.htm:479
 msgid "Warning"
 msgstr "警告"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:356
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:384
 msgid ""
 "When a node with QUIC proxy enabled accesses this node, the original tcp "
 "connection is preserved."
 msgstr "当启用 QUIC 代理的节点访问此节点时，仍将保留原始 TCP 连接。"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:372
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:400
 msgid ""
 "When enabled, nodes with a different network name and password are not "
 "allowed to handshake or relay via this node. (--private-mode parameter)"
@@ -1531,16 +1536,16 @@ msgstr ""
 "启用后则不允许使用了与本网络不相同的网络名称和密码的节点通过本节点进行握手或"
 "中转。（--private-mode 参数）"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:276
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:304
 msgid "Whitelisted Networks"
 msgstr "白名单网络"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:633
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:637
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:810
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:814
 msgid "WireGuard"
 msgstr "WireGuard"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:147
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:159
 msgid ""
 "WireGuard protocol port number: 11011 means WG will listen on port 11011."
 "<br>If this is the Web configuration in the config file, please fill in the "
@@ -1549,7 +1554,7 @@ msgstr ""
 "WireGuard 协议端口号：11011 表示 WG 将在 11011 上监听。<br>如果是配置文件中"
 "的 Web 配置，请填写相同的监听端口以便防火墙放行"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:367
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:395
 msgid ""
 "With Magic DNS, you can access other nodes using domain names, e.g., "
 "<hostname>.et.net. Magic DNS will modify your system DNS settings, please "
@@ -1558,19 +1563,19 @@ msgstr ""
 "使用魔法 DNS，您可以使用域名访问其他节点，例如：<hostname>.et.net。魔法 DNS "
 "将修改您的系统 DNS 设置，请谨慎启用。（--accept-dns 参数）"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:214
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:242
 msgid "aes-256-gcm"
 msgstr ""
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:213
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:241
 msgid "aes-gcm"
 msgstr ""
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:704
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:881
 msgid "cannot_be_a_base"
 msgstr "不能作为基础节点"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:212
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:240
 msgid "chacha20"
 msgstr ""
 
@@ -1578,12 +1583,12 @@ msgstr ""
 msgid "core log"
 msgstr "核心日志"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:190
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:241
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:217
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:269
 msgid "default"
 msgstr "默认"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:209
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:237
 msgid ""
 "encryption algorithm to use, supported: xor, chacha20, aes-gcm, aes-256-gcm, "
 "openssl-aes-gcm, openssl-chacha20, openssl-aes-256-gcm. default (aes-gcm) (--"
@@ -1593,27 +1598,27 @@ msgstr ""
 "openssl-chacha20、openssl-aes-256-gcm。默认（aes-gcm）（--encryption-"
 "algorithm 参数）"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:700
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:877
 msgid "failed to connect to server"
 msgstr "无法连接到服务器"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:699
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:876
 msgid "failed to get peer center client"
 msgstr "无法获取节点中心客户端"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:698
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:875
 msgid "failed to get peer manager client"
 msgstr "无法获取节点管理客户端"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:711
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:888
 msgid "fragment"
 msgstr "片段"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:707
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:884
 msgid "host"
 msgstr "主机地址"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:314
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:342
 msgid ""
 "if true, disable udp nat hole punching for symmetric nat (NAT4), which is "
 "based on birthday attack and may be blocked by ISP. (--disable-sym-hole-"
@@ -1622,52 +1627,52 @@ msgstr ""
 "如果为 true，则禁用基于生日攻击的对称 NAT（NAT4）UDP 打洞功能；该打洞方式可能"
 "会被运营商封锁（--disable-sym-hole-punching 参数）"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:72
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:81
 msgid ""
 "ipv6 address of this vpn node, can be used together with ipv4 for dual-stack "
 "operation(--ipv6 parameter)"
 msgstr ""
 "此 VPN 节点的 IPv6 地址，可与 IPv4 一起使用以实现双栈运行（--ipv6 参数）"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:653
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:830
 msgid "no running instances found"
 msgstr "未找到正在运行的实例"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:294
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:322
 msgid ""
 "only communicate with peers that already establish p2p connection. (--p2p-"
 "only parameter)"
 msgstr "仅与已建立 P2P 连接的对等节点通信（--p2p-only 参数）"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:217
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:245
 msgid "openssl-aes-256-gcm"
 msgstr ""
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:215
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:243
 msgid "openssl-aes-gcm"
 msgstr ""
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:216
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:244
 msgid "openssl-chacha20"
 msgstr ""
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:706
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:883
 msgid "password"
 msgstr "密码"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:709
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:886
 msgid "path"
 msgstr "路径"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:708
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:885
 msgid "port"
 msgstr "端口"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:710
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:887
 msgid "query"
 msgstr "查询"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:113
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:122
 msgid ""
 "rpc portal whitelist, only allow these addresses to access rpc portal (--rpc-"
 "portal-whitelist parameter)"
@@ -1675,18 +1680,18 @@ msgstr ""
 "RPC 门户白名单，仅允许这些地址访问 RPC 门户，例如：127.0.0.1/32、"
 "127.0.0.0/8、::1/128（--rpc-portal-whitelist 参数）"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:703
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:880
 msgid "scheme"
 msgstr "方式"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:310
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:338
 msgid ""
 "tcp port whitelist. Supports single ports (53) and ranges (5000-6000). (--"
 "tcp-whitelist parameter)"
 msgstr ""
 "TCP 端口白名单。支持单个端口（53）和范围（5000-6000）（--tcp-whitelist 参数）"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:377
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:405
 msgid ""
 "the maximum bps limit for foreign network relay, default is no limit. unit: "
 "BPS (bytes per second). (--foreign-relay-bps-limit parameter)"
@@ -1694,7 +1699,7 @@ msgstr ""
 "作为共享节点时，限制非本地网络的流量转发速率，默认无限制，单位 BPS（字节每"
 "秒）（--foreign-relay-bps-limit 参数）"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:225
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:253
 msgid ""
 "the number of threads to use, default is 2, only effective when multi-thread "
 "is enabled, must be greater than 2 (--multi-thread-count parameter)"
@@ -1702,24 +1707,21 @@ msgstr ""
 "使用的线程数，默认为 2，仅在多线程模式下有效；取值必须大于 2（--multi-thread-"
 "count 参数）"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:302
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:330
 msgid ""
 "udp port whitelist. Supports single ports (53) and ranges (5000-6000). (--"
 "udp-whitelist parameter)"
 msgstr ""
 "UDP 端口白名单。支持单个端口（53）和范围（5000-6000）（--udp-whitelist 参数）"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:705
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/view/easytier/easytier_cli.htm:882
 msgid "username"
 msgstr "用户名"
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:211
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:239
 msgid "xor"
 msgstr ""
 
-#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:242
+#: ../../../luci-app-easytier/luci-app-easytier/luasrc/model/cbi/easytier.lua:270
 msgid "zstd"
 msgstr "zstd"
-
-#~ msgid "Upload Program"
-#~ msgstr "上传程序"
